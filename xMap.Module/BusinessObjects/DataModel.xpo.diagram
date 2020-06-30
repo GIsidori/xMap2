@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<visualDesignerDiagram dslVersion="1.0.0.0" Id="facf33fa-a195-41f5-842d-d287a2f44735" absoluteBounds="0, 0, 11, 8.5" name="DataModel">
+  <dataBaseObjectModelMoniker Id="f8519123-53f6-4902-a46b-6745b2c79f84" />
+  <nestedChildShapes>
+    <xpObjectShape Id="a8de6dc4-8565-4595-84d6-c9f9d3c7a417" absoluteBounds="2, 4.75, 1.5, 1.5627718098958319">
+      <xpObjectMoniker Id="e4b9385e-10c6-47c7-a25d-fc8f1eeda4a9" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9e798be-678b-47dc-ab8b-94dce0095e72" absoluteBounds="2.0149999999999997, 5.06, 1.4700000000000002, 0.44169108072916663" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3e80ddaf-5733-4614-a0e5-2350042fa37f" absoluteBounds="2.0149999999999997, 5.5116910807291664, 1.4700000000000002, 0.2493896484375" name="Indexes" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5f1efc12-4acc-45d3-bc41-d745f327ea45" absoluteBounds="2.0149999999999997, 5.7710807291666661, 1.4700000000000002, 0.44169108072916663" name="Collections" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </xpObjectShape>
+    <xpObjectShape Id="2e42f06a-e551-4004-a716-1989bcf5ffb7" absoluteBounds="5.8854165077209473, 5.3333334922790527, 1.5, 1.5627718098958328">
+      <xpObjectMoniker Id="f153256c-19dc-4126-be00-5c9b539f06c5" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f9439c75-ae83-4e8a-8c3d-64b269e0e625" absoluteBounds="5.9004165077209469, 5.6433334922790523, 1.4700000000000002, 0.63399251302083326" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b5096ac3-63ce-4b52-a78a-d76560c6915c" absoluteBounds="5.9004165077209469, 6.2873260052998861, 1.4700000000000002, 0.2493896484375" name="Indexes" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="cdfd714e-c03c-47c2-8167-dc47a85297bd" absoluteBounds="5.9004165077209469, 6.5467156537373858, 1.4700000000000002, 0.2493896484375" name="Collections" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </xpObjectShape>
+    <aggregationConnector Id="805a5e97-c289-4a3b-823f-e02a9db346ce" edgePoints="[(3.5 : 5.82305265108744); (5.88541650772095 : 5.82305265108744)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <aggregationMoniker Id="2ef4d992-948c-4b68-876a-8280830e1a9d" />
+      <relativeChildShapes />
+      <nodes>
+        <xpObjectShapeMoniker Id="a8de6dc4-8565-4595-84d6-c9f9d3c7a417" />
+        <xpObjectShapeMoniker Id="2e42f06a-e551-4004-a716-1989bcf5ffb7" />
+      </nodes>
+      <sourceCollectionField>
+        <associationConnectorReferencesSourceCollectionField Id="744fd75c-c59e-42dc-b4f0-54da29ff7aec">
+          <collectionFieldMoniker Id="213f1b9f-90a0-46d2-b6cf-a2832ebb9913" />
+        </associationConnectorReferencesSourceCollectionField>
+      </sourceCollectionField>
+    </aggregationConnector>
+    <externalPersistentTypeShape Id="c5b53681-36a2-4c15-9dc1-396c383d2857" absoluteBounds="5.875, 3.625, 1.5, 1.0439925130208323">
+      <externalPersistentTypeMoniker Id="f53f5b04-9705-47eb-96f9-a7c9b0c90431" />
+      <nestedChildShapes>
+        <elementListCompartment Id="108eec7b-3e64-4966-9e10-79e3dc9f8730" absoluteBounds="5.89, 3.9349999999999996, 1.4700000000000002, 0.63399251302083326" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </externalPersistentTypeShape>
+    <inheritaceConnector Id="da76f13c-9486-4ea2-8ddb-5cbbe7c37192" edgePoints="[(6.63020825386047 : 5.33333349227905); (6.63020825386047 : 4.66899251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <inheritanceMoniker Id="7ef683f4-1cc3-4a9d-98a1-bff8bb636eb4" />
+      <nodes>
+        <xpObjectShapeMoniker Id="2e42f06a-e551-4004-a716-1989bcf5ffb7" />
+        <externalPersistentTypeShapeMoniker Id="c5b53681-36a2-4c15-9dc1-396c383d2857" />
+      </nodes>
+    </inheritaceConnector>
+  </nestedChildShapes>
+</visualDesignerDiagram>

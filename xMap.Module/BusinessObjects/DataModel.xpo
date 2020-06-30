@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="f8519123-53f6-4902-a46b-6745b2c79f84" namespace="xMap.Module.BusinessObjects.DataModel" dataBaseShemaInfo="H4sIAAAAAAAEAO1XbU/bMBD+Pmn/IepnnNhO3CQoDYK0QwhWUIFtXx370kbLSxUnbffv57Sh0AIbkyb2Ir7lnntOvufucrKDo1WeGQuoVFoWgx4xce8ofP8uOOEKruuy4lM4K5LS0KxCHa5UOujN6np+aFnL5dJc2mZZTS2KMbG+fLy4FjPIOUoLVfNCQG8bJX8e1dOnGkZww+MMVHvk2r5DHgB30JjnEF4uC6gC6x7YckZFi4V11UBgdcbWOUxVC9zOJa8hTHimNGkX3HJPm1SeyRCc2Lc9Bohg0UeOK1zEKZMoEV5CACR3uB9YHXkbHJVZkxdqJ/1nYe1oNWycYXQ5PItGgfUA2qH+SOCvinwoVBLKmWsD4jHVQn1GEBeehzxPYqC+5NKVj4TqcOspUU+hXbte3OMrXgnIXqXJCWE2ZX2BiC8FcoguQAwYIyb8mNl+gvuC/dYmX34ejyav32MX4j61RYJsz7GRk9gMxdImyPdln3mUS8+NX9zjv3yefUlc39YyKSUSOQwo8mwskeQUuzaTDpX8Vee56/nbzvqfd9bxJBpdvO2st531b+yszr6nBO3lD+RVVYo1aFgb+NPmphgOYTFazStQyhzympsLik1yYHTuQWuZjokPjKjJ6qaCQQFNXfHswLhq4iwV5/DtpvwKxSDW/yhxmSNdjMHxtay7I9bnRRlXClTbgEmzrW5wLHVqkKSrLq8NdN0kO9AE8nIB+8QNus+N9IU3vC3EjBdT0MtibW9K81QOga7MHKo6/cO5PZNGcAr6YqzHKyrzHIpadTP6CN4hD0GlU/35IdWjsBex61uHjZssa6fmBGZ8kZaVHoqE63br/2Xfo18U1t6TIvwODCg+fHsMAAA=" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" createdInVersion="20.1.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="20.1.4.0" name="DataModel" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="beba5f48-6385-425e-aae8-7e231a38ab6a">
+      <xpObject Id="e4b9385e-10c6-47c7-a25d-fc8f1eeda4a9" name="Owner" baseClass="XPObject" userFileName="Owner" designerFileName="Owner.Designer" className="Owner" deferredDeletion="False" persistent="OWNER" optimisticLocking="False" virtualName="Owner" customAttributes="DevExpress.Persistent.Base.DefaultClassOptions">
+        <fields>
+          <generalXpObjectHasFields Id="475e22a1-54dd-4117-8e8d-0cab28af0cea">
+            <field Id="d12a573e-ab26-4951-ac88-88d0e29dad7d" name="Codice" persistent="CODICE" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <aggrTarget>
+          <aggregation Id="2ef4d992-948c-4b68-876a-8280830e1a9d" sourceCollectionName="Parcels" name="ParcelReferencesOwner" targetFieldName="Owner">
+            <xpObjectMoniker Id="f153256c-19dc-4126-be00-5c9b539f06c5" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="436434a3-6618-43f6-ad13-97aed1599389">
+            <collectionField Id="213f1b9f-90a0-46d2-b6cf-a2832ebb9913" name="Parcels" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="a089e010-f301-4d3a-9346-07bfc1eedfb9">
+      <xpObject Id="f153256c-19dc-4126-be00-5c9b539f06c5" name="Parcel" baseClass="xMap.Persistent.BaseImpl.XPSTGeometry" userFileName="Parcel" designerFileName="Parcel.Designer" className="Parcel" virtualBaseClass="xMap.Persistent.BaseImpl.XPSTGeometry" persistent="PARCEL" virtualName="Parcel">
+        <fields>
+          <generalXpObjectHasFields Id="b4563434-2554-4150-9dd3-c07409693032">
+            <field Id="7eb623cf-3843-4f35-bd31-99d6582ad87b" name="Owner" persistent="OWNER" virtualColumnType="Owner" logicalType="Owner" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b47c6656-8811-49a7-a948-51760aa9bda6">
+            <field Id="9d179343-221d-45e2-830d-da20735d42da" name="Codice" persistent="CODICE" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="7ef683f4-1cc3-4a9d-98a1-bff8bb636eb4">
+            <externalPersistentTypeMoniker Id="f53f5b04-9705-47eb-96f9-a7c9b0c90431" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="39a1dc9f-1bdd-4986-874a-c3aa023926da">
+      <externalPersistentType Id="f53f5b04-9705-47eb-96f9-a7c9b0c90431" name="xMap.Persistent.BaseImpl.XPSTGeometry" nameSpace="xMap.Persistent.BaseImpl" virtualName="XPSTGeometry" assemblyName="C:\Users\GIsidori\Source\repos\xMap\xMap.Persistent.Base\bin\Debug\xMap.Persistent.Base.dll" deferredDeletion="False" optimisticLocking="False" addReferenceToAssembly="false" hasDefaultConstructor="true" constructorParameterType="Session" hasSessionSpecifiedConstructor="false">
+        <fields>
+          <generalXpObjectHasFields Id="0434f64c-541b-4400-8cb7-2506af9c6794">
+            <externalPersistentTypeField Id="fcfab208-5d66-4501-9e24-3c3725adc7c2" name="OID" virtualColumnType="Int32" key="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e571f024-e7ba-4f9a-9fde-238e4df0266a">
+            <externalPersistentTypeField Id="52a4bf67-eb52-4860-ae93-e8a84ab2b721" name="Shape" virtualColumnType="SqlGeometry" />
+          </generalXpObjectHasFields>
+        </fields>
+      </externalPersistentType>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>
