@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{501AC9BB-7724-40CE-BDEF-038C2F4865E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xRoad.Module.Module</RootNamespace>
+    <AssemblyName>xRoad.Module.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="xMap.Persistent.Base">
+      <HintPath>..\xMap.Persistent.Base\bin\Debug\xMap.Persistent.Base.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Arco.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Arco.Designer.cs">
+      <DependentUpon>Arco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\BaseTipo.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\BaseTipo.Designer.cs">
+      <DependentUpon>BaseTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Cippo.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Cippo.Designer.cs">
+      <DependentUpon>Cippo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Evento.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Evento.Designer.cs">
+      <DependentUpon>Evento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Percorso.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Percorso.Designer.cs">
+      <DependentUpon>Percorso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\PonteViadotto.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\PonteViadotto.Designer.cs">
+      <DependentUpon>PonteViadotto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\StatoArco.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\StatoArco.Designer.cs">
+      <DependentUpon>StatoArco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAmministrazione.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAmministrazione.Designer.cs">
+      <DependentUpon>TipoAmministrazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAsse.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAsse.Designer.cs">
+      <DependentUpon>TipoAsse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoCarreggiata.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoCarreggiata.Designer.cs">
+      <DependentUpon>TipoCarreggiata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoCippo.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoCippo.Designer.cs">
+      <DependentUpon>TipoCippo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoClassificaFunzionale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoClassificaFunzionale.Designer.cs">
+      <DependentUpon>TipoClassificaFunzionale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoConfineAmministrativo.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoConfineAmministrativo.Designer.cs">
+      <DependentUpon>TipoConfineAmministrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoStradale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoStradale.Designer.cs">
+      <DependentUpon>TipoElementoStradale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoEvento.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoEvento.Designer.cs">
+      <DependentUpon>TipoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoFonte.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoFonte.Designer.cs">
+      <DependentUpon>TipoFonte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoImpalcato.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoImpalcato.Designer.cs">
+      <DependentUpon>TipoImpalcato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoSpalle.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoSpalle.Designer.cs">
+      <DependentUpon>TipoSpalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+    <None Include="BusinessObjects\RoadDataModel.xpo" />
+    <None Include="BusinessObjects\RoadDataModel.xpo.diagram">
+      <DependentUpon>RoadDataModel.xpo</DependentUpon>
+    </None>
+    <None Include="Controllers\ReadMe.txt" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+    <None Include="Images\ReadMe.txt" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

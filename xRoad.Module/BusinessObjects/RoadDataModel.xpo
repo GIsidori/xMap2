@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="fb4362ba-a384-4f33-b345-eaf2f4faa181" namespace="xRoad.Module.Module.BusinessObjects.RoadDataModel" dataBaseShemaInfo="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" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" createdInVersion="20.1.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="20.1.4.0" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="782eca90-e78f-4519-8e55-3027057b2eb5">
+      <externalPersistentType Id="91e81f09-cd0f-4d29-89ee-8b46e713efd0" name="xMap.Persistent.BaseImpl.XPSTGeometry" nameSpace="xMap.Persistent.BaseImpl" virtualName="XPSTGeometry" assemblyName="C:\Users\GIsidori\Source\repos\xMap\xMap.Persistent.Base\bin\Debug\xMap.Persistent.Base.dll" deferredDeletion="False" optimisticLocking="False" hasDefaultConstructor="true" constructorParameterType="Session" hasSessionSpecifiedConstructor="false">
+        <fields>
+          <generalXpObjectHasFields Id="d6af4e67-10b7-4e0f-bb0a-930dbc357ab9">
+            <externalPersistentTypeField Id="b9dec588-9943-4c07-be23-db12a1aca756" name="OID" virtualColumnType="Int32" key="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="704b9387-97ed-4713-8bfd-cdfffa853c9c">
+            <externalPersistentTypeField Id="01875ae3-f082-4b87-b57f-28380f12d3a4" name="Shape" virtualColumnType="SqlGeometry" />
+          </generalXpObjectHasFields>
+        </fields>
+      </externalPersistentType>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="ee9c60cd-4acc-4208-8976-e8c5b4052d30">
+      <xpObject Id="fb34530b-fcfc-42cd-b16a-08d3e18d85bd" name="Arco" baseClass="xMap.Persistent.BaseImpl.XPSTGeometry" userFileName="Arco" designerFileName="Arco.Designer" className="Arco" virtualBaseClass="xMap.Persistent.BaseImpl.XPSTGeometry" virtualName="Arco">
+        <fields>
+          <generalXpObjectHasFields Id="fd836651-6278-436e-a486-1d9db228c75e">
+            <field Id="a369bec9-2abc-457b-9970-1ad27d816540" name="Percorso" columnType="Single" virtualColumnType="Percorso" logicalType="Percorso" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="057a0fc7-5003-4f66-90ea-837b9f62a346">
+            <field Id="6efd2707-6089-49e5-b58b-eec18cffa7a3" name="TipoElementoStradale" columnType="TimeSpan" virtualColumnType="TipoElementoStradale" logicalType="TipoElementoStradale" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="966f6f8c-d65c-45bd-818f-0fd50193bdd3">
+            <field Id="09b8b6b0-f6db-4f33-bfb1-54dbbb1e3e74" name="ConfineAmministrativo" columnType="TimeSpan" virtualColumnType="TipoConfineAmministrativo" logicalType="TipoConfineAmministrativo" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="319450a5-368d-446b-8302-f5824b111163">
+            <field Id="6ee6d31d-d088-4348-94be-6fc4cf32183d" name="TipoCarreggiata" columnType="TimeSpan" virtualColumnType="TipoCarreggiata" logicalType="TipoCarreggiata" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="06a0347a-6e2d-4106-aa48-dc76f99835d8">
+            <field Id="81389125-05c6-44b1-8b8d-ec4e09447890" name="Lunghezza" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8fd2ec3a-80eb-4c60-9493-a7a1ec7dce7c">
+            <field Id="98232a73-c830-4dea-8c8d-dc3e81a6f81e" name="Stato" columnType="Single" virtualColumnType="TipoStato" logicalType="TipoStato" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fba66f2d-5d63-45e1-978c-4007a57488c2">
+            <field Id="fca83df8-bffe-4d9a-ac23-e80d3be33005" name="Fonte" columnType="TimeSpan" virtualColumnType="TipoFonte" logicalType="TipoFonte" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="312a72ec-8fa6-428d-b107-ae2a60a920f0">
+            <field Id="2904124e-5001-4e85-8b9d-e6a8939f1a23" name="LivelloGrafo" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e21662b8-984c-43b3-8b27-51960e1b34f8">
+            <field Id="7b410b7a-3d29-4511-8ab9-a8efe6322dd3" name="StatoGrafo" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="b9a3e869-1c73-41f5-9947-3b7fc0377024">
+            <externalPersistentTypeMoniker Id="91e81f09-cd0f-4d29-89ee-8b46e713efd0" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="8e5691c4-093e-45c9-8fb8-83625a40fc50">
+      <xpObject Id="7666aec1-fcfc-4f6d-b527-0b024b8c46d2" name="Percorso" baseClass="xMap.Persistent.BaseImpl.XPSTGeometry" userFileName="Percorso" designerFileName="Percorso.Designer" className="Percorso" virtualBaseClass="xMap.Persistent.BaseImpl.XPSTGeometry" virtualName="Percorso">
+        <fields>
+          <generalXpObjectHasFields Id="9aadab7d-9318-4ff4-82d5-25ceb0e155f6">
+            <field Id="cf56fd86-02b5-4046-86e2-45e98897cc24" name="Sigla" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4ee78f22-2456-4315-8e39-99ccb4c1d63d">
+            <field Id="abe069eb-95ea-4455-9b8f-93edfbc2134c" name="Denominazione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4dcc7b49-1b8b-4311-83fd-9c327e3772c7">
+            <field Id="162f0faa-5aa7-4bf3-b8cb-6bfe35e18630" name="ClassificaFunzionale" columnType="TimeSpan" virtualColumnType="TipoClassificaFunzionale" logicalType="TipoClassificaFunzionale" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3130be7a-a343-4c43-85c6-fa223e5d0c44">
+            <field Id="cb3ed31c-ccc3-4f41-b177-8e8f0dd30bc0" name="Numero" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6ce6b425-eefd-4448-bf33-e7a9627653af">
+            <field Id="31d8f8bb-27f4-4b05-914c-b57faebecb76" name="Asse" columnType="TimeSpan" virtualColumnType="TipoAsse" logicalType="TipoAsse" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="57a88621-1f5e-4b66-a6b9-83fbd84e98cf">
+            <field Id="8141bc91-0c23-49eb-9edd-ddd84f87bcff" name="TipoAmministrazione" columnType="TimeSpan" virtualColumnType="TipoAmministrazione" logicalType="TipoAmministrazione" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="60527a88-7463-426c-b659-a91413cc1e93">
+            <field Id="d384d7e9-14da-4fe2-a144-1cfcb72f5b03" name="Tronco" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="d8bf3f6b-7f78-4c2f-affb-7f35ad9358f3">
+            <externalPersistentTypeMoniker Id="91e81f09-cd0f-4d29-89ee-8b46e713efd0" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="b0acc5d3-23c8-4a7f-9cbe-981de0db2483">
+      <xpObject Id="7b36fe6d-0001-4ce4-aebf-0a632a2c3b97" name="TipoStato" baseClass="XPCustomObject" userFileName="StatoArco" designerFileName="StatoArco.Designer" className="TipoStato" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoStato">
+        <fields>
+          <generalXpObjectHasFields Id="3e4c9a52-3b86-4145-93ec-0f3ae4e53161">
+            <field Id="a455fd2f-596a-453d-8234-3b64e5247ea9" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a30c0a3f-cdd6-4d07-a77b-7c8740939807">
+            <field Id="ddc3567c-60a5-4141-802d-04c1cdfb5875" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="896ee5c8-7e85-4d82-aeca-6f961e755e56">
+      <xpObject Id="6595c981-bce9-467a-90f3-04dbf5b33ab2" name="TipoElementoStradale" baseClass="XPCustomObject" userFileName="TipoElementoStradale" designerFileName="TipoElementoStradale.Designer" className="TipoElementoStradale" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoElementoStradale">
+        <fields>
+          <generalXpObjectHasFields Id="a2fe7ba5-c19c-4ec1-a194-135e635039aa">
+            <field Id="df69afe5-1e19-4d8f-a41b-121195e0eb09" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="19ceb029-8f29-4185-8afa-17aea28e7e00">
+            <field Id="1ddf8502-f47a-4d18-8de9-f6e09e43c4af" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="8e96f94e-9a1c-4312-8b0c-4c0906371641">
+      <xpObject Id="96e5847e-c4e4-4d42-8fa2-9414ee8f8dbc" name="TipoConfineAmministrativo" baseClass="XPCustomObject" userFileName="TipoConfineAmministrativo" designerFileName="TipoConfineAmministrativo.Designer" className="TipoConfineAmministrativo" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoConfineAmministrativo">
+        <fields>
+          <generalXpObjectHasFields Id="59e456ae-b963-4a5e-8272-6c1a4fe34201">
+            <field Id="1ddc5243-27a4-4d5c-9a12-1fc1ae3088ec" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ba6e6875-edb4-41b3-8866-fe231c006547">
+            <field Id="02fe7325-fa69-4814-a605-02bd66640639" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="9947717b-31e6-4b3a-a83b-6171cb7f65d5">
+      <xpObject Id="56b41cea-1676-48ec-93f7-d4912fbe73af" name="TipoCarreggiata" baseClass="XPCustomObject" userFileName="TipoCarreggiata" designerFileName="TipoCarreggiata.Designer" className="TipoCarreggiata" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoCarreggiata">
+        <fields>
+          <generalXpObjectHasFields Id="31a685a2-27fb-4c47-b734-9d7a40284c82">
+            <field Id="1e0531a0-0ae7-4144-a870-cc8004374441" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f1e7eb46-dd1b-4d06-bcb7-f57aec8bcbfc">
+            <field Id="44acf051-ea1d-426d-b6f2-62ec5b9b97a3" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="5233ccef-edb1-40f3-bd3c-3a05f33b8128">
+      <xpObject Id="dd30ee8f-203c-4083-ad6b-83b3c1557318" name="TipoFonte" baseClass="XPCustomObject" userFileName="TipoFonte" designerFileName="TipoFonte.Designer" className="TipoFonte" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoFonte">
+        <fields>
+          <generalXpObjectHasFields Id="e09095d4-5588-46d8-bead-5e6d19121de4">
+            <field Id="038a887c-0dbe-44d8-a5a6-fd301d719944" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3927a281-1161-4f78-af63-bbcb4e4385bf">
+            <field Id="3d336ce5-c57b-4cdd-8e86-efcd7c2f6cd5" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="ea600622-bb8e-4935-94aa-4f0f42486206">
+      <xpObject Id="2238ad91-8fb3-4a1c-94bc-add72e49d484" name="TipoClassificaFunzionale" baseClass="XPCustomObject" userFileName="TipoClassificaFunzionale" designerFileName="TipoClassificaFunzionale.Designer" className="TipoClassificaFunzionale" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoClassificaFunzionale">
+        <fields>
+          <generalXpObjectHasFields Id="b3405e53-e5e4-4dd5-9827-ac621c35e28a">
+            <field Id="fb5abc2c-ad78-445d-aa23-a2660d9aa96a" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9dc6f966-4285-4554-a53d-2003c289b11e">
+            <field Id="163e00af-33a7-44d2-8edc-f6f1f2dca1ff" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="61949702-ba12-4139-a9df-083aedfd2a21">
+      <xpObject Id="32d92c8c-5f98-436d-b5d9-c08dd513e023" name="TipoAmministrazione" baseClass="XPCustomObject" userFileName="TipoAmministrazione" designerFileName="TipoAmministrazione.Designer" className="TipoAmministrazione" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoAmministrazione">
+        <fields>
+          <generalXpObjectHasFields Id="eec9977e-153e-44db-b415-4ddab807936f">
+            <field Id="46990633-f10a-4802-8405-084eabc12a6b" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="978feb0d-f746-4f84-980f-711fa8fb3371">
+            <field Id="a395bc53-f142-4fd4-a36c-8420510d49ef" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="1f568359-7606-421e-9480-3eea547016ff">
+      <xpObject Id="202bd8a2-b8f0-40d4-b212-9f68bfad8244" name="TipoAsse" baseClass="XPCustomObject" userFileName="TipoAsse" designerFileName="TipoAsse.Designer" className="TipoAsse" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoAsse">
+        <fields>
+          <generalXpObjectHasFields Id="82b7bf6a-9519-4fa9-a140-114585a0706e">
+            <field Id="e1a49f96-604a-4e40-a9df-238731633215" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7d21c0d0-9814-4060-99e6-bb4e1153d5d4">
+            <field Id="273f46b5-9745-4c7a-89d7-986b487a4d18" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="955c0297-80f4-4413-83bb-d7eb52a3f768">
+      <xpObject Id="05c054d4-3554-4555-ae99-2b1ef2c360b3" name="Cippo" baseClass="xMap.Persistent.BaseImpl.XPSTGeometry" userFileName="Cippo" designerFileName="Cippo.Designer" className="Cippo" virtualBaseClass="xMap.Persistent.BaseImpl.XPSTGeometry" virtualName="Cippo">
+        <fields>
+          <generalXpObjectHasFields Id="fc7a2169-d4d6-4a29-9ec4-793fd2866fb2">
+            <field Id="cc52bb07-269a-451a-967c-a312c0b6a19b" name="Percorso" virtualColumnType="Percorso" logicalType="Percorso" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="95cdda30-5770-4386-8ffb-3c7e92c3163d">
+            <field Id="ef261ef3-2c37-4e5a-8ca2-9fa80faf29a4" name="Misura" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c1681d12-26a9-4483-b468-fb5b699bfc47">
+            <field Id="52b2206f-11d9-48e2-be49-b84e84154cb2" name="TipoCippo" columnType="TimeSpan" virtualColumnType="TipoCippo" logicalType="TipoCippo" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="ed3ef47e-5a7e-418d-9655-265583e44336">
+            <externalPersistentTypeMoniker Id="91e81f09-cd0f-4d29-89ee-8b46e713efd0" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="7c412106-eb6d-4c57-8ccf-dccf4410eb08">
+      <xpObject Id="5bce6cf3-df3a-4b61-b579-fd83748d9c8a" name="TipoCippo" baseClass="XPCustomObject" userFileName="TipoCippo" designerFileName="TipoCippo.Designer" className="TipoCippo" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoCippo">
+        <fields>
+          <generalXpObjectHasFields Id="823c982a-8f82-4565-b0c8-5657a181f35c">
+            <field Id="655e7517-8643-489a-8490-259b67aeca23" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="11b14d62-d480-4806-9313-f861f31e37e7">
+            <field Id="0058223a-cedf-41db-8346-366e715e9bb2" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="3917818f-0af5-4ae6-bf95-0affaba6c0aa">
+      <xpObject Id="bd5faf76-b102-423f-8809-c81740bdd279" name="Evento" baseClass="XPObject" userFileName="Evento" designerFileName="Evento.Designer" className="Evento" nonPersistent="true" virtualName="Evento">
+        <fields>
+          <generalXpObjectHasFields Id="a717beee-1699-4919-ae6c-b999de04bc11">
+            <field Id="69b4e2ec-910f-4edd-9ee0-3fb691293415" name="Nome" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3bf34c52-5834-4819-8cf7-22851bee3711">
+            <field Id="760a2f84-4f7b-4696-a069-17beb9ef21a5" name="Percorso" virtualColumnType="Percorso" logicalType="Percorso" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6ec5ed47-393e-46e1-bb45-d0d0b766468c">
+            <field Id="a47b235d-bd52-4dfd-b1ff-90056b657758" name="From_M" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="84410ff2-0839-41dd-a0d0-c852479f0a37">
+            <field Id="a25b7ae5-5744-4877-9e90-2f22211baf5f" name="To_M" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="51edcc79-c337-4b78-9238-1a7d249a9efa">
+            <field Id="d8669e11-6e78-429d-aec1-3f69dfaa5b74" name="Tipo" columnType="TimeSpan" virtualColumnType="TipoEvento" logicalType="TipoEvento" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="5a5893dd-06a7-4f54-a29c-292c8dd13b01">
+      <xpObject Id="af1635af-1e21-4e3b-87f9-98640024032a" name="TipoEvento" baseClass="XPCustomObject" userFileName="TipoEvento" designerFileName="TipoEvento.Designer" className="TipoEvento" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoEvento">
+        <fields>
+          <generalXpObjectHasFields Id="03b22a24-21a3-4800-a810-28621c99fa7e">
+            <field Id="f73a2718-01ac-4bb2-865c-e9a6a275b738" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0a099b76-a3c1-496a-a999-33ae88c5c5f6">
+            <field Id="185ae9ef-3055-4c3c-a285-fa7ccbacde10" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="bf16ced1-f579-48b4-810d-c0b73182b32d">
+      <xpObject Id="8ac45d13-c83d-4806-995d-3d946b21dafd" name="PonteViadottoTombino" baseClass="Evento" userFileName="PonteViadotto" designerFileName="PonteViadotto.Designer" className="PonteViadottoTombino" virtualBaseClass="Evento" virtualName="PonteViadottoTombino">
+        <fields>
+          <generalXpObjectHasFields Id="77e899aa-8acf-4b12-841b-11d8f8a94465">
+            <field Id="690404fd-e212-4256-8a22-cbcafe6cd1e2" name="Classificazione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c22eb613-58bf-4845-9ce5-7ef4935beb66">
+            <field Id="9557d9c9-2673-452e-95cc-eadb89227b36" name="TipoImpalcato" columnType="TimeSpan" virtualColumnType="TipoImpalcato" logicalType="TipoImpalcato" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b6ab3de7-134a-42cc-b999-49bb377b40ee">
+            <field Id="21b4d710-07e3-482f-9f13-6c2d1c60b8b7" name="TipoSpalle" virtualColumnType="TipoSpalle" logicalType="TipoSpalle" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="520d5d3b-d7e4-4344-a0e3-58dba5d1d122">
+            <field Id="960b6edd-2ffa-4151-bb94-ada4192a22c5" name="NumeroCampate" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c7da7b5b-4f88-458b-bac6-595fda631005">
+            <field Id="08a0be91-abe0-4bea-890a-47dbd98a16c9" name="LunghMaxCampata" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="775fef51-e3e5-4faf-b3c8-988984a9c44e">
+            <field Id="ba434d91-42ef-4efe-9cc1-2756d5335bec" name="DataIspezione" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="001cd7cc-163a-4f88-8060-44a8455d2ea5">
+            <field Id="2955e2be-a1bd-4bbd-9f4c-66dbf0bdec77" name="Note" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dca5015d-f3d8-4514-9428-d51331b70789">
+            <field Id="2b33fa7c-3e73-469b-b8f5-1878a9f2da7d" name="Proprietà" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="20581b28-f712-4857-b7f5-d20206431073">
+            <field Id="fe8afa52-80a7-4c9b-875f-c5c820230c7c" name="ElementoAttraversato" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2d1a76a6-482e-41a8-bf03-08076ab09318">
+            <field Id="1ef03ea2-d769-4be6-bfa0-3ff56e828e0c" name="CodiceARS" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="69d7e1f3-623e-44cc-aac4-4436f256c3a8">
+            <xpObjectMoniker Id="bd5faf76-b102-423f-8809-c81740bdd279" />
+          </inheritance>
+        </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="70c286c6-9ce4-498c-a380-2f97f418c7e8">
+      <xpObject Id="2cfe7010-8fd7-44a1-ac91-5f6a788806fa" name="TipoImpalcato" baseClass="XPCustomObject" userFileName="TipoImpalcato" designerFileName="TipoImpalcato.Designer" className="TipoImpalcato" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoImpalcato">
+        <fields>
+          <generalXpObjectHasFields Id="e1766c01-ae28-4ba0-832c-b1f6095a4d78">
+            <field Id="5e3acb54-77a1-4846-8151-b3e379438cb9" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="54f1c1f7-9216-4d79-b199-d38b3fad6051">
+            <field Id="624029f7-cf72-492f-a24a-337c2760c707" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="980f37f4-8d71-4e2a-989a-4142051a854a">
+      <xpObject Id="1eedaaab-0db5-4c1d-8cef-64fe897ec8fc" name="TipoSpalle" baseClass="XPCustomObject" userFileName="TipoSpalle" designerFileName="TipoSpalle.Designer" className="TipoSpalle" virtualBaseClass="XPCustomObject" deferredDeletion="False" optimisticLocking="False" virtualName="TipoSpalle">
+        <fields>
+          <generalXpObjectHasFields Id="02e94119-933d-43c1-876e-12a8292286da">
+            <field Id="acce08e8-31d9-47b2-8b70-3c7f4b430a44" name="Codice" key="true" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5115c824-fa1d-4fa6-825c-10b6e8efff5f">
+            <field Id="a3e6f686-f3ab-457d-b293-ceba3e48f952" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>
