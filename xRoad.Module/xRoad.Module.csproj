@@ -7,8 +7,8 @@
     <ProjectGuid>{501AC9BB-7724-40CE-BDEF-038C2F4865E6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>xRoad.Module.Module</RootNamespace>
-    <AssemblyName>xRoad.Module.Module</AssemblyName>
+    <RootNamespace>xRoad.Module</RootNamespace>
+    <AssemblyName>xRoad.Module</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -78,9 +78,17 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\Arco.Designer.cs">
       <DependentUpon>Arco.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Atto.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Atto.Designer.cs">
+      <DependentUpon>Atto.cs</DependentUpon>
+    </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\BaseTipo.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\BaseTipo.Designer.cs">
       <DependentUpon>BaseTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\CentroAbitato.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\CentroAbitato.Designer.cs">
+      <DependentUpon>CentroAbitato.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\Cippo.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\Cippo.Designer.cs">
@@ -90,17 +98,29 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\Evento.Designer.cs">
       <DependentUpon>Evento.cs</DependentUpon>
     </Compile>
-    <Compile Include="BusinessObjects\RoadDataModelCode\Percorso.cs" />
-    <Compile Include="BusinessObjects\RoadDataModelCode\Percorso.Designer.cs">
-      <DependentUpon>Percorso.cs</DependentUpon>
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaEvento.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaEvento.Designer.cs">
+      <DependentUpon>GeometriaEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteVelocità.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteVelocità.Designer.cs">
+      <DependentUpon>LimiteVelocità.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\PonteViadotto.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\PonteViadotto.Designer.cs">
       <DependentUpon>PonteViadotto.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\PosizioneEvento.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\PosizioneEvento.Designer.cs">
+      <DependentUpon>PosizioneEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\StatoArco.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\StatoArco.Designer.cs">
       <DependentUpon>StatoArco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Strada.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Strada.Designer.cs">
+      <DependentUpon>Strada.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoAmministrazione.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoAmministrazione.Designer.cs">
@@ -109,6 +129,10 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoAsse.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoAsse.Designer.cs">
       <DependentUpon>TipoAsse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAtto.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAtto.Designer.cs">
+      <DependentUpon>TipoAtto.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoCarreggiata.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoCarreggiata.Designer.cs">
@@ -130,10 +154,6 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoStradale.Designer.cs">
       <DependentUpon>TipoElementoStradale.cs</DependentUpon>
     </Compile>
-    <Compile Include="BusinessObjects\RoadDataModelCode\TipoEvento.cs" />
-    <Compile Include="BusinessObjects\RoadDataModelCode\TipoEvento.Designer.cs">
-      <DependentUpon>TipoEvento.cs</DependentUpon>
-    </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoFonte.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoFonte.Designer.cs">
       <DependentUpon>TipoFonte.cs</DependentUpon>
@@ -147,16 +167,17 @@
       <DependentUpon>TipoSpalle.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseUpdate\Updater.cs" />
-    <Compile Include="Module.cs">
+    <Compile Include="xRoadModule.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Module.Designer.cs">
-      <DependentUpon>Module.cs</DependentUpon>
+    <Compile Include="xRoadModule.Designer.cs">
+      <DependentUpon>xRoadModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BusinessObjects\ReadMe.txt" />

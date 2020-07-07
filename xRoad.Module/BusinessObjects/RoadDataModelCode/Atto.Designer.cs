@@ -16,23 +16,26 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [OptimisticLocking(false)]
-    [DeferredDeletion(false)]
-    [Persistent(@"TIPOFONTE")]
-    public partial class TipoFonte : XPCustomObject
+    [Persistent(@"ATTO")]
+    public partial class Atto : XPObject
     {
-        string fCodice;
-        [Key]
-        public string Codice
+        TipoAtto fTipo;
+        public TipoAtto Tipo
         {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
+            get { return fTipo; }
+            set { SetPropertyValue<TipoAtto>(nameof(Tipo), ref fTipo, value); }
         }
-        string fDescrizione;
-        public string Descrizione
+        DateTime fData;
+        public DateTime Data
         {
-            get { return fDescrizione; }
-            set { SetPropertyValue<string>(nameof(Descrizione), ref fDescrizione, value); }
+            get { return fData; }
+            set { SetPropertyValue<DateTime>(nameof(Data), ref fData, value); }
+        }
+        string fNumero;
+        public string Numero
+        {
+            get { return fNumero; }
+            set { SetPropertyValue<string>(nameof(Numero), ref fNumero, value); }
         }
     }
 

@@ -13,16 +13,18 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
+    [Persistent(@"ARCO")]
     public partial class Arco : xMap.Persistent.BaseImpl.XPSTGeometry
     {
-        Percorso fPercorso;
-        public Percorso Percorso
+        Strada fStrada;
+        [Association(@"ArcoReferencesStrada"), NoForeignKey]
+        public Strada Strada
         {
-            get { return fPercorso; }
-            set { SetPropertyValue<Percorso>(nameof(Percorso), ref fPercorso, value); }
+            get { return fStrada; }
+            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
         TipoElementoStradale fTipoElementoStradale;
         public TipoElementoStradale TipoElementoStradale
@@ -71,6 +73,18 @@ namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
         {
             get { return fStatoGrafo; }
             set { SetPropertyValue<string>(nameof(StatoGrafo), ref fStatoGrafo, value); }
+        }
+        DateTime? fDataInizio;
+        public DateTime? DataInizio
+        {
+            get { return fDataInizio; }
+            set { SetPropertyValue<DateTime?>(nameof(DataInizio), ref fDataInizio, value); }
+        }
+        DateTime? fDataFine;
+        public DateTime? DataFine
+        {
+            get { return fDataFine; }
+            set { SetPropertyValue<DateTime?>(nameof(DataFine), ref fDataFine, value); }
         }
     }
 

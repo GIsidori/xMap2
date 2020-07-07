@@ -1,5 +1,5 @@
 ﻿namespace xRoad.Module {
-	partial class ModuleModule {
+	partial class xRoadModule {
 		/// <summary> 
 		/// Required designer variable.
 		/// </summary>

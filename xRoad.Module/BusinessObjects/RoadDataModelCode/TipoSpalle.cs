@@ -5,12 +5,12 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class TipoSpalle
+    public partial class TipoSpalla
     {
-        public TipoSpalle(Session session) : base(session) { }
+        public TipoSpalla(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

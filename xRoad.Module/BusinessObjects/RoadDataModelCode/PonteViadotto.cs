@@ -5,12 +5,12 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class PonteViadottoTombino
+    public partial class Ponte
     {
-        public PonteViadottoTombino(Session session) : base(session) { }
+        public Ponte(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

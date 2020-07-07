@@ -16,10 +16,8 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [OptimisticLocking(false)]
-    [DeferredDeletion(false)]
-    [Persistent(@"TIPOFONTE")]
-    public partial class TipoFonte : XPCustomObject
+    [Persistent(@"TIPOATTO")]
+    public partial class TipoAtto : XPCustomObject
     {
         string fCodice;
         [Key]

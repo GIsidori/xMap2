@@ -16,23 +16,21 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [OptimisticLocking(false)]
-    [DeferredDeletion(false)]
-    [Persistent(@"TIPOFONTE")]
-    public partial class TipoFonte : XPCustomObject
+    [Persistent(@"CENTROABITATO")]
+    [DevExpress.Persistent.Base.DefaultClassOptions]
+    public partial class CentroAbitato : Evento
     {
-        string fCodice;
-        [Key]
-        public string Codice
+        string fNome;
+        public string Nome
         {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
+            get { return fNome; }
+            set { SetPropertyValue<string>(nameof(Nome), ref fNome, value); }
         }
-        string fDescrizione;
-        public string Descrizione
+        string fCodiceIstat;
+        public string CodiceIstat
         {
-            get { return fDescrizione; }
-            set { SetPropertyValue<string>(nameof(Descrizione), ref fDescrizione, value); }
+            get { return fCodiceIstat; }
+            set { SetPropertyValue<string>(nameof(CodiceIstat), ref fCodiceIstat, value); }
         }
     }
 

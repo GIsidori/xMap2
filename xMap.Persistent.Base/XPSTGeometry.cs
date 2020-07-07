@@ -27,14 +27,13 @@ namespace xMap.Persistent.BaseImpl
 
         }
 
-        private int oid;
-        [Key(autoGenerate:true),Persistent("OBJECTID")]
-        public int OID
+        private Int64 oid;
+        [Key(autoGenerate:false),Persistent("OBJECTID"),DbType("NUMBER(*,0)")]
+        public Int64 OID
         {
             get => oid;
-            set => SetPropertyValue<int>(nameof(OID), ref oid, value);
+            set => SetPropertyValue<Int64>(nameof(OID), ref oid, value);
         }
-
 
         private SqlGeometry shape;
         [DbType("SDE.ST_GEOMETRY"), Persistent("SHAPE")]

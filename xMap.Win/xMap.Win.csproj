@@ -237,6 +237,10 @@
       <Name>xMap.Module</Name>
       <Private>True</Private>
     </ProjectReference>
+    <ProjectReference Include="..\xRoad.Module\xRoad.Module.csproj">
+      <Project>{501ac9bb-7724-40ce-bdef-038c2f4865e6}</Project>
+      <Name>xRoad.Module</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,11 +13,12 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [OptimisticLocking(false)]
     [DeferredDeletion(false)]
+    [Persistent(@"TIPOELEMENTOSTRADALE")]
     public partial class TipoElementoStradale : XPCustomObject
     {
         string fCodice;

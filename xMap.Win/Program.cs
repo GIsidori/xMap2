@@ -44,7 +44,7 @@ namespace xMap.Win {
             }
 #endif
             try {
-                winApplication.Setup();
+                winApplication.Setup("xMap",winApplication.ConnectionString,ConfigurationManager.AppSettings["Modules"].Split(';'));
                 winApplication.Start();
             }
             catch(Exception e) {

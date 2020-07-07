@@ -16,24 +16,9 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [OptimisticLocking(false)]
-    [DeferredDeletion(false)]
-    [Persistent(@"TIPOFONTE")]
-    public partial class TipoFonte : XPCustomObject
+    [Persistent(@"GEOMETRIAEVENTO")]
+    public partial class GeometriaEvento : xMap.Persistent.BaseImpl.XPSTGeometry
     {
-        string fCodice;
-        [Key]
-        public string Codice
-        {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
-        string fDescrizione;
-        public string Descrizione
-        {
-            get { return fDescrizione; }
-            set { SetPropertyValue<string>(nameof(Descrizione), ref fDescrizione, value); }
-        }
     }
 
 }

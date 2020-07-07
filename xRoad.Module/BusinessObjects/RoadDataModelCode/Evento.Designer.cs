@@ -13,41 +13,61 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [NonPersistent]
+    [Persistent(@"EVENTO")]
     public partial class Evento : XPObject
     {
-        string fNome;
-        public string Nome
+        Strada fStrada;
+        [NoForeignKey]
+        public Strada Strada
         {
-            get { return fNome; }
-            set { SetPropertyValue<string>(nameof(Nome), ref fNome, value); }
+            get { return fStrada; }
+            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
-        Percorso fPercorso;
-        public Percorso Percorso
+        double fInizio;
+        public double Inizio
         {
-            get { return fPercorso; }
-            set { SetPropertyValue<Percorso>(nameof(Percorso), ref fPercorso, value); }
+            get { return fInizio; }
+            set { SetPropertyValue<double>(nameof(Inizio), ref fInizio, value); }
         }
-        double fFrom_M;
-        public double From_M
+        double fFine;
+        public double Fine
         {
-            get { return fFrom_M; }
-            set { SetPropertyValue<double>(nameof(From_M), ref fFrom_M, value); }
+            get { return fFine; }
+            set { SetPropertyValue<double>(nameof(Fine), ref fFine, value); }
         }
-        double fTo_M;
-        public double To_M
+        double fOffset;
+        public double Offset
         {
-            get { return fTo_M; }
-            set { SetPropertyValue<double>(nameof(To_M), ref fTo_M, value); }
+            get { return fOffset; }
+            set { SetPropertyValue<double>(nameof(Offset), ref fOffset, value); }
         }
-        TipoEvento fTipo;
-        public TipoEvento Tipo
+        PosizioneEvento fPosizione;
+        public PosizioneEvento Posizione
         {
-            get { return fTipo; }
-            set { SetPropertyValue<TipoEvento>(nameof(Tipo), ref fTipo, value); }
+            get { return fPosizione; }
+            set { SetPropertyValue<PosizioneEvento>(nameof(Posizione), ref fPosizione, value); }
+        }
+        DateTime? fDataInizio;
+        public DateTime? DataInizio
+        {
+            get { return fDataInizio; }
+            set { SetPropertyValue<DateTime?>(nameof(DataInizio), ref fDataInizio, value); }
+        }
+        DateTime? fDataFine;
+        public DateTime? DataFine
+        {
+            get { return fDataFine; }
+            set { SetPropertyValue<DateTime?>(nameof(DataFine), ref fDataFine, value); }
+        }
+        Atto fAtto;
+        [Aggregated]
+        public Atto Atto
+        {
+            get { return fAtto; }
+            set { SetPropertyValue<Atto>(nameof(Atto), ref fAtto, value); }
         }
     }
 

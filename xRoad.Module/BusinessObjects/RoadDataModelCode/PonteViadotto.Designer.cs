@@ -13,11 +13,19 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class PonteViadottoTombino : Evento
+    [Persistent(@"PONTE")]
+    [DevExpress.Persistent.Base.DefaultClassOptions]
+    public partial class Ponte : Evento
     {
+        string fNome;
+        public string Nome
+        {
+            get { return fNome; }
+            set { SetPropertyValue<string>(nameof(Nome), ref fNome, value); }
+        }
         string fClassificazione;
         public string Classificazione
         {
@@ -30,11 +38,11 @@ namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
             get { return fTipoImpalcato; }
             set { SetPropertyValue<TipoImpalcato>(nameof(TipoImpalcato), ref fTipoImpalcato, value); }
         }
-        TipoSpalle fTipoSpalle;
-        public TipoSpalle TipoSpalle
+        TipoSpalla fTipoSpalla;
+        public TipoSpalla TipoSpalla
         {
-            get { return fTipoSpalle; }
-            set { SetPropertyValue<TipoSpalle>(nameof(TipoSpalle), ref fTipoSpalle, value); }
+            get { return fTipoSpalla; }
+            set { SetPropertyValue<TipoSpalla>(nameof(TipoSpalla), ref fTipoSpalla, value); }
         }
         int fNumeroCampate;
         public int NumeroCampate

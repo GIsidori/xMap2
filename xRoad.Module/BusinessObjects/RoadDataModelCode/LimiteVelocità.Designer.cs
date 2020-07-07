@@ -13,25 +13,18 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [OptimisticLocking(false)]
-    [DeferredDeletion(false)]
-    public partial class TipoEvento : XPCustomObject
+    [Persistent(@"LIMITEVELOCITA")]
+    [DevExpress.Persistent.Base.DefaultClassOptions]
+    public partial class LimiteVelocità : Evento
     {
-        string fCodice;
-        [Key]
-        public string Codice
+        int fLimite;
+        public int Limite
         {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
-        string fDescrizione;
-        public string Descrizione
-        {
-            get { return fDescrizione; }
-            set { SetPropertyValue<string>(nameof(Descrizione), ref fDescrizione, value); }
+            get { return fLimite; }
+            set { SetPropertyValue<int>(nameof(Limite), ref fLimite, value); }
         }
     }
 

@@ -13,10 +13,11 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Percorso : xMap.Persistent.BaseImpl.XPSTGeometry
+    [Persistent(@"STRADA")]
+    public partial class Strada : xMap.Persistent.BaseImpl.XPSTGeometry
     {
         string fSigla;
         public string Sigla
@@ -60,6 +61,10 @@ namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
             get { return fTronco; }
             set { SetPropertyValue<string>(nameof(Tronco), ref fTronco, value); }
         }
+        [Association(@"ArcoReferencesStrada"), Aggregated]
+        public XPCollection<Arco> Archi { get { return GetCollection<Arco>(nameof(Archi)); } }
+        [Association(@"CippoReferencesStrada"), Aggregated]
+        public XPCollection<Cippo> Cippi { get { return GetCollection<Cippo>(nameof(Cippi)); } }
     }
 
 }

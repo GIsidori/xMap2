@@ -13,16 +13,18 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
+    [Persistent(@"CIPPO")]
     public partial class Cippo : xMap.Persistent.BaseImpl.XPSTGeometry
     {
-        Percorso fPercorso;
-        public Percorso Percorso
+        Strada fStrada;
+        [Association(@"CippoReferencesStrada"), NoForeignKey]
+        public Strada Strada
         {
-            get { return fPercorso; }
-            set { SetPropertyValue<Percorso>(nameof(Percorso), ref fPercorso, value); }
+            get { return fStrada; }
+            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
         double fMisura;
         public double Misura

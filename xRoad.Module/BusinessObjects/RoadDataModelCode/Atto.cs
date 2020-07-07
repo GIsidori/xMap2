@@ -5,13 +5,12 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Percorso
+    public partial class Atto
     {
-        public Percorso() : base() { }
-        public Percorso(Session session) : base(session) { }
+        public Atto(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

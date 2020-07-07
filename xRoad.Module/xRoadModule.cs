@@ -15,11 +15,17 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
+using System.Drawing;
+using DevExpress.Utils;
 
 namespace xRoad.Module {
     // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ModuleBase.
-    public sealed partial class ModuleModule : ModuleBase {
-        public ModuleModule() {
+    [Description("Classi per la gestione di un grafo stradale.")]
+    [DXToolboxItem(true)]
+    //[ToolboxBitmap(typeof(xRoadModule), "Resources.Toolbox_Module_Validation.ico")]
+    [ToolboxTabName("xProv: XAF Modules")]
+    public sealed partial class xRoadModule : ModuleBase {
+        public xRoadModule() {
             InitializeComponent();
 			BaseObject.OidInitializationMode = OidInitializationMode.AfterConstruction;
         }
