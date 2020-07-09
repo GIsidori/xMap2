@@ -59,6 +59,9 @@
     <Reference Include="DevExpress.Xpo.v20.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -74,6 +77,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\Enums.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\Arco.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\Arco.Designer.cs">
       <DependentUpon>Arco.cs</DependentUpon>
@@ -81,10 +85,6 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\Atto.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\Atto.Designer.cs">
       <DependentUpon>Atto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BusinessObjects\RoadDataModelCode\BaseTipo.cs" />
-    <Compile Include="BusinessObjects\RoadDataModelCode\BaseTipo.Designer.cs">
-      <DependentUpon>BaseTipo.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\CentroAbitato.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\CentroAbitato.Designer.cs">
@@ -98,9 +98,45 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\Evento.Designer.cs">
       <DependentUpon>Evento.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoLineare.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoLineare.Designer.cs">
+      <DependentUpon>EventoLineare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoPuntuale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoPuntuale.Designer.cs">
+      <DependentUpon>EventoPuntuale.cs</DependentUpon>
+    </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaEvento.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaEvento.Designer.cs">
       <DependentUpon>GeometriaEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaEventoLineare.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaEventoLineare.Designer.cs">
+      <DependentUpon>GeometriaEventoLineare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaEventoPuntuale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaEventoPuntuale.Designer.cs">
+      <DependentUpon>GeometriaEventoPuntuale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Ispezione.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Ispezione.Designer.cs">
+      <DependentUpon>Ispezione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimitePortata.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimitePortata.Designer.cs">
+      <DependentUpon>LimitePortata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimitePrefabbricato.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimitePrefabbricato.Designer.cs">
+      <DependentUpon>LimitePrefabbricato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteSagoma.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteSagoma.Designer.cs">
+      <DependentUpon>LimiteSagoma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteTransito.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteTransito.Designer.cs">
+      <DependentUpon>LimiteTransito.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\LimiteVelocità.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\LimiteVelocità.Designer.cs">
@@ -113,6 +149,10 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\PosizioneEvento.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\PosizioneEvento.Designer.cs">
       <DependentUpon>PosizioneEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\PosizioneSpaziale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\PosizioneSpaziale.Designer.cs">
+      <DependentUpon>PosizioneSpaziale.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\StatoArco.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\StatoArco.Designer.cs">
@@ -150,6 +190,10 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoConfineAmministrativo.Designer.cs">
       <DependentUpon>TipoConfineAmministrativo.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoAttraversato.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoAttraversato.Designer.cs">
+      <DependentUpon>TipoElementoAttraversato.cs</DependentUpon>
+    </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoStradale.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoStradale.Designer.cs">
       <DependentUpon>TipoElementoStradale.cs</DependentUpon>
@@ -158,15 +202,36 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\TipoFonte.Designer.cs">
       <DependentUpon>TipoFonte.cs</DependentUpon>
     </Compile>
-    <Compile Include="BusinessObjects\RoadDataModelCode\TipoImpalcato.cs" />
-    <Compile Include="BusinessObjects\RoadDataModelCode\TipoImpalcato.Designer.cs">
-      <DependentUpon>TipoImpalcato.cs</DependentUpon>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoMateriale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoMateriale.Designer.cs">
+      <DependentUpon>TipoMateriale.cs</DependentUpon>
     </Compile>
-    <Compile Include="BusinessObjects\RoadDataModelCode\TipoSpalle.cs" />
-    <Compile Include="BusinessObjects\RoadDataModelCode\TipoSpalle.Designer.cs">
-      <DependentUpon>TipoSpalle.cs</DependentUpon>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoOpera.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoOpera.Designer.cs">
+      <DependentUpon>TipoOpera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoPortata.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoPortata.Designer.cs">
+      <DependentUpon>TipoPortata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoPrefabbricato.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoPrefabbricato.Designer.cs">
+      <DependentUpon>TipoPrefabbricato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoSagoma.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoSagoma.Designer.cs">
+      <DependentUpon>TipoSagoma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoTransito.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoTransito.Designer.cs">
+      <DependentUpon>TipoTransito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Tombino.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Tombino.Designer.cs">
+      <DependentUpon>Tombino.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="xRoadModule.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -188,7 +253,23 @@
     <None Include="Controllers\ReadMe.txt" />
     <None Include="DatabaseUpdate\ReadMe.txt" />
     <None Include="Images\ReadMe.txt" />
+    <None Include="packages.config" />
     <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

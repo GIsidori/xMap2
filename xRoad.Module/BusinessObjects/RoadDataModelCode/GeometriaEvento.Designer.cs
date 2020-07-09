@@ -16,7 +16,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [Persistent(@"GEOMETRIAEVENTO")]
+    [NonPersistent]
     public partial class GeometriaEvento : xMap.Persistent.BaseImpl.XPSTGeometry
     {
     }

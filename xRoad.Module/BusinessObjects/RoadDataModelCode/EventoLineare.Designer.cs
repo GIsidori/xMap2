@@ -13,25 +13,11 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [NonPersistent]
-    public partial class BaseTipo : XPCustomObject
+    public partial class EventoLineare : Evento
     {
-        string fCodice;
-        [Key]
-        public string Codice
-        {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
-        string fDescrizione;
-        public string Descrizione
-        {
-            get { return fDescrizione; }
-            set { SetPropertyValue<string>(nameof(Descrizione), ref fDescrizione, value); }
-        }
     }
 
 }

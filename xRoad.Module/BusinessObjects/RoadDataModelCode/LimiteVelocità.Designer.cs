@@ -17,8 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"LIMITEVELOCITA")]
-    [DevExpress.Persistent.Base.DefaultClassOptions]
-    public partial class LimiteVelocità : Evento
+    public partial class LimiteVelocità : EventoLineare
     {
         int fLimite;
         public int Limite

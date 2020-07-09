@@ -17,8 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"PONTE")]
-    [DevExpress.Persistent.Base.DefaultClassOptions]
-    public partial class Ponte : Evento
+    public partial class Ponte : EventoLineare
     {
         string fNome;
         public string Nome
@@ -26,23 +25,29 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fNome; }
             set { SetPropertyValue<string>(nameof(Nome), ref fNome, value); }
         }
-        string fClassificazione;
-        public string Classificazione
+        string fTipoOpera;
+        public string TipoOpera
         {
-            get { return fClassificazione; }
-            set { SetPropertyValue<string>(nameof(Classificazione), ref fClassificazione, value); }
+            get { return fTipoOpera; }
+            set { SetPropertyValue<string>(nameof(TipoOpera), ref fTipoOpera, value); }
         }
-        TipoImpalcato fTipoImpalcato;
-        public TipoImpalcato TipoImpalcato
+        TipoMateriale fTipoImpalcato;
+        public TipoMateriale TipoImpalcato
         {
             get { return fTipoImpalcato; }
-            set { SetPropertyValue<TipoImpalcato>(nameof(TipoImpalcato), ref fTipoImpalcato, value); }
+            set { SetPropertyValue<TipoMateriale>(nameof(TipoImpalcato), ref fTipoImpalcato, value); }
         }
-        TipoSpalla fTipoSpalla;
-        public TipoSpalla TipoSpalla
+        TipoMateriale fTipoSpalla;
+        public TipoMateriale TipoSpalla
         {
             get { return fTipoSpalla; }
-            set { SetPropertyValue<TipoSpalla>(nameof(TipoSpalla), ref fTipoSpalla, value); }
+            set { SetPropertyValue<TipoMateriale>(nameof(TipoSpalla), ref fTipoSpalla, value); }
+        }
+        TipoMateriale fTipoPila;
+        public TipoMateriale TipoPila
+        {
+            get { return fTipoPila; }
+            set { SetPropertyValue<TipoMateriale>(nameof(TipoPila), ref fTipoPila, value); }
         }
         int fNumeroCampate;
         public int NumeroCampate
@@ -50,17 +55,35 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fNumeroCampate; }
             set { SetPropertyValue<int>(nameof(NumeroCampate), ref fNumeroCampate, value); }
         }
+        double fLunghezza;
+        public double Lunghezza
+        {
+            get { return fLunghezza; }
+            set { SetPropertyValue<double>(nameof(Lunghezza), ref fLunghezza, value); }
+        }
+        double fLarghezza;
+        public double Larghezza
+        {
+            get { return fLarghezza; }
+            set { SetPropertyValue<double>(nameof(Larghezza), ref fLarghezza, value); }
+        }
         double fLunghMaxCampata;
         public double LunghMaxCampata
         {
             get { return fLunghMaxCampata; }
             set { SetPropertyValue<double>(nameof(LunghMaxCampata), ref fLunghMaxCampata, value); }
         }
-        DateTime fDataIspezione;
-        public DateTime DataIspezione
+        bool fIlluminazione;
+        public bool Illuminazione
         {
-            get { return fDataIspezione; }
-            set { SetPropertyValue<DateTime>(nameof(DataIspezione), ref fDataIspezione, value); }
+            get { return fIlluminazione; }
+            set { SetPropertyValue<bool>(nameof(Illuminazione), ref fIlluminazione, value); }
+        }
+        TipoElementoAttraversato fTipoElementoAttraversato;
+        public TipoElementoAttraversato TipoElementoAttraversato
+        {
+            get { return fTipoElementoAttraversato; }
+            set { SetPropertyValue<TipoElementoAttraversato>(nameof(TipoElementoAttraversato), ref fTipoElementoAttraversato, value); }
         }
         string fNote;
         public string Note
@@ -68,17 +91,11 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fNote; }
             set { SetPropertyValue<string>(nameof(Note), ref fNote, value); }
         }
-        string fProprietà;
-        public string Proprietà
+        StatoManutenzione fStatoManutenzione;
+        public StatoManutenzione StatoManutenzione
         {
-            get { return fProprietà; }
-            set { SetPropertyValue<string>(nameof(Proprietà), ref fProprietà, value); }
-        }
-        string fElementoAttraversato;
-        public string ElementoAttraversato
-        {
-            get { return fElementoAttraversato; }
-            set { SetPropertyValue<string>(nameof(ElementoAttraversato), ref fElementoAttraversato, value); }
+            get { return fStatoManutenzione; }
+            set { SetPropertyValue<StatoManutenzione>(nameof(StatoManutenzione), ref fStatoManutenzione, value); }
         }
         string fCodiceARS;
         public string CodiceARS
@@ -86,6 +103,27 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fCodiceARS; }
             set { SetPropertyValue<string>(nameof(CodiceARS), ref fCodiceARS, value); }
         }
+        double fPortata;
+        public double Portata
+        {
+            get { return fPortata; }
+            set { SetPropertyValue<double>(nameof(Portata), ref fPortata, value); }
+        }
+        Atto fOrdinanzaLimitePeso;
+        [Aggregated]
+        public Atto OrdinanzaLimitePeso
+        {
+            get { return fOrdinanzaLimitePeso; }
+            set { SetPropertyValue<Atto>(nameof(OrdinanzaLimitePeso), ref fOrdinanzaLimitePeso, value); }
+        }
+        double fLimitePeso;
+        public double LimitePeso
+        {
+            get { return fLimitePeso; }
+            set { SetPropertyValue<double>(nameof(LimitePeso), ref fLimitePeso, value); }
+        }
+        [Association(@"IspezioniReferencesPonte"), Aggregated]
+        public XPCollection<Ispezione> Ispezioni { get { return GetCollection<Ispezione>(nameof(Ispezioni)); } }
     }
 
 }

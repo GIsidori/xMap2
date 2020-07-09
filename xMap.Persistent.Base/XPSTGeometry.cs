@@ -28,7 +28,7 @@ namespace xMap.Persistent.BaseImpl
         }
 
         private Int64 oid;
-        [Key(autoGenerate:false),Persistent("OBJECTID"),DbType("NUMBER(*,0)")]
+        [Key(autoGenerate: false), Persistent("OBJECTID"), DbType("NUMBER(*,0)")]
         public Int64 OID
         {
             get => oid;

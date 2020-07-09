@@ -46,6 +46,15 @@ namespace xMap.Xpo.DB
             return base.FormatColumn(columnName, tableAlias);
         }
 
+        public override string ComposeSafeColumnName(string columnName)
+        {
+            return base.ComposeSafeColumnName(columnName.ToUpper());
+        }
+
+        public override string ComposeSafeTableName(string tableName)
+        {
+            return base.ComposeSafeTableName(tableName.ToUpper());
+        }
 
         public override string FormatInsert(string tableName, string fields, string values)
         {
@@ -61,7 +70,6 @@ namespace xMap.Xpo.DB
             var format = base.FormatInsert(tableName, fields, string.Join(",", vals));
             return format;
         }
-
         static Dictionary<string, long> tableRegistry = new System.Collections.Generic.Dictionary<string, long>();
         protected override string GetSeqName(string tableName)
         {

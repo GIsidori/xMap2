@@ -18,16 +18,8 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
     [OptimisticLocking(false)]
     [DeferredDeletion(false)]
-    [Persistent(@"TIPOCONFINEAMMINISTRATIVO")]
-    public partial class TipoConfineAmministrativo : XPCustomObject
+    public partial class TipoConfineAmministrativo : xMap.Persistent.Base.ShortIntegerCodedDomain
     {
-        string fCodice;
-        [Key]
-        public string Codice
-        {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
         string fDescrizione;
         public string Descrizione
         {

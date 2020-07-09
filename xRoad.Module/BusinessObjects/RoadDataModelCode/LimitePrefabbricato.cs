@@ -8,9 +8,9 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class TipoImpalcato
+    public partial class LimitePrefabbricato
     {
-        public TipoImpalcato(Session session) : base(session) { }
+        public LimitePrefabbricato(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

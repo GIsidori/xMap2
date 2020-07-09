@@ -92,14 +92,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessObjects\DataModelCode\Owner.cs" />
-    <Compile Include="BusinessObjects\DataModelCode\Owner.Designer.cs">
-      <DependentUpon>Owner.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BusinessObjects\DataModelCode\Parcel.cs" />
-    <Compile Include="BusinessObjects\DataModelCode\Parcel.Designer.cs">
-      <DependentUpon>Parcel.cs</DependentUpon>
-    </Compile>
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
@@ -118,10 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="BusinessObjects\DataModel.xpo" />
-    <None Include="BusinessObjects\DataModel.xpo.diagram">
-      <DependentUpon>DataModel.xpo</DependentUpon>
-    </None>
     <None Include="BusinessObjects\ReadMe.txt" />
     <None Include="Controllers\ReadMe.txt" />
     <None Include="DatabaseUpdate\ReadMe.txt" />

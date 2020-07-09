@@ -16,16 +16,13 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [Persistent(@"POSIZIONEVENTO")]
-    public partial class PosizioneEvento : XPCustomObject
+    /// <summary>
+    /// Posizione dell'evento rispetto alla strada (dx, sx, C, ..)
+    /// </summary>
+    [OptimisticLocking(false)]
+    [DeferredDeletion(false)]
+    public partial class PosizioneEvento : xMap.Persistent.Base.StringCodedDomain
     {
-        string fCodice;
-        [Key]
-        public string Codice
-        {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
         string fDescrizione;
         public string Descrizione
         {

@@ -18,16 +18,8 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
     [OptimisticLocking(false)]
     [DeferredDeletion(false)]
-    [Persistent(@"TIPOFONTE")]
-    public partial class TipoFonte : XPCustomObject
+    public partial class TipoFonte : xMap.Persistent.Base.ShortIntegerCodedDomain
     {
-        string fCodice;
-        [Key]
-        public string Codice
-        {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
         string fDescrizione;
         public string Descrizione
         {

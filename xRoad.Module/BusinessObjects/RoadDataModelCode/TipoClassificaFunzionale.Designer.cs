@@ -18,16 +18,8 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
     [OptimisticLocking(false)]
     [DeferredDeletion(false)]
-    [Persistent(@"TIPOCLASSIFICAFUNZIONALE")]
-    public partial class TipoClassificaFunzionale : XPCustomObject
+    public partial class TipoClassificaFunzionale : xMap.Persistent.Base.StringCodedDomain
     {
-        string fCodice;
-        [Key]
-        public string Codice
-        {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
         string fDescrizione;
         public string Descrizione
         {

@@ -62,17 +62,11 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fFonte; }
             set { SetPropertyValue<TipoFonte>(nameof(Fonte), ref fFonte, value); }
         }
-        string fLivelloGrafo;
-        public string LivelloGrafo
+        LivelloGrafo fLivelloGrafo;
+        public LivelloGrafo LivelloGrafo
         {
             get { return fLivelloGrafo; }
-            set { SetPropertyValue<string>(nameof(LivelloGrafo), ref fLivelloGrafo, value); }
-        }
-        string fStatoGrafo;
-        public string StatoGrafo
-        {
-            get { return fStatoGrafo; }
-            set { SetPropertyValue<string>(nameof(StatoGrafo), ref fStatoGrafo, value); }
+            set { SetPropertyValue<LivelloGrafo>(nameof(LivelloGrafo), ref fLivelloGrafo, value); }
         }
         DateTime? fDataInizio;
         public DateTime? DataInizio

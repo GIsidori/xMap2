@@ -74,7 +74,8 @@ namespace xMap.Module.Win.Editors.DevEx
             {
                 foreach (IXPGeometry item in bindingList)
                 {
-                    storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.STSrid));
+                    if (item.Shape != null)
+                        storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.STSrid));
                 }
             }
 

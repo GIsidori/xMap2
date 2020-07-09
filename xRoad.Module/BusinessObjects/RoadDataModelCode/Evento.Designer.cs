@@ -16,7 +16,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [Persistent(@"EVENTO")]
+    [NonPersistent]
     public partial class Evento : XPObject
     {
         Strada fStrada;
@@ -25,30 +25,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         {
             get { return fStrada; }
             set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
-        }
-        double fInizio;
-        public double Inizio
-        {
-            get { return fInizio; }
-            set { SetPropertyValue<double>(nameof(Inizio), ref fInizio, value); }
-        }
-        double fFine;
-        public double Fine
-        {
-            get { return fFine; }
-            set { SetPropertyValue<double>(nameof(Fine), ref fFine, value); }
-        }
-        double fOffset;
-        public double Offset
-        {
-            get { return fOffset; }
-            set { SetPropertyValue<double>(nameof(Offset), ref fOffset, value); }
-        }
-        PosizioneEvento fPosizione;
-        public PosizioneEvento Posizione
-        {
-            get { return fPosizione; }
-            set { SetPropertyValue<PosizioneEvento>(nameof(Posizione), ref fPosizione, value); }
         }
         DateTime? fDataInizio;
         public DateTime? DataInizio
@@ -68,6 +44,43 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         {
             get { return fAtto; }
             set { SetPropertyValue<Atto>(nameof(Atto), ref fAtto, value); }
+        }
+        PosizioneEvento fPosizione;
+        public PosizioneEvento Posizione
+        {
+            get { return fPosizione; }
+            set { SetPropertyValue<PosizioneEvento>(nameof(Posizione), ref fPosizione, value); }
+        }
+        double fInizio;
+        public double Inizio
+        {
+            get { return fInizio; }
+            set { SetPropertyValue<double>(nameof(Inizio), ref fInizio, value); }
+        }
+        double fFine;
+        public double Fine
+        {
+            get { return fFine; }
+            set { SetPropertyValue<double>(nameof(Fine), ref fFine, value); }
+        }
+        double fOffset;
+        public double Offset
+        {
+            get { return fOffset; }
+            set { SetPropertyValue<double>(nameof(Offset), ref fOffset, value); }
+        }
+        TipoLocalizzazione fTipoLocalizzazione;
+        public TipoLocalizzazione TipoLocalizzazione
+        {
+            get { return fTipoLocalizzazione; }
+            set { SetPropertyValue<TipoLocalizzazione>(nameof(TipoLocalizzazione), ref fTipoLocalizzazione, value); }
+        }
+        PosizioneSpaziale fPosizioneSpaziale;
+        [Aggregated]
+        public PosizioneSpaziale PosizioneSpaziale
+        {
+            get { return fPosizioneSpaziale; }
+            set { SetPropertyValue<PosizioneSpaziale>(nameof(PosizioneSpaziale), ref fPosizioneSpaziale, value); }
         }
     }
 

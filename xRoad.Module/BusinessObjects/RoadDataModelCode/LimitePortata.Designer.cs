@@ -16,23 +16,13 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [OptimisticLocking(false)]
-    [DeferredDeletion(false)]
-    [Persistent(@"TIPOIMPALCATO")]
-    public partial class TipoImpalcato : XPCustomObject
+    public partial class LimitePortata : EventoLineare
     {
-        string fCodice;
-        [Key]
-        public string Codice
+        TipoPortata fPortata;
+        public TipoPortata Portata
         {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
-        string fDescrizione;
-        public string Descrizione
-        {
-            get { return fDescrizione; }
-            set { SetPropertyValue<string>(nameof(Descrizione), ref fDescrizione, value); }
+            get { return fPortata; }
+            set { SetPropertyValue<TipoPortata>(nameof(Portata), ref fPortata, value); }
         }
     }
 

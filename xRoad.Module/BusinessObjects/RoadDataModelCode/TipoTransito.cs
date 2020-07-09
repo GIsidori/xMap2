@@ -8,9 +8,9 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class TipoSpalla
+    public partial class TipoTransito
     {
-        public TipoSpalla(Session session) : base(session) { }
+        public TipoTransito(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

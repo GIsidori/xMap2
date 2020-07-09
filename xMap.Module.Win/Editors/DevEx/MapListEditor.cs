@@ -14,7 +14,7 @@ using xMap.Persistent.BaseImpl;
 
 namespace xMap.Module.Win.Editors.DevEx
 {
-    [ListEditor(typeof(IXPGeometry), true)]
+    [ListEditor(typeof(IXPGeometry), false)]
     public class MapListEditor : ListEditor
     {
         private MapControl mapControl;

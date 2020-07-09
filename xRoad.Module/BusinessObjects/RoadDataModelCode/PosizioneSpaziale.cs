@@ -5,12 +5,12 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-namespace xRoad.Module.Module.BusinessObjects.RoadDataModel
+namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class BaseTipo
+    public partial class PosizioneSpaziale
     {
-        public BaseTipo(Session session) : base(session) { }
+        public PosizioneSpaziale(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

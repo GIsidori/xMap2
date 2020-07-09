@@ -16,16 +16,10 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [Persistent(@"TIPOATTO")]
-    public partial class TipoAtto : XPCustomObject
+    [OptimisticLocking(false)]
+    [DeferredDeletion(false)]
+    public partial class TipoAtto : xMap.Persistent.Base.ShortIntegerCodedDomain
     {
-        string fCodice;
-        [Key]
-        public string Codice
-        {
-            get { return fCodice; }
-            set { SetPropertyValue<string>(nameof(Codice), ref fCodice, value); }
-        }
         string fDescrizione;
         public string Descrizione
         {

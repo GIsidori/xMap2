@@ -17,8 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"CENTROABITATO")]
-    [DevExpress.Persistent.Base.DefaultClassOptions]
-    public partial class CentroAbitato : Evento
+    public partial class CentroAbitato : EventoLineare
     {
         string fNome;
         public string Nome
