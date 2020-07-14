@@ -61,6 +61,8 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fTronco; }
             set { SetPropertyValue<string>(nameof(Tronco), ref fTronco, value); }
         }
+        [Association(@"EventoReferencesStrada")]
+        public XPCollection<Evento> Eventi { get { return GetCollection<Evento>(nameof(Eventi)); } }
         [Association(@"ArcoReferencesStrada"), Aggregated]
         public XPCollection<Arco> Archi { get { return GetCollection<Arco>(nameof(Archi)); } }
         [Association(@"CippoReferencesStrada"), Aggregated]

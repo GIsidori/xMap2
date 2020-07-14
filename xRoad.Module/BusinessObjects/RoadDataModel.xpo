@@ -28,12 +28,6 @@
           <generalXpObjectHasFields Id="312a72ec-8fa6-428d-b107-ae2a60a920f0">
             <field Id="2904124e-5001-4e85-8b9d-e6a8939f1a23" name="LivelloGrafo" virtualColumnType="LivelloGrafo" logicalType="LivelloGrafo" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="d6537a60-103c-42cb-9c5a-5be343ad4e4b">
-            <field Id="9d677e85-a11f-4efe-bbff-0397089780f1" name="DataInizio" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" isNullable="true" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="3e79fce8-0b02-4840-bd70-371e88c8fa57">
-            <field Id="200a7eec-f14d-4509-bea7-4fef3bcda8e6" name="DataFine" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" isNullable="true" />
-          </generalXpObjectHasFields>
         </fields>
         <superClass>
           <inheritance Id="195f5517-f510-4663-bce5-af25b495f35b">
@@ -68,10 +62,15 @@
           </generalXpObjectHasFields>
         </fields>
         <superClass>
-          <inheritance Id="18fbf75f-32ff-4a66-a7b4-897e32f925a8">
+          <inheritance Id="c6b0f00c-4060-4a68-a4cf-e7510141db94">
             <externalPersistentTypeMoniker Id="cab723c2-3c53-4475-b414-f16fe88b7c11" />
           </inheritance>
         </superClass>
+        <saTargets>
+          <simpleAssociation Id="5fb99adc-4384-487b-a962-46b5a9065531" sourceCollectionName="Eventi" name="EventoReferencesStrada" targetFieldName="Strada" noForeignKey="true">
+            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
+          </simpleAssociation>
+        </saTargets>
         <aggrTarget>
           <aggregation Id="5a748717-3672-40ee-a287-ab0e8a813744" sourceCollectionName="Archi" name="ArcoReferencesStrada" targetFieldName="Strada" noForeignKey="true">
             <xpObjectMoniker Id="fb34530b-fcfc-42cd-b16a-08d3e18d85bd" />
@@ -86,6 +85,9 @@
           </xpObjectHasCollectionFields>
           <xpObjectHasCollectionFields Id="5f775770-b53a-4829-9ee1-7ff3d1ce65a4">
             <collectionField Id="07b3f92d-e819-49b7-9418-4c30662e0d53" name="Cippi" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="da5dd708-c478-4c4a-aca8-ab15d03c7cfd">
+            <collectionField Id="a333737c-84d8-49d5-a3e3-298101a1feb7" name="Eventi" />
           </xpObjectHasCollectionFields>
         </collectionFields>
       </xpObject>
@@ -373,10 +375,10 @@
       </xpObject>
     </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="cc5da40c-c2a4-4aac-b5cc-6c199eaf0b43">
-      <xpObject Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" name="Evento" baseClass="XPObject" userFileName="Evento" designerFileName="Evento.Designer" className="Evento" nonPersistent="true" virtualName="Evento">
+      <xpObject Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" name="Evento" baseClass="XPObject" userFileName="Evento" designerFileName="Evento.Designer" className="Evento" virtualName="Evento">
         <fields>
           <generalXpObjectHasFields Id="f82e9bd9-015e-4c6f-8fe6-b7361581b56b">
-            <field Id="2c59c536-af87-4711-9994-435f4bfad844" name="Strada" virtualColumnType="Strada" logicalType="Strada" delayedUpdateModifiedOnly="false" customAttributes="NoForeignKey" />
+            <field Id="2c59c536-af87-4711-9994-435f4bfad844" name="Strada" virtualColumnType="Strada" logicalType="Strada" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="20666e3a-ba01-4b1f-8128-053e77126813">
             <field Id="a75a2700-bf18-4695-86ec-b8764205ffb5" name="DataInizio" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" isNullable="true" />
@@ -614,7 +616,7 @@
     <dataBaseObjectModelHasUserComments Id="8c96606d-25f4-4aa1-9ea3-575bc628734f">
       <userComment Id="18c11529-5124-468e-80df-4f216ea6027b" text="Route calibrata">
         <generalXpObjects>
-          <userCommentReferencesGeneralXpObjects Id="b1c4e16c-f4bb-4a0e-82f6-68e9d633db0b">
+          <userCommentReferencesGeneralXpObjects Id="b7b7f8a2-c95c-4862-9aeb-2f9486e80665">
             <xpObjectMoniker Id="7666aec1-fcfc-4f6d-b527-0b024b8c46d2" />
           </userCommentReferencesGeneralXpObjects>
         </generalXpObjects>

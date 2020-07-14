@@ -222,6 +222,10 @@
     <Compile Include="XafSplashScreen.Designer.cs">
       <DependentUpon>XafSplashScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="WinApplication.resx">
+      <DependentUpon>WinApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XafSplashScreen.resx">
       <DependentUpon>XafSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +240,10 @@
       <Project>{C6A8E335-36ED-4E42-9EB5-713B9ACE37EE}</Project>
       <Name>xMap.Module</Name>
       <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\xRoad.Module.Win\xRoad.Module.Win.csproj">
+      <Project>{263c1a48-d027-4dd9-b528-813dfb4c6a76}</Project>
+      <Name>xRoad.Module.Win</Name>
     </ProjectReference>
     <ProjectReference Include="..\xRoad.Module\xRoad.Module.csproj">
       <Project>{501ac9bb-7724-40ce-bdef-038c2f4865e6}</Project>

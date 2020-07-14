@@ -16,11 +16,10 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [NonPersistent]
     public partial class Evento : XPObject
     {
         Strada fStrada;
-        [NoForeignKey]
+        [Association(@"EventoReferencesStrada"), NoForeignKey]
         public Strada Strada
         {
             get { return fStrada; }

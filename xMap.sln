@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xMap.Xpo.DB", "xMap.Xpo.DB\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xRoad.Module", "xRoad.Module\xRoad.Module.csproj", "{501AC9BB-7724-40CE-BDEF-038C2F4865E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xRoad.Module.Win", "xRoad.Module.Win\xRoad.Module.Win.csproj", "{263C1A48-D027-4DD9-B528-813DFB4C6A76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,12 @@ Global
 		{501AC9BB-7724-40CE-BDEF-038C2F4865E6}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{501AC9BB-7724-40CE-BDEF-038C2F4865E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{501AC9BB-7724-40CE-BDEF-038C2F4865E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263C1A48-D027-4DD9-B528-813DFB4C6A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263C1A48-D027-4DD9-B528-813DFB4C6A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263C1A48-D027-4DD9-B528-813DFB4C6A76}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{263C1A48-D027-4DD9-B528-813DFB4C6A76}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{263C1A48-D027-4DD9-B528-813DFB4C6A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263C1A48-D027-4DD9-B528-813DFB4C6A76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

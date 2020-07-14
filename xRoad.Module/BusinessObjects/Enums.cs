@@ -10,7 +10,8 @@ namespace xRoad.Module.BusinessObjects
     {
         Odometrica,         //Progressiva chilometrica su strada
         Toponomastica,      //Via e Numero Civico
-        Coordinate          //Coordinate geografiche
+        Coordinate,         //Coordinate geografiche
+        Catasto,            //Dati catastali
     }
 
     public enum TipoCoordinata
@@ -28,7 +29,7 @@ namespace xRoad.Module.BusinessObjects
 
     public enum LivelloGrafo
     {
-        Livello1,
-        Livello2
+        Livello1 = 1,
+        Livello2 = 2
     }
 }
