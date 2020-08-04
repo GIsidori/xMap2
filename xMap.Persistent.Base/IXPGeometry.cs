@@ -1,4 +1,4 @@
-﻿using Microsoft.SqlServer.Types;
+﻿using NetTopologySuite.Geometries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace xMap.Persistent.Base
 {
     public interface IXPGeometry:DevExpress.Xpo.IXPObject
     {
-        SqlGeometry Shape { get; set; }
+        Geometry Shape { get; set; }
     }
 
 }

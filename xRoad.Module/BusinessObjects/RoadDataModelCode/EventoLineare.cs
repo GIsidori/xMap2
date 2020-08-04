@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reflection;
 using DevExpress.Persistent.Base;
 using xMap.Persistent.Base;
-using Microsoft.SqlServer.Types;
+using NetTopologySuite.Geometries;
 
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
@@ -48,7 +48,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             }
         }
 
-        public SqlGeometry Shape { get => geometria?.Shape; set { if (geometria != null) geometria.Shape = value; } }
+        public Geometry Shape { get => geometria?.Shape; set { if (geometria != null) geometria.Shape = value; } }
 
     }
 

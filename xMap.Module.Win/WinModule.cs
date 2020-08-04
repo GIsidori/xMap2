@@ -30,8 +30,8 @@ namespace xMap.Module.Win {
         }
         public xMapWindowsFormsModule() {
             InitializeComponent();
-            if (!this.DesignMode)
-                SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
+            //if (!this.DesignMode)
+            //    SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
         }
         public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) {
             return ModuleUpdater.EmptyModuleUpdaters;

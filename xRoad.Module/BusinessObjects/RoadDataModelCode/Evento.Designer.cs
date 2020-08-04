@@ -16,7 +16,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Evento : XPObject
+    public partial class Evento : xMap.Persistent.Base.DefaultXPObject
     {
         Strada fStrada;
         [Association(@"EventoReferencesStrada"), NoForeignKey]

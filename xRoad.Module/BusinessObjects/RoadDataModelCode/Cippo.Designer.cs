@@ -38,6 +38,13 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fTipoCippo; }
             set { SetPropertyValue<TipoCippo>(nameof(TipoCippo), ref fTipoCippo, value); }
         }
+        double fZPos;
+        [Persistent(@"Z")]
+        public double ZPos
+        {
+            get { return fZPos; }
+            set { SetPropertyValue<double>(nameof(ZPos), ref fZPos, value); }
+        }
     }
 
 }

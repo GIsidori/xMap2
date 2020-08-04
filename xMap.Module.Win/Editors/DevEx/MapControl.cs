@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraMap;
 using xMap.Persistent.Base;
 using System.Data.SqlTypes;
+using NetTopologySuite.Geometries;
+using xMap.Persistent.BaseImpl;
 
 namespace xMap.Module.Win.Editors.DevEx
 {
@@ -50,8 +52,8 @@ namespace xMap.Module.Win.Editors.DevEx
                         IXPGeometry geom = (IXPGeometry)bindingList.AddNew();
                         if (item is MapShape shp)
                         {
-                            SqlChars str = new SqlChars(new SqlString(shp.ExportToWkt()));
-                            geom.Shape = Microsoft.SqlServer.Types.SqlGeometry.STGeomFromText(str, 25832);
+                            //SqlChars str = new SqlChars(new SqlString(shp.ExportToWkt()));
+                            geom.Shape = GeometryConverter.FromWKT(shp.ExportToWkt(), 25832);
                         }
                         break;
                     case MapEditorAction.Remove:
@@ -75,7 +77,7 @@ namespace xMap.Module.Win.Editors.DevEx
                 foreach (IXPGeometry item in bindingList)
                 {
                     if (item.Shape != null)
-                        storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.STSrid));
+                        storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.SRID));
                 }
             }
 

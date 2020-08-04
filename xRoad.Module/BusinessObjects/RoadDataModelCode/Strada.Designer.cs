@@ -17,7 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"STRADA")]
-    public partial class Strada : xMap.Persistent.BaseImpl.XPSTGeometry
+    public partial class Strada : xMap.Persistent.Base.DefaultXPObject
     {
         string fSigla;
         public string Sigla

@@ -68,18 +68,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fLivelloGrafo; }
             set { SetPropertyValue<LivelloGrafo>(nameof(LivelloGrafo), ref fLivelloGrafo, value); }
         }
-        DateTime? fDataInizio;
-        public DateTime? DataInizio
-        {
-            get { return fDataInizio; }
-            set { SetPropertyValue<DateTime?>(nameof(DataInizio), ref fDataInizio, value); }
-        }
-        DateTime? fDataFine;
-        public DateTime? DataFine
-        {
-            get { return fDataFine; }
-            set { SetPropertyValue<DateTime?>(nameof(DataFine), ref fDataFine, value); }
-        }
     }
 
 }

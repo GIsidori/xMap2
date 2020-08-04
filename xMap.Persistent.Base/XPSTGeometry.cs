@@ -1,17 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.Net.Http.Headers;
 using DevExpress.Xpo;
+using DevExpress.Xpo.Helpers;
 using DevExpress.Xpo.Metadata;
-using Microsoft.SqlServer.Types;
+using NetTopologySuite.Geometries;
+using NetTopologySuite.Geometries.Implementation;
+using NetTopologySuite.IO;
 using xMap.Persistent.Base;
 
 namespace xMap.Persistent.BaseImpl
 {
+
+    //https://community.devexpress.com/blogs/oliver/archive/2017/01/16/xpo-sql-server-and-spatial-data-revisited.aspx
+
+
     [NonPersistent]
     [DeferredDeletion(false)]
     [OptimisticLocking(false)]
@@ -35,10 +39,10 @@ namespace xMap.Persistent.BaseImpl
             set => SetPropertyValue<Int64>(nameof(OID), ref oid, value);
         }
 
-        private SqlGeometry shape;
+        private Geometry shape;
         [DbType("SDE.ST_GEOMETRY"), Persistent("SHAPE")]
         [ValueConverter(typeof(GeometryConverter))]
-        public SqlGeometry Shape
+        public Geometry Shape
         {
             get => shape;
             set => SetPropertyValue(nameof(Shape), ref shape, value);
@@ -46,23 +50,100 @@ namespace xMap.Persistent.BaseImpl
 
     }
 
+
+    public abstract class CustomCoordinateSequenceFactory:CoordinateSequenceFactory
+    {
+        public override CoordinateSequence Create(Coordinate[] coordinates)
+        {
+            //return GeometryFactory.Default.CoordinateSequenceFactory.Create(coordinates);
+            return new CoordinateArraySequence(coordinates, OrdinatesUtility.OrdinatesToDimension(Ordinates));
+        }
+
+        public override CoordinateSequence Create(CoordinateSequence coordSeq)
+        {
+            return GeometryFactory.Default.CoordinateSequenceFactory.Create(coordSeq);
+        }
+
+        public override CoordinateSequence Create(int size, Ordinates ordinates)
+        {
+            return GeometryFactory.Default.CoordinateSequenceFactory.Create(size, ordinates);
+        }
+        public override CoordinateSequence Create(int size, int dimension, int measures)
+        {
+            return this.Create(size, this.Ordinates);
+        }
+
+        public new Ordinates Ordinates => Ordinates.XYM;
+
+    }
+
+    public sealed class XYZCoordinateSequenceFactory:CustomCoordinateSequenceFactory
+    {
+        public new Ordinates Ordinates => Ordinates.XYZ;
+    }
+
+    public sealed class XYMCoordinateSequenceFactory : CustomCoordinateSequenceFactory
+    {
+        public new Ordinates Ordinates => Ordinates.XYM;
+    }
+
+    public sealed class XYZMCoordinateSequenceFactory : CustomCoordinateSequenceFactory
+    {
+        public new Ordinates Ordinates => Ordinates.XYZM;
+    }
+
+
+
     public class GeometryConverter : ValueConverter
     {
+
+
+        public static Geometry FromWKT(string value,int srid=25832)
+        {
+
+            //SqlChars str = new SqlChars(new SqlString((string)value));
+
+            var wkt = (string)value;
+
+            WKTReader reader = null;
+
+            var tokens = new string(wkt.TakeWhile(c => c != '(').ToArray()).Split(' ');
+            if (tokens.Length > 0)
+            {
+                switch (tokens[1])
+                {
+                    case "M":
+                        reader = new WKTReader(new GeometryFactory(new XYMCoordinateSequenceFactory()));
+                        break;
+                    case "Z":
+                        reader = new WKTReader(new GeometryFactory(new XYZCoordinateSequenceFactory()));
+                        break;
+                    case "ZM":
+                        reader = new WKTReader(new GeometryFactory(new XYZMCoordinateSequenceFactory()));
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (reader == null)
+                reader = new WKTReader();
+            Geometry g = reader.Read((string)value);
+            g.SRID = srid;
+
+            return g;
+
+            //WKTWriter writer = WKTWriter.ForMicrosoftSqlServer();
+            //var ss = writer.Write(g);
+            //SqlChars str = new SqlChars(ss);
+            //SqlGeometry s = SqlGeometry.STGeomFromText(str, 25832);
+
+
+            //return s;
+        }
+
         public override object ConvertFromStorageType(object value)
         {
-            // We're ignoring the request to convert here, knowing that the loaded
-            // object is already the correct type because SqlClient returns it 
-            // that way.
-
-            //byte[] buff = value as byte[];
-            //SqlBytes bytes = new SqlBytes(buff);
-            //var s = SqlGeometry.STGeomFromWKB(bytes,25832);
-
-            SqlChars str = new SqlChars(new SqlString((string)value));
-            var s = SqlGeometry.STGeomFromText(str, 25832);
-
-
-            return s;
+            return GeometryConverter.FromWKT(value as string);
         }
 
         public override object ConvertToStorageType(object value)
@@ -71,15 +152,20 @@ namespace xMap.Persistent.BaseImpl
 
             // this mechanism persists the srid to SQL Server - 
             // better than using WKT because it doesn't contain srid at all
-            var sqlGeography = value as SqlGeography;
-            if (sqlGeography != null)
-                value = sqlGeography.STAsText().ToSqlString().ToString();
-            else
-            {
-                var sqlGeometry = value as SqlGeometry;
-                if (sqlGeometry != null)
-                    value = sqlGeometry.STAsText().ToSqlString().ToString();
-            }
+            var geometry = value as Geometry;
+            if (geometry != null)
+                value = geometry.AsText();
+
+            //var sqlGeography = value as SqlGeography;
+            //if (sqlGeography != null)
+            //    value = sqlGeography.STAsText().ToSqlString().ToString();
+            //else
+            //{
+            //    var sqlGeometry = value as SqlGeometry;
+            //    if (sqlGeometry != null)
+            //        value = sqlGeometry.STAsText().ToSqlString().ToString();
+            //}
+
             return value;
         }
         public override Type StorageType
