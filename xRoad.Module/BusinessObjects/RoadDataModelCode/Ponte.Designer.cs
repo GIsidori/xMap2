@@ -26,24 +26,28 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<string>(nameof(Nome), ref fNome, value); }
         }
         string fTipoOpera;
+        [NoForeignKey]
         public string TipoOpera
         {
             get { return fTipoOpera; }
             set { SetPropertyValue<string>(nameof(TipoOpera), ref fTipoOpera, value); }
         }
         TipoMateriale fTipoImpalcato;
+        [NoForeignKey]
         public TipoMateriale TipoImpalcato
         {
             get { return fTipoImpalcato; }
             set { SetPropertyValue<TipoMateriale>(nameof(TipoImpalcato), ref fTipoImpalcato, value); }
         }
         TipoMateriale fTipoSpalla;
+        [NoForeignKey]
         public TipoMateriale TipoSpalla
         {
             get { return fTipoSpalla; }
             set { SetPropertyValue<TipoMateriale>(nameof(TipoSpalla), ref fTipoSpalla, value); }
         }
         TipoMateriale fTipoPila;
+        [NoForeignKey]
         public TipoMateriale TipoPila
         {
             get { return fTipoPila; }
@@ -80,6 +84,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<bool>(nameof(Illuminazione), ref fIlluminazione, value); }
         }
         TipoElementoAttraversato fTipoElementoAttraversato;
+        [NoForeignKey]
         public TipoElementoAttraversato TipoElementoAttraversato
         {
             get { return fTipoElementoAttraversato; }
@@ -121,6 +126,13 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         {
             get { return fLimitePeso; }
             set { SetPropertyValue<double>(nameof(LimitePeso), ref fLimitePeso, value); }
+        }
+        Strada fStrada;
+        [Association(@"PonteReferencesStrada"), NoForeignKey]
+        public Strada Strada
+        {
+            get { return fStrada; }
+            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
         [Association(@"IspezioniReferencesPonte"), Aggregated]
         public XPCollection<Ispezione> Ispezioni { get { return GetCollection<Ispezione>(nameof(Ispezioni)); } }

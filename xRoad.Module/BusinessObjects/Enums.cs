@@ -29,7 +29,14 @@ namespace xRoad.Module.BusinessObjects
 
     public enum LivelloGrafo
     {
+        LivelloComune = 0,
         Livello1 = 1,
         Livello2 = 2
+    }
+
+    public enum TipoGeometriaEvento
+    {
+        Puntuale,
+        Lineare
     }
 }

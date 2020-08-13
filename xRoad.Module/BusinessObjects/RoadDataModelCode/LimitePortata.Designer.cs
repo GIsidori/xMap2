@@ -18,11 +18,18 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
     public partial class LimitePortata : EventoLineare
     {
-        TipoPortata fPortata;
-        public TipoPortata Portata
+        double fPortata;
+        public double Portata
         {
             get { return fPortata; }
-            set { SetPropertyValue<TipoPortata>(nameof(Portata), ref fPortata, value); }
+            set { SetPropertyValue<double>(nameof(Portata), ref fPortata, value); }
+        }
+        Strada fStrada;
+        [Association(@"LimitePortataReferencesStrada")]
+        public Strada Strada
+        {
+            get { return fStrada; }
+            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
     }
 

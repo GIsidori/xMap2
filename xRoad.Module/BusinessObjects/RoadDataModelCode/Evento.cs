@@ -8,13 +8,36 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public abstract partial class Evento
+    public partial class Evento
     {
         public Evento(Session session) : base(session) { }
-        public override void AfterConstruction() { base.AfterConstruction(); }
+        public override void AfterConstruction() {
+            DataInizio = System.DateTime.Now.Date;
+            base.AfterConstruction(); }
 
-        [Browsable(false),NonPersistent]
-        public abstract GeometriaEvento GeometriaEvento { get; set; }
+
+        [MemberDesignTimeVisibility(false)]
+        [Browsable(false)]
+        private string sigla;
+        public string Sigla
+        {
+            get { return sigla; }
+            set { SetPropertyValue<string>(nameof(Sigla), ref sigla, value); }
+        }
+
+        protected override void OnChanged(string propertyName, object oldValue, object newValue)
+        {
+            base.OnChanged(propertyName, oldValue, newValue);
+            switch (propertyName)
+            {
+                case nameof(Strada):
+                    Strada s = newValue as Strada;
+                    Sigla = s?.Sigla;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
 }

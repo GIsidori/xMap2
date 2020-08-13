@@ -33,6 +33,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<double>(nameof(Misura), ref fMisura, value); }
         }
         TipoCippo fTipoCippo;
+        [NoForeignKey]
         public TipoCippo TipoCippo
         {
             get { return fTipoCippo; }

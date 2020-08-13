@@ -16,6 +16,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
+    [NonPersistent]
     public partial class EventoPuntuale : Evento
     {
     }

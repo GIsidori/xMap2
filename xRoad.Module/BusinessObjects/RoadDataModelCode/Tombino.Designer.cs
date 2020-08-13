@@ -24,11 +24,18 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fNome; }
             set { SetPropertyValue<string>(nameof(Nome), ref fNome, value); }
         }
-        string fLarghezza;
-        public string Larghezza
+        double fLarghezza;
+        public double Larghezza
         {
             get { return fLarghezza; }
-            set { SetPropertyValue<string>(nameof(Larghezza), ref fLarghezza, value); }
+            set { SetPropertyValue<double>(nameof(Larghezza), ref fLarghezza, value); }
+        }
+        Strada fStrada;
+        [Association(@"TombinoReferencesStrada")]
+        public Strada Strada
+        {
+            get { return fStrada; }
+            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
     }
 

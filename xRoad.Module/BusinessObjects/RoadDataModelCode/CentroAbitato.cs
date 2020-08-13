@@ -8,9 +8,9 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class CentroAbitato
+    public partial class LimiteCentroAbitato
     {
-        public CentroAbitato(Session session) : base(session) { }
+        public LimiteCentroAbitato(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

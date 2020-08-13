@@ -25,6 +25,13 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fLimite; }
             set { SetPropertyValue<int>(nameof(Limite), ref fLimite, value); }
         }
+        Strada fStrada;
+        [Association(@"LimiteVelocitàReferencesStrada"), NoForeignKey]
+        public Strada Strada
+        {
+            get { return fStrada; }
+            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
+        }
     }
 
 }

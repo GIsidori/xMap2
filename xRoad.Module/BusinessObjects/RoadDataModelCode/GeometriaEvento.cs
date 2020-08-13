@@ -14,8 +14,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         public GeometriaEvento(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
 
-        [Browsable(false),NonPersistent]
-        public abstract Evento Evento { get; set; }
     }
 
 }

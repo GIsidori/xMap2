@@ -16,8 +16,33 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
+    [NonPersistent]
     public partial class EventoLineare : Evento
     {
+        double fXPosFinale;
+        public double XPosFinale
+        {
+            get { return fXPosFinale; }
+            set { SetPropertyValue<double>(nameof(XPosFinale), ref fXPosFinale, value); }
+        }
+        double fYPosFinale;
+        public double YPosFinale
+        {
+            get { return fYPosFinale; }
+            set { SetPropertyValue<double>(nameof(YPosFinale), ref fYPosFinale, value); }
+        }
+        double fZPosFinale;
+        public double ZPosFinale
+        {
+            get { return fZPosFinale; }
+            set { SetPropertyValue<double>(nameof(ZPosFinale), ref fZPosFinale, value); }
+        }
+        double fMPosFinale;
+        public double MPosFinale
+        {
+            get { return fMPosFinale; }
+            set { SetPropertyValue<double>(nameof(MPosFinale), ref fMPosFinale, value); }
+        }
     }
 
 }

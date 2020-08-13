@@ -27,18 +27,21 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
         TipoElementoStradale fTipoElementoStradale;
+        [NoForeignKey]
         public TipoElementoStradale TipoElementoStradale
         {
             get { return fTipoElementoStradale; }
             set { SetPropertyValue<TipoElementoStradale>(nameof(TipoElementoStradale), ref fTipoElementoStradale, value); }
         }
         TipoConfineAmministrativo fConfineAmministrativo;
+        [NoForeignKey]
         public TipoConfineAmministrativo ConfineAmministrativo
         {
             get { return fConfineAmministrativo; }
             set { SetPropertyValue<TipoConfineAmministrativo>(nameof(ConfineAmministrativo), ref fConfineAmministrativo, value); }
         }
         TipoCarreggiata fTipoCarreggiata;
+        [NoForeignKey]
         public TipoCarreggiata TipoCarreggiata
         {
             get { return fTipoCarreggiata; }
@@ -51,12 +54,14 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<double>(nameof(Lunghezza), ref fLunghezza, value); }
         }
         TipoStato fStato;
+        [NoForeignKey]
         public TipoStato Stato
         {
             get { return fStato; }
             set { SetPropertyValue<TipoStato>(nameof(Stato), ref fStato, value); }
         }
         TipoFonte fFonte;
+        [NoForeignKey]
         public TipoFonte Fonte
         {
             get { return fFonte; }

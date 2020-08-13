@@ -74,6 +74,7 @@ namespace xMap.Xpo.DB
         protected override string GetSeqName(string tableName)
         {
             long regid;
+            tableName = ComposeSafeTableName(tableName);
             if (tableRegistry.ContainsKey(tableName) == false)
             {
                 object value = this.GetScalar(new Query($"SELECT REGISTRATION_ID FROM SDE.TABLE_REGISTRY WHERE Table_Name = '{tableName}' AND OWNER = (SELECT sys_context('USERENV','CURRENT_SCHEMA') from dual) "));

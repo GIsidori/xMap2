@@ -29,6 +29,7 @@ namespace xMap.Win {
             }
             Tracing.Initialize();
             xMapWindowsFormsApplication winApplication = new xMapWindowsFormsApplication();
+            //winApplication.DatabaseUpdateMode = DatabaseUpdateMode.Never;
             winApplication.GetSecurityStrategy().RegisterXPOAdapterProviders();
             if(ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {
                 winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
@@ -39,9 +40,9 @@ namespace xMap.Win {
             }
 #endif
 #if DEBUG
-            if(System.Diagnostics.Debugger.IsAttached && winApplication.CheckCompatibilityType == CheckCompatibilityType.DatabaseSchema) {
-                winApplication.DatabaseUpdateMode = DatabaseUpdateMode.UpdateDatabaseAlways;
-            }
+            //if(System.Diagnostics.Debugger.IsAttached && winApplication.CheckCompatibilityType == CheckCompatibilityType.DatabaseSchema) {
+            //    winApplication.DatabaseUpdateMode = DatabaseUpdateMode.UpdateDatabaseAlways;
+            //}
 #endif
             try {
                 winApplication.Setup("xMap",winApplication.ConnectionString,ConfigurationManager.AppSettings["Modules"].Split(';'));

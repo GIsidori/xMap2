@@ -16,8 +16,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [Persistent(@"CENTROABITATO")]
-    public partial class CentroAbitato : EventoLineare
+    public partial class LimiteCentroAbitato : EventoLineare
     {
         string fNome;
         public string Nome
@@ -30,6 +29,13 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         {
             get { return fCodiceIstat; }
             set { SetPropertyValue<string>(nameof(CodiceIstat), ref fCodiceIstat, value); }
+        }
+        Strada fStrada;
+        [Association(@"LimiteCentroAbitatoReferencesStrada")]
+        public Strada Strada
+        {
+            get { return fStrada; }
+            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
     }
 

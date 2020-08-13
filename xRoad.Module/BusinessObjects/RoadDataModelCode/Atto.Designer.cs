@@ -16,7 +16,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Atto : xMap.Persistent.Base.DefaultXPObject
+    public partial class Atto : XPObject
     {
         TipoAtto fTipo;
         public TipoAtto Tipo

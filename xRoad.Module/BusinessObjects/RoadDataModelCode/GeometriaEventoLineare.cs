@@ -18,10 +18,9 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         public GeometriaEventoLineare(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
 
-        public override Evento Evento { get => EventoLineare; set => EventoLineare = (EventoLineare)value; }
-
         private EventoLineare evento;
 
+        [NoForeignKey]
         public EventoLineare EventoLineare
         {
             get => evento;
@@ -36,11 +35,11 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
                 if (IsLoading)
                     return;
 
-                if (prevEv != null && prevEv.GeometriaEvento == this)
-                    prevEv.GeometriaEvento = null;
+                if (prevEv != null && prevEv.GeometriaEventoLineare == this)
+                    prevEv.GeometriaEventoLineare = null;
 
                 if (evento != null)
-                    evento.GeometriaEvento = this;
+                    evento.GeometriaEventoLineare = this;
 
                 OnChanged(nameof(Evento));
 

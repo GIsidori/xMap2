@@ -16,15 +16,9 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
+    [NonPersistent]
     public partial class Evento : xMap.Persistent.Base.DefaultXPObject
     {
-        Strada fStrada;
-        [Association(@"EventoReferencesStrada"), NoForeignKey]
-        public Strada Strada
-        {
-            get { return fStrada; }
-            set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
-        }
         DateTime? fDataInizio;
         public DateTime? DataInizio
         {
@@ -44,42 +38,47 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fAtto; }
             set { SetPropertyValue<Atto>(nameof(Atto), ref fAtto, value); }
         }
-        PosizioneEvento fPosizione;
-        public PosizioneEvento Posizione
-        {
-            get { return fPosizione; }
-            set { SetPropertyValue<PosizioneEvento>(nameof(Posizione), ref fPosizione, value); }
-        }
-        double fInizio;
-        public double Inizio
-        {
-            get { return fInizio; }
-            set { SetPropertyValue<double>(nameof(Inizio), ref fInizio, value); }
-        }
-        double fFine;
-        public double Fine
-        {
-            get { return fFine; }
-            set { SetPropertyValue<double>(nameof(Fine), ref fFine, value); }
-        }
-        double fOffset;
-        public double Offset
-        {
-            get { return fOffset; }
-            set { SetPropertyValue<double>(nameof(Offset), ref fOffset, value); }
-        }
         TipoLocalizzazione fTipoLocalizzazione;
         public TipoLocalizzazione TipoLocalizzazione
         {
             get { return fTipoLocalizzazione; }
             set { SetPropertyValue<TipoLocalizzazione>(nameof(TipoLocalizzazione), ref fTipoLocalizzazione, value); }
         }
-        PosizioneSpaziale fPosizioneSpaziale;
-        [Aggregated]
-        public PosizioneSpaziale PosizioneSpaziale
+        TipoCoordinata fTipoCoordinata;
+        public TipoCoordinata TipoCoordinata
         {
-            get { return fPosizioneSpaziale; }
-            set { SetPropertyValue<PosizioneSpaziale>(nameof(PosizioneSpaziale), ref fPosizioneSpaziale, value); }
+            get { return fTipoCoordinata; }
+            set { SetPropertyValue<TipoCoordinata>(nameof(TipoCoordinata), ref fTipoCoordinata, value); }
+        }
+        double fXPos;
+        public double XPos
+        {
+            get { return fXPos; }
+            set { SetPropertyValue<double>(nameof(XPos), ref fXPos, value); }
+        }
+        double fYPos;
+        public double YPos
+        {
+            get { return fYPos; }
+            set { SetPropertyValue<double>(nameof(YPos), ref fYPos, value); }
+        }
+        double fZPos;
+        public double ZPos
+        {
+            get { return fZPos; }
+            set { SetPropertyValue<double>(nameof(ZPos), ref fZPos, value); }
+        }
+        double fMPos;
+        public double MPos
+        {
+            get { return fMPos; }
+            set { SetPropertyValue<double>(nameof(MPos), ref fMPos, value); }
+        }
+        TipoGeometriaEvento fTipoGeometria;
+        public TipoGeometriaEvento TipoGeometria
+        {
+            get { return fTipoGeometria; }
+            set { SetPropertyValue<TipoGeometriaEvento>(nameof(TipoGeometria), ref fTipoGeometria, value); }
         }
     }
 

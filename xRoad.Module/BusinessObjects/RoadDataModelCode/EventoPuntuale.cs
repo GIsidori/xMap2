@@ -18,8 +18,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
         private GeometriaEventoPuntuale geometria;
 
-        public override GeometriaEvento GeometriaEvento { get => GeometriaEventoPuntuale; set => GeometriaEventoPuntuale = (GeometriaEventoPuntuale)value; }
-
         [Aggregated, ExpandObjectMembers(ExpandObjectMembers.Always), NoForeignKey]
         public GeometriaEventoPuntuale GeometriaEventoPuntuale
         {
@@ -35,11 +33,11 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
                 if (IsLoading)
                     return;
 
-                if (prevGeom != null && prevGeom.Evento == this)
-                    prevGeom.Evento = null;
+                if (prevGeom != null && prevGeom.EventoPuntuale == this)
+                    prevGeom.EventoPuntuale = null;
 
                 if (geometria != null)
-                    geometria.Evento = this;
+                    geometria.EventoPuntuale = this;
 
                 OnChanged(nameof(GeometriaEvento));
 

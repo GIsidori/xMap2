@@ -20,6 +20,7 @@ namespace xMap.Win {
 			DevExpress.ExpressApp.Utils.ImageLoader.Instance.UseSvgImages = true;
 			DetailView.UseAsyncLoading = true;
             DevExpress.ExpressApp.Security.SecurityStrategy.EnableSecurityForActions = true;
+
         }
         private void InitializeDefaults() {
             LinkNewObjectToParentImmediately = false;

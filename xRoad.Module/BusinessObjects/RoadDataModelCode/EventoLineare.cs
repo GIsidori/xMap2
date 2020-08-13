@@ -19,9 +19,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
         private GeometriaEventoLineare geometria;
 
-        public override GeometriaEvento GeometriaEvento { get => GeometriaEventoLineare; set => GeometriaEventoLineare = (GeometriaEventoLineare) value; }
-
-
         [Aggregated, ExpandObjectMembers(ExpandObjectMembers.Always), NoForeignKey]
         public GeometriaEventoLineare GeometriaEventoLineare
         {
@@ -37,11 +34,11 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
                 if (IsLoading)
                     return;
 
-                if (prevGeom != null && prevGeom.Evento == this)
-                    prevGeom.Evento = null;
+                if (prevGeom != null && prevGeom.EventoLineare == this)
+                    prevGeom.EventoLineare = null;
 
                 if (geometria != null)
-                    geometria.Evento = this;
+                    geometria.EventoLineare = this;
 
                 OnChanged(nameof(GeometriaEvento));
 
@@ -49,7 +46,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         }
 
         public Geometry Shape { get => geometria?.Shape; set { if (geometria != null) geometria.Shape = value; } }
-
     }
 
 }

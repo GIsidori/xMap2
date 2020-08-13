@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Net.Http.Headers;
@@ -8,6 +9,7 @@ using DevExpress.Xpo.Metadata;
 using NetTopologySuite.Geometries;
 using NetTopologySuite.Geometries.Implementation;
 using NetTopologySuite.IO;
+using NetTopologySuite.LinearReferencing;
 using xMap.Persistent.Base;
 
 namespace xMap.Persistent.BaseImpl
@@ -32,7 +34,7 @@ namespace xMap.Persistent.BaseImpl
         }
 
         private Int64 oid;
-        [Key(autoGenerate: false), Persistent("OBJECTID"), DbType("NUMBER(*,0)")]
+        [Key(autoGenerate: true), Persistent("OBJECTID"), DbType("NUMBER(38,0)"),Browsable(false)]
         public Int64 OID
         {
             get => oid;
@@ -51,8 +53,14 @@ namespace xMap.Persistent.BaseImpl
     }
 
 
-    public abstract class CustomCoordinateSequenceFactory:CoordinateSequenceFactory
+    public class CustomCoordinateSequenceFactory:CoordinateSequenceFactory
     {
+        private Ordinates ordinates;
+        public CustomCoordinateSequenceFactory(Ordinates ordinates)
+        {
+            this.ordinates = ordinates;
+        }
+
         public override CoordinateSequence Create(Coordinate[] coordinates)
         {
             //return GeometryFactory.Default.CoordinateSequenceFactory.Create(coordinates);
@@ -73,26 +81,9 @@ namespace xMap.Persistent.BaseImpl
             return this.Create(size, this.Ordinates);
         }
 
-        public new Ordinates Ordinates => Ordinates.XYM;
+        public new Ordinates Ordinates => ordinates;
 
     }
-
-    public sealed class XYZCoordinateSequenceFactory:CustomCoordinateSequenceFactory
-    {
-        public new Ordinates Ordinates => Ordinates.XYZ;
-    }
-
-    public sealed class XYMCoordinateSequenceFactory : CustomCoordinateSequenceFactory
-    {
-        public new Ordinates Ordinates => Ordinates.XYM;
-    }
-
-    public sealed class XYZMCoordinateSequenceFactory : CustomCoordinateSequenceFactory
-    {
-        public new Ordinates Ordinates => Ordinates.XYZM;
-    }
-
-
 
     public class GeometryConverter : ValueConverter
     {
@@ -113,13 +104,13 @@ namespace xMap.Persistent.BaseImpl
                 switch (tokens[1])
                 {
                     case "M":
-                        reader = new WKTReader(new GeometryFactory(new XYMCoordinateSequenceFactory()));
+                        reader = new WKTReader(new GeometryFactory(new CustomCoordinateSequenceFactory(Ordinates.XYM)));
                         break;
                     case "Z":
-                        reader = new WKTReader(new GeometryFactory(new XYZCoordinateSequenceFactory()));
+                        reader = new WKTReader(new GeometryFactory(new CustomCoordinateSequenceFactory(Ordinates.XYZ)));
                         break;
                     case "ZM":
-                        reader = new WKTReader(new GeometryFactory(new XYZMCoordinateSequenceFactory()));
+                        reader = new WKTReader(new GeometryFactory(new CustomCoordinateSequenceFactory(Ordinates.XYZM)));
                         break;
                     default:
                         break;

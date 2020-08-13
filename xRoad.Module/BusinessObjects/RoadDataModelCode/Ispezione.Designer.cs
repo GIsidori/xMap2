@@ -16,10 +16,10 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Ispezione : xMap.Persistent.Base.DefaultXPObject
+    public partial class Ispezione : XPObject
     {
         Ponte fPonte;
-        [Association(@"IspezioniReferencesPonte")]
+        [Association(@"IspezioniReferencesPonte"), NoForeignKey]
         public Ponte Ponte
         {
             get { return fPonte; }
