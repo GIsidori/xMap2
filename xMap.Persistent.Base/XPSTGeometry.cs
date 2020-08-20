@@ -33,12 +33,12 @@ namespace xMap.Persistent.BaseImpl
 
         }
 
-        private Int64 oid;
-        [Key(autoGenerate: true), Persistent("OBJECTID"), DbType("NUMBER(38,0)"),Browsable(false)]
-        public Int64 OID
+        private int oid;
+        [Key(autoGenerate: false), Persistent("OBJECTID"), Browsable(false),DbType("int")]
+        public int OID
         {
             get => oid;
-            set => SetPropertyValue<Int64>(nameof(OID), ref oid, value);
+            set => SetPropertyValue<int>(nameof(OID), ref oid, value);
         }
 
         private Geometry shape;

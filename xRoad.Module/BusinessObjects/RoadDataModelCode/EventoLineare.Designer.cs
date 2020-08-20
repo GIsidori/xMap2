@@ -38,6 +38,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<double>(nameof(ZPosFinale), ref fZPosFinale, value); }
         }
         double fMPosFinale;
+        [DevExpress.Xpo.DisplayName(@"Al km.")]
         public double MPosFinale
         {
             get { return fMPosFinale; }

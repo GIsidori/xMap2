@@ -5,6 +5,8 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
+using DevExpress.Entity.Model.Metadata;
+
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
@@ -14,32 +16,36 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         public GeometriaEventoPuntuale(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
 
-        private EventoPuntuale evento;
-        [NoForeignKey]
-        public EventoPuntuale EventoPuntuale
-        {
-            get => evento;
-            set
-            {
-                if (evento == value)
-                    return;
 
-                EventoPuntuale prevEv = evento;
-                evento = value;
+        //private EventoPuntuale evento;
+        //[NonPersistent]
+        //public EventoPuntuale EventoPuntuale
+        //{
+        //    get => evento;
+        //    set
+        //    {
+        //        if (evento == value)
+        //            return;
 
-                if (IsLoading)
-                    return;
+        //        EventoPuntuale prevEv = evento;
+        //        evento = value;
 
-                if (prevEv != null && prevEv.GeometriaEventoPuntuale == this)
-                    prevEv.GeometriaEventoPuntuale = null;
+        //        if (IsLoading)
+        //            return;
 
-                if (evento != null)
-                    evento.GeometriaEventoPuntuale = this;
+        //        OidEvento = evento?.Oid;
 
-                OnChanged(nameof(Evento));
+        //        if (prevEv != null && prevEv.GeometriaEventoPuntuale == this)
+        //            prevEv.GeometriaEventoPuntuale = null;
 
-            }
-        }
+        //        if (evento != null)
+        //            evento.GeometriaEventoPuntuale = this;
+
+        //        OnChanged(nameof(Evento));
+
+        //    }
+        //}
+
     }
 
 }

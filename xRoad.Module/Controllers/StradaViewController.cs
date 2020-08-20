@@ -34,7 +34,7 @@ namespace xRoad.Module.Controllers
             base.OnActivated();
             // Perform various tasks depending on the target View.
 
-            if (View.CurrentObject is IXPGeometry geom)
+            if (View.CurrentObject is IXPGeometry geom && geom.Shape != null)
             {
                 this.actionGetLocation.Active["IsLinear"] = (geom.Shape.GeometryType == Geometry.TypeNameLineString || geom.Shape.GeometryType == Geometry.TypeNameMultiLineString);
             }
@@ -56,7 +56,7 @@ namespace xRoad.Module.Controllers
             double distance = (double)e.ParameterCurrentValue;
             var road = e.CurrentObject as Strada;
             {
-                //var loc = LengthLocationMap.GetLocation(road.Shape, distance);
+                var loc = LengthLocationMap.GetLocation(road.Shape, distance);
                 //var coord = loc.GetCoordinate(road.Shape);
 
                 var lnr = new LengthIndexedLine(road.Shape);
@@ -70,11 +70,8 @@ namespace xRoad.Module.Controllers
                 p.ZPos = coord.Z;
                 p.MPos = distance;
                 p.TipoCoordinata = BusinessObjects.TipoCoordinata.Proiettata;
-                p.GeometriaEventoPuntuale = ObjectSpace.CreateObject<GeometriaEventoPuntuale>();
-                p.GeometriaEventoPuntuale.EventoPuntuale = p;
-                p.GeometriaEventoPuntuale.Shape = new Point(coord);
+                p.Shape = new Point(coord);
             }
-
         }
     }
 }

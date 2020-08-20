@@ -16,7 +16,8 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class LimitePortata : EventoLineare
+    [Persistent(@"EV_LimitePortata")]
+    public partial class LimitePortata : Evento
     {
         double fPortata;
         public double Portata

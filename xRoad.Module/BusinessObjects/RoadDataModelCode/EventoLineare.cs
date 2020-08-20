@@ -12,40 +12,16 @@ using NetTopologySuite.Geometries;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class EventoLineare : IXPGeometry
+    public partial class EventoLineare
     {
         public EventoLineare(Session session) : base(session) { }
-        public override void AfterConstruction() { base.AfterConstruction(); }
-
-        private GeometriaEventoLineare geometria;
-
-        [Aggregated, ExpandObjectMembers(ExpandObjectMembers.Always), NoForeignKey]
-        public GeometriaEventoLineare GeometriaEventoLineare
+        public override void AfterConstruction() 
         {
-            get => geometria;
-            set
-            {
-                if (geometria == value)
-                    return;
-
-                GeometriaEventoLineare prevGeom = geometria;
-                geometria = value;
-
-                if (IsLoading)
-                    return;
-
-                if (prevGeom != null && prevGeom.EventoLineare == this)
-                    prevGeom.EventoLineare = null;
-
-                if (geometria != null)
-                    geometria.EventoLineare = this;
-
-                OnChanged(nameof(GeometriaEvento));
-
-            }
+            this.TipoGeometria = TipoGeometriaEvento.Lineare;
+            base.AfterConstruction(); 
         }
 
-        public Geometry Shape { get => geometria?.Shape; set { if (geometria != null) geometria.Shape = value; } }
+
     }
 
 }

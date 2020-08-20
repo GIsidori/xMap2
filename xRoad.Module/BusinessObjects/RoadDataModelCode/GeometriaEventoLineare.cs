@@ -18,33 +18,35 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         public GeometriaEventoLineare(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
 
-        private EventoLineare evento;
+        //private EventoLineare evento;
 
-        [NoForeignKey]
-        public EventoLineare EventoLineare
-        {
-            get => evento;
-            set
-            {
-                if (evento == value)
-                    return;
+        //[NoForeignKey,NonPersistent]
+        //public EventoLineare EventoLineare
+        //{
+        //    get => evento;
+        //    set
+        //    {
+        //        if (evento == value)
+        //            return;
 
-                EventoLineare prevEv = evento;
-                evento = (EventoLineare) value;
+        //        EventoLineare prevEv = evento;
+        //        evento = (EventoLineare) value;
 
-                if (IsLoading)
-                    return;
+        //        if (IsLoading)
+        //            return;
 
-                if (prevEv != null && prevEv.GeometriaEventoLineare == this)
-                    prevEv.GeometriaEventoLineare = null;
+        //        OidEvento = evento.Oid;
 
-                if (evento != null)
-                    evento.GeometriaEventoLineare = this;
+        //        if (prevEv != null && prevEv.GeometriaEventoLineare == this)
+        //            prevEv.GeometriaEventoLineare = null;
 
-                OnChanged(nameof(Evento));
+        //        if (evento != null)
+        //            evento.GeometriaEventoLineare = this;
 
-            }
-        }
+        //        OnChanged(nameof(Evento));
+
+        //    }
+        //}
     }
 
 }

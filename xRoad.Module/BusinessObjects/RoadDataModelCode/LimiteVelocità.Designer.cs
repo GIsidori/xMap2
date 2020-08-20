@@ -16,8 +16,8 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [Persistent(@"LIMITEVELOCITA")]
-    public partial class LimiteVelocità : EventoLineare
+    [Persistent(@"EV_LimiteVelocità")]
+    public partial class LimiteVelocità : Evento
     {
         int fLimite;
         public int Limite
@@ -26,7 +26,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<int>(nameof(Limite), ref fLimite, value); }
         }
         Strada fStrada;
-        [Association(@"LimiteVelocitàReferencesStrada"), NoForeignKey]
+        [Association(@"LimiteVelocitàReferencesStrada")]
         public Strada Strada
         {
             get { return fStrada; }

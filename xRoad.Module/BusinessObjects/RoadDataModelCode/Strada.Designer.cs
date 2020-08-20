@@ -17,6 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"STRADA")]
+    [DefaultProperty(nameof(Sigla))]
     public partial class Strada : xMap.Persistent.Base.DefaultXPObject
     {
         string fSigla;
@@ -65,20 +66,20 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fTronco; }
             set { SetPropertyValue<string>(nameof(Tronco), ref fTronco, value); }
         }
+        [Association(@"TombinoReferencesStrada")]
+        public XPCollection<Tombino> Tombini { get { return GetCollection<Tombino>(nameof(Tombini)); } }
+        [Association(@"LimiteCentroAbitatoReferencesStrada")]
+        public XPCollection<LimiteCentroAbitato> LimitiCentroAbitato { get { return GetCollection<LimiteCentroAbitato>(nameof(LimitiCentroAbitato)); } }
+        [Association(@"LimitePortataReferencesStrada")]
+        public XPCollection<LimitePortata> LimitiPortata { get { return GetCollection<LimitePortata>(nameof(LimitiPortata)); } }
+        [Association(@"LimiteVelocitàReferencesStrada")]
+        public XPCollection<LimiteVelocità> LimitiVelocità { get { return GetCollection<LimiteVelocità>(nameof(LimitiVelocità)); } }
+        [Association(@"PonteReferencesStrada")]
+        public XPCollection<Ponte> Ponti { get { return GetCollection<Ponte>(nameof(Ponti)); } }
         [Association(@"ArcoReferencesStrada"), Aggregated]
         public XPCollection<Arco> Archi { get { return GetCollection<Arco>(nameof(Archi)); } }
         [Association(@"CippoReferencesStrada"), Aggregated]
         public XPCollection<Cippo> Cippi { get { return GetCollection<Cippo>(nameof(Cippi)); } }
-        [Association(@"PonteReferencesStrada"), Aggregated]
-        public XPCollection<Ponte> Ponti { get { return GetCollection<Ponte>(nameof(Ponti)); } }
-        [Association(@"LimiteVelocitàReferencesStrada"), Aggregated]
-        public XPCollection<LimiteVelocità> LimitiVelocità { get { return GetCollection<LimiteVelocità>(nameof(LimitiVelocità)); } }
-        [Association(@"LimiteCentroAbitatoReferencesStrada"), Aggregated]
-        public XPCollection<LimiteCentroAbitato> LimitiCentroAbitato { get { return GetCollection<LimiteCentroAbitato>(nameof(LimitiCentroAbitato)); } }
-        [Association(@"LimitePortataReferencesStrada"), Aggregated]
-        public XPCollection<LimitePortata> LimitiPortata { get { return GetCollection<LimitePortata>(nameof(LimitiPortata)); } }
-        [Association(@"TombinoReferencesStrada"), Aggregated]
-        public XPCollection<Tombino> Tombini { get { return GetCollection<Tombino>(nameof(Tombini)); } }
     }
 
 }

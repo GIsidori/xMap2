@@ -49,11 +49,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
         public Geometry Shape { get => ((IXPGeometry)percorso)?.Shape; set => ((IXPGeometry)percorso).Shape = value; }
 
-        [Association]
-        public XPCollection<Ponte> Ponti
-        {
-            get => GetCollection<Ponte>(nameof(Ponti));
-        }
 
     }
 

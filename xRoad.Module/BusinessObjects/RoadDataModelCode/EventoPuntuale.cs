@@ -14,37 +14,41 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
     public partial class EventoPuntuale
     {
         public EventoPuntuale(Session session) : base(session) { }
-        public override void AfterConstruction() { base.AfterConstruction(); }
-
-        private GeometriaEventoPuntuale geometria;
-
-        [Aggregated, ExpandObjectMembers(ExpandObjectMembers.Always), NoForeignKey]
-        public GeometriaEventoPuntuale GeometriaEventoPuntuale
+        public override void AfterConstruction() 
         {
-            get => geometria;
-            set
-            {
-                if (geometria == value)
-                    return;
-
-                GeometriaEventoPuntuale prevGeom = geometria;
-                geometria = value;
-
-                if (IsLoading)
-                    return;
-
-                if (prevGeom != null && prevGeom.EventoPuntuale == this)
-                    prevGeom.EventoPuntuale = null;
-
-                if (geometria != null)
-                    geometria.EventoPuntuale = this;
-
-                OnChanged(nameof(GeometriaEvento));
-
-            }
+            this.TipoGeometria = TipoGeometriaEvento.Puntuale;
+            base.AfterConstruction(); 
         }
 
-        public Geometry Shape { get => geometria?.Shape; set { if (geometria != null) geometria.Shape = value; } }
+        //private GeometriaEventoPuntuale geometria;
+
+        //[Aggregated, Browsable(false), NoForeignKey]
+        //public GeometriaEventoPuntuale GeometriaEventoPuntuale
+        //{
+        //    get => geometria;
+        //    set
+        //    {
+        //        if (geometria == value)
+        //            return;
+
+        //        GeometriaEventoPuntuale prevGeom = geometria;
+        //        geometria = value;
+
+        //        if (IsLoading)
+        //            return;
+
+        //        if (prevGeom != null && prevGeom.EventoPuntuale == this)
+        //            prevGeom.EventoPuntuale = null;
+
+        //        if (geometria != null)
+        //            geometria.EventoPuntuale = this;
+
+        //        OnChanged(nameof(GeometriaEvento));
+
+        //    }
+        //}
+
+        //public Geometry Shape { get => geometria?.Shape; set { if (geometria != null) geometria.Shape = value; } }
 
     }
 

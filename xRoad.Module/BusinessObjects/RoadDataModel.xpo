@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="fb4362ba-a384-4f33-b345-eaf2f4faa181" namespace="xRoad.Module.BusinessObjects.RoadDataModel" dataBaseShemaInfo="H4sIAAAAAAAEAO1d3W5cR46+X2Dewcj1MK7/n4WThcaWA2HlH9hOMJObBVnFchorqY1Wy8n6afZd9sWWbDmOHWt2pfHxOWOlbxK7JcOmikV+H4v8eO/ffjk9ufOaN+er9dk3X9mvzVf/9u2f/uXeX/Ccn2/XG3zJR2djfUe+6+z8X385X33z1U/b7at/vXv3559//vpn//V68/KuM8be/euj4+ftJz5FWJ2db/Gs8Vfv/lT////UV/K33rlz7wXSCZ/rX7n7/a+fvPfBrx89xlP+9mDT1vfu/vb7d99yeKaffbvdXPC9u29/8+6LD1bn+sH3rzpu+duBJ+fyTR9++O57v7tY9aP+7SAfojcEo40GwbUOZBOCKd2zLb1E6vfuvv3md3/4/vrk4vTs/IN//d/9WL6gNlx+8dunLKZtzsW69z784Jv/LxNvaub7pqJPlbhVcEhiaswEtWYDFrvLvdgUg/nIVPnjdz/B2herV+vDEz7ls+36+XaDHU94fssTDzHRZEimVAiVI1AsBMzNljYGZvRTW35/fTZWZ3xwero6W52L6dvV6wUO3VQqlMjASJ0gDO+BBlmIoRORZc85fI5Dv4+bDb98ucItLnHenLq3HbopBYIPBWoghjRaaMM7W/zHl/oTjT6+OHv5E795s4C5xfpSrYtgYksQghxvodKBW2BTQ8ilTn6xn29xu4A71+K8w+yhFW8gdEYoTUztzXOxmEaxPLWpD9dn2wWC1mgobjqK3NfBYmpFwOY8cDHdE3tvTJzciVev+eRk/d0GxwKH66oJ1gWGKAgCApcoflzFjxOW6uuw6CYP0zs/XsjeTMEaygi+O0lL0cq9RaqAhQcn71zvn8FeTcJ/DPDxQJLP0dnqzWqJQNVTzurBaO0QX5YrTHKRwXixutRczLCfw96HgjkWuLnGYBY0BcOGLqdrKhBjFrzBw1Pr4tHp2tZe9elbLnBt/vAbyp6BQ+SUEgqUfMshBGkJvHQZDBkXqLSQupuUQzxfvTxZ4A63EdPoJYFxFCGYkKAkdnLeXIv4dGtuciz5gM/WgqBRLvESjo3EJlWWYBUFaoQQIwigHlA990HNWR/a5MzhBM/PV2PV8OHFmdq9CGeyyQ0zECGiXmQaQhxKI0g02EehxslPHrAfX5zyZoFg3UiO09sGrTUvFzhYIJszFC7DSBI21Ca39eD8fIFTFVJURiECl0eQUzXizzY0iVd5IEuCpnz9QH0DOvgbDV7oIhcbLLVqwSiGDrsrzV2IQ+8ljJKpjTG54Zv1WVvAnbsvoWeuIMkYNQc7QSEhgJX0RNmNSOb6uHKKbKxFR/WCWbKx8EOB052AqQsbdlrsKTaD/BgYa07OJ5w0G99f91Vb4i4bRju8MGBj5ZhLMBKwWocYY3NMIbQ4+V1+wOdts1roDrMNOHokEL4gBteGUEPLgMahbUZCeM2z+vWOPM5Wqs7kk/DCDmZHjxsHkJAtlAKFK6Jrnq4w//1TvXP3H7RT7+7bgs+XYOeXcoFR4OTobkCsSfw5+g7F+QCeUuDoQpZ4dasucO/Nx5QbJINCICQlS+xyctCh2SZ4OpZ8/ZLWFBf46ueJGXw8xRpbLYIzm+TpkLKEMiMQ24ROkp+9R5qWMi7l432kikNysGUrhgr6BBQkBtZZK5zKMJnb5eO291GicTCCHGrotkDpcsYjsakcfJMcNruP/53HqBkcvSaORSIZtCBxPPTgoAx0krhtYKFXpdPHBPpLdHQ59yYx2wuzQjU0NqhoHdjRLLI3RbDZrXJ04wZn7yIMTHKzhWABJuGTxgnuTimY5K9/sydz9PefHWdw75go2MYINmUhG3LGUP3I0EO1bpD8gK647V+ke7OJ3qIRFMZZU7ecdskGWivGBJ9DCNPXs5d07xCwDRMtCMnqQiO1qJuGg+S4RaqCQW/QMzCVe799ipzBsbXqpfEZnPENgikesCeC4sk3G2P2ttwKxza+YCmCSU0nhiAIBTBigiE/ANuzrTV8hqL2go7tu/epCSJr+ggXWu9a50zAo/Xc3Eitzw/Cr655z+Dnzsn59ypEZJCHgLZpq0gTZ+/Zcag9lI+P/0v0c2FXSM2pZbnoS0YHRCe32qVkekWsV5TFvmQ/t8mzMThAyFTWiy3Ik3sTID7scL2hvUHFdyo//6gOPktBtFfXSoM4qnZD7Z4ne4VmSu/Ryk/piraKL9HFQ6pVUKeHYY0WRIWElaCItAQW37cOE90qF0dfI7WoBguvCqMLKJPYLlY7QS5GQCgv4OK7h605QrcyjSJcksowAlHEenLCuOpIhQb24q7I3F+iX7PFUEdNkEwQv+ZgAGsXaOaLwDBxeGcn7wRb1K9d9iMkilBziAJRMkKpPUMtQreK8Ot+Bfj8nH59f/VqptcrE5uJQVzZxxggxBgBuVZwZHm45pOhaYP1cv3orUVHZDK4VLX8bRGqFofRW9cMJbR18nD9aHV+sVmgdUbOLskBepAjFDDCUftWtQw2sJiBw1X8PG3Yl447t7lysM6ZNMDarrUhliAtYFoideASbAztivL2J5q7VGfjpG48GZ+aLWAJAOHUxLO7PkUHSlabSarw5+JzKL22cjue21OMnKPNUFIQpljksEuoBlyslDJy+wzdycsWeE0sQo8RGgvYCLZr9Sck8ClxtpEr3eAST+XYz1/hyUylAcvcEZG0MqQoxHaJ2TwghcGlZm5l3I6nC2yNTeECfhetMwlvomzAtzwCBW/wlpXA0HMSkpBAQhZpM7owYle9ODrJl0IZNc7r2Yev9QV6Fq+mHgVv5ARkhR8H5weUYiq0YnMw1LvLHz/bfIpXP16fLhGtKwV2+hxjjfbf9w6VWXx6UKpWDjtMz5mWg9I5GXSjCGEYWtNNwhXRpAo2E1MV8Glxcmsfbtan//Foia4ZCVA+ypXtURy4D53YHQOq5KtEKeYcr08Orwul14tY6iIJsIgQc5CjLVkYMCviGM45awlHnL5ndbUEX+glpcrWgiCLIkGpdtgNVPiRah+I8nOYPAMtxReWuKtLTUEtcVeXmYBa4q4+GeOctwvcVjuE9GGDrI1NobQENVqWeytAmYZ1NP1QzNP1+VJoMbdQBBQx1NIaBBWLKLUMaF5nkbuA4ytKcp8KjxccXbQacJtzOgMjRJeCA5ToDIk6CslP2dD0feWLjS5Sdc64kSHLLwQokkSnZhBcTUaInnDd6cnPwXaJ2fnMLtqcAuQseD+0IJYGrNBrbQKWTbfT+7HCieN1w5PVmzdLjf6k4SRElQw+60BIHdrKQhUk21qjs8fDTN669C5cPX8lZi8zwJdjzYkRUgwSm02sOq2ZwHpBVU3o76iTd97+VexeYNZavJcaNbA6oBhKZzngGqEOG7PVWk2cPB/9bRFLJeGijp4Ce9MFQEYDlUhYba+tYsFAaXJLf1zmTEM12fUBPaMkoZ61JtURGkaTSQtWZvIXhGPcrrYXfZE0NEbJUfAECO2xwgrEkcl1A5yrtUg1pDR50j1en71czOAWXRvBSVR2bgeYO1QUOKk0sHE0Y9TJadBlK/x6IxYvokvkiDGhuPIwDSUDlwaUnHCi4fwwvQRrJ9clerTI9W3dGSOJB9g6sRSDAdKx4zIackIrxz15ztXT/Y7Xp7zdrBY4XF+tBGfBFaaS3GAvd7n23sHQyMHkMugGQHKy4ab5Css4bPIRB1h2qt7j5bTzqNq0ESRYByNk6VY8l4zs0WVbwFjhwIH0uSTFBlzlcrscKfvJixrLdlKWKJGZB3gT9SHMN0BXdPAjt0bYOtvryyNMou6ibfA/rLCvtzM5d8EWYrc73bGurYUJao1dgVdI5GzHMa1M5G8N0UuxpmqCEGCBmtpTF1xMUFAYsuBsFFrculzzzxHBj05f4UlbRlwuxqxAGlzSwkd0DDU2udhCF0t1TgeTP4fJv75pzw5HLAmwtgZMZu1ocEMpk4fUXLctGcnY15+nv6a9lxIv91FOeQlRvSpWJX0MdGMILrHRAgm4Bi3j2erEwdv0onqqDPkIf7k0egFkYgoa4mpB1YwkYaloYtUO6dyp14I2telncLWAef6KF4pehMEHHesIjt/Kr9XWLEh6Tj16H2n6aczH6yU82knUYiEWgJa6ohHhUSM0SKnTMNS55ckv8dPN+tVmxdv/+e8lOJT3CjzAswbpVEn7vyMIpShYh+uYJ+dQv0oEHGy3G1RN7UXS0+CCA6OgTaMDLa0qwI4DWmzFGedNy9Nrke0w9sGz50tMnA7jGR30rPPFxEl4MmoHx4iJiytsrm/uVHzqPXQyx4RDG5yNJOgyuo4woYRw1bCKI2EuRVDouB2UKrLHRlGfJsTGUFRZcJebPftcgy+NbpdKRBI+7OrI0EYWdF0FeqELCN7n5nKSq2zmlTL6gFK9WJ/S6mzPrPbMas+s9sxqz6z2zGrPrPbMas+s9szqE67wElMAlB0yCq7EoqpF3UVA0yVY1VyzStn0Pu+A/K9Nx3tV+snOeK9Kv1el36vST2TrXpV+VsP3qvQLqtIfr05XW/6BT9ZttQPcc1S7hFOgePOlcHkIKEnZ1wgStrsk5FLIT6tZc2nkAhXdXFx0jSGztvdlUpn6qO2cmWpAgZ830IucRMJFaMZmfUCr+XTMs/OJksBs1m4/0h8BewbnG1k0nOgKYPLlTdpWFODVTIIUcn/buVqTAeslY0m+tkyTx7BL8nR0Lme5xLKrgKTiYoLCip5rgWKTpGkfEttqDF1Rsf6crv1u2GDGbj+ba0xCFWGQTn4lL9naSTQfKXd2CeXCf6x68iU+TTXLWtgcEJwjCDrTR4wDCEMZunOy3DYBcxKALRRCzlPde1cG0rXIJWXvBZ+lcoPxrync+2CuJj9va4pRIYnJBoLvThhV6ICjhRyTXPQr9qh+ik8vM2xtikANaxjK7upWyc+Us4VhW2ftQ8/TB+wHi5TnqVeUkMwg9MJBaKpfnHSFKkcB18F6uoHOxz85WwzND6sCn9UOiVNZ6ZP+qlhnkEcJts/ffj7b1R04sJSBYHqQUE02ARmhGdVaKz+LzuOW7NOoGfPQxSGDjc5FdYnTwTW5xlGSsLHk++SPEsvKVbNttiUWUOmHAg1B0VYYk7Em+uS7qYPnTUfP7j+Zx6eFC0adNr8s4GoOFr8WFy9dfiill0jTdkb8kXYDX735Z/ZWEB5iosmQTKla/4lAsZAkqGZLGwNvsmTg2pHryl0ws6OQSgIkyQhj6JKvhpdAJlwCYuhEAkw8Ty/58tGGkPnPm1P3tkM3RaW4Q1G1eYYkCLMN72zxkz+x7pok+M2bBcwt1pdqnQTr2BIEScuCOUsHboFNDSFfBag/0dy3e+pmz8tFxUDyro1NuEPXTpAmpvbmlSSmUez109Q1TX27DWT21/KG4qajyH0dwh8EYwNq+ZqL6Z7Ye2Om7/RZveaTk/V3GxwLHK6rJlgXGOJuI6GudS9UxY8TlurrsJ9B+nPnxwvZmylYQxlBKHBVSVu5t0hVX9EHJ++cwM7bpHhTe8pZTxWtfdvTROLcYLzAkFJzMWP65UaLKd44YzALwtCtAV1O11StaGV9khmeWpdTnrfA8/zFs4MHB/umiH1TxKeYvG+K2DdF7Jsi9k0R+6aIT6raHj198vzFwYt5Slz7Vd/7Vd8zOvbh8eGjw8cvnlwCzuPD/arvSY98v+p76VXf4uP3nzx+ePT48ODRo6PHR+roL45+mCeY71d971d9z+noB8+eHX733dHBi3lKB/tV3/tV33O69/HB8+dHD4/uHzz8/vGPR08ez4VX9huR9xuRZ/Rz8fKZ/Hq/Lna/LnamWYOjp0/nwdyzr4u9FVs2r2nrflnsLOYusSz2xyXCcgoei9xNo9MEZYjzZjlaW2PsKcfkwrwk6umTxy/mSb2zazzdArWB64KMvZrVH0vNaom1BXs1q72a1V7NajLX3qtZzWHvXs1qr2b1udSsFuypR7mwQRnEyIq3OkvECnLEJtk8RiFPOPk9PsbNUuY2MpYIK0TSvVhVx+6HkbA1kMihiT1MH7bWm+0iCZidt9YOLW047aw3ArSiq1BdGZSbq2H65rYnu21YZ2/wUinkKS+xvzw146MTvuSiTk+U4gH1Lab2lnoR7EnTdzAuaW/1yVPRtwYs2qsq2Lpyl4OOZtiQY+2JPweDePKKlyhooa81jKzebLXLTTdAd+7CJ1q0JXqJaZNf4t38xCM8u9jy2R+MGj9dLcESkw2mkzbvyWkKK276bFwkDxufSsqm+umHZN6f4vzjga6jE/nfgg33I1MglyB3HUAfjoQ7IcIQv/fi96GlyfegLTaiHA36XpNQRKciR2J18b1BDtVRlFud8vXfiqd6Oj169PTg+P5cvbr7ZRT7ZRRzNqGLbx/P09llmTsiCofqOizVBHiWJgwrhaHLo7mVcTsaF1H3Jhcu4HcvbVk3V1KWFN3yCBS8wel33S/q2eg5DUEfMLwcb4i5A7nqoTHJl0IZ9QYCQJNoTh49Onpx+MPh8ZP7RzP1Le4lJ/8Rycl/cjzSYw15JA+dWHJUtg1KwN328JErJx/S9dshJml5OXz84tmTg78czTc7tJfX3MtrzuHagkWOtAFXwvbjmXx7r665V9ecybsPXszk03t1zb265idbulfXfL91fq6ru1fX3KtrzujXD2drTFXBEB1NBWcEYgWj745d45gn32yM2V8xOfAlOrbxRW5wblriYh39KYAREwz5Adieba23rPLju/epcYSmcqKh9a4SMQl4tJ6bG6n1+fUHfhvK3vGJeWCX69W10iBq+gp+p3jVKzQBKj1az+aKZ7kv0cUFS1eTvBekpT2LyiBL0CHlEhipWYc3KIl8CS6OvkZqUQ0Ogr9GD4Di82K1M9FKqq68gPzAbKNPYjunNjz04bX+k6xKI1UJacXnUHpt5Xa8Rwlr4hxtFnQdtP26So4OQpRdrJQycvsM6pPLyg2YWJyTQ23cBZTYrgk5JPApcbaRK91gIGgKx/6O16e83axwxgUr3sXYXTTgY0qKzKLQ5ebAhUwmxJj6FfrI75/tnbv/qLWHTx4dvnh2dDBjwWs5a2c0knoUJpWFPFmj/UCCuEsxkoqLzcFQ7y5/XOz6Eoc1czLohBRLUlLwlWoCNKmCzcQkWclZnHx6YintWNRnVB8FVfWo/bhDVfq1wU2iWKIUc46Td8EsoxuLLpKkmwgxBznakjNULdi64ZyzlnDEyStbT8Y45wUeIbodAi+wQVZBp1Ba0t5FYU6uU6RhHU0vJvpujdcCF7aFIsGHoZYmPFiXTpQqtLh5VTXvGMIVY+SfCjEWFHy2AzE251Q7VCAVCX7GJOYn6ihwMmVzgyr8Dexd5uJSdc64kSHLLyCowGJtwpFcTSYMFlQ1Pfm/3Pwzux+zE6CctHVL8mpoQSwNWKHX2iiw6fYGfvwZkOOxnD9ueB45Ng3OMRfwTROT/kq5Athku2tkHJf/+73lHweQHxr99OJse7ETRp5DbbFTckGLeeQyBHWDWijAaKY4pM6pf1zQnAZIzm9sdSa7Kk7OyUhuwiHQklIDk7Nt1NvIVwxsfgqgXCpes+DjOuQYnSlR8lPNQNzFtbNrqBNCdfqJ64XE+auvLfUGEbsufSraVK01nuRisTxyrZNn4qVAlhGEhXKukIbOlZvmJR9jAddC0FFcfUW8RSCr5mhrZwId/RFqJEirKuZqEa3ywBzSQntjn7/CN6u5glamkV0cEfJI+pTqIpAPVm517CE5AV9XDOZ+StD6q9i5wAOERN9qJEY5lT0OrWgbEzJ4X0LGEWq3k3e2/G0RSyUQj4joIachxxhGAElCVZuMbUQS155e2/rHZSxFlNDEFhzqnhirrbQuN+CQbfIjOMOTd5ge43a1vejLEAfBEDZLCnJOJyEi6gSfdiE2Z1MbZCVRTW7v+uzlYgZb641W1JXxq0agtYACJMFi7BRMCW361VY75a31ejeGu0Qbj0fDNXgnPMGqmrEzQMoYUpY45XrpQonnfUZan9LqbJ4qe3Ax+uwZ0JemDR9GCKNAzDSSMR6rL37a19Flmog9Fh0CkJO1umaC8wBMcq8j8oiRe7f5+m0e1w5ci4kGOEOpoLHARbtaRlMl8lChR4OxGm7sJzd3MWHEoG0rWWL07hU4Bcm+nbRVy0XBmdYTzdvB83au/lcNhRkuMY+BURkw60kHiViqYISQfMgpJ0FabVpl7sUEInoK3g5hTII3JD/FQIA2ksTqVIahkOr0WyaXcuzSxD59RBKwrBJcgii1ngWRPQW53MXeQHVsqoXmLzZ4dr6a6Qm4qF5TM0UcefdeaAkqsa6dbLn2xtr9cSs6HNB6bwVSamOtvrHoWlxXG5jRxamdABR7u1p3WmRKXZiDS1mFXoRNUE4oJzusL+TIXjHf8bl9e86QXXpFU2yFotX60Iaw41EMYBlJyaMN7WMm9SW6dhuOSq0ZKgroClH7EFPUsG2dr0FAdptchmzZxssUg665BgHPUfdNyl3W9sNBDT1ZwsLzinHvlDPx5fp0Hs9Oxo7W5GqXctmWJoxCMDY0b8gZn02duLy1WEtxdc1YFBtTlxhGKCA7U4FeSgnsmi6vu1WebTOOjiMLOYySqjCKZ+sGbNsFgpsgP4aZZRIukfaMvp2jI4nbDKka3RcswYxa7RAHCgUZVZjItED7V9tmb7nMcphektJQYcHgiocS/a4mEmNqKfY677jP5VHPij5H0G4fx+CrLgHHtJtBNcDOl+YwZVemDWS/WTd/t4/XPZQRyKipQRIXUchQ3AiCPZ0PN+j2mZBDb1hVDjerS5nrOdowG4fc4oCksoNynSWNY1Q5XEfGph5tm1YJ5Xcmzn3wo6eYMTlxan1XJt3k5jwJDu+u2zBabfN2Gu9w+OzHzhLhSpe4bnWBiLbcAmYBLs4IMh8jyce3A7NUnwplOWWryxpD1XUpiSsYHr2EmFy+ZTMidoxQKXvIVKNGNqEfHb0OxbheKGC4QTvBZGj8rY79XtppwhLKXtppYWmn9/RV53i4qm4Ix2IwjZpcbLndVAWm1hSKNegD/z99bl+MY9eYC1cCOwSBBsEnYmNxUE0Ntbccap1cZWBZNb7OPlLRbZRON2crr/ZZx9ySDYw94w22yEwWssXM7fZiJudm5LBbWWeDNgZFX4GSLtLh7uVH4du4Imt9ic5divG2kgcBIbqUQR+ia4jArcuNFsxt7O3SG7C5tdK0EprUubkUQNsTZM8+5JCN55mbDcS5H8m/djNb/9teR3Wvozqjc18tjz1H/ciX0Ehgmbe2Xr58oDMNRnctOO/jGLcjiOc+PKWku5K1ucZ6vFQJGkQtC6vOkW4X9C6jpBY1eKG2nHi/W6KrywxybRwz9TKvtsZ7C6RmUUMy6Dh0GCbomqxMUNg5rRWn6ASiuTzt2+XT9dkiG6MKFl2sC6QtJoG6rn3LBUhoByeM8p/Jm00eLLN3RdIu2R7BaddBECgCwqUaRPnU14Ds2uSbwJfZAlbR2aadf8XsViX7AjVkbX+0uVoaVP28KWr+ubjZp/B1/uDh6myHL2eHJLHU3gWNVLtb3Sh0iloz0LuvXthzsX3yjvW/LWgv06hVHyep6xKSrn0lWfJTNoTGUqyMk49P/bigvZ10kXAUxhglIQWdWK+jM1T0lAexIJLp12IvaG8LflgfvcRnXbFr1V43gmCt0CuxEcYxb7fr78RSjo8eHx48O7ztA74fGv30+8cvvj84nsfq5QZ8nx4+u//k2fOZtGKq4I4s6VnO1mn3q9xpj1oUrJyC7gt3n+lwL9+e70ta3qwPaLWdiy/u9dz3eu5TGbxUzzqzt+xUk64UHYUsAUoiAm7NjTxsRZp2TdTb3//2Lfeeb9cb7k836/Z+GLj3A2/OhSF/+4BfH/7yasPn518r1/r6tTNf2z/fefvlb/R3X4evzZ/v3L842V5s+JszvpAf5smf7zy9oJNV+3f+rxfr/+Szb6iUbrOgjmwMhypm/fpX7P6+3V56PtcDeHbx7qd776B3bW9Y/fJbeJKPnl+MDz56xqfr1/z7b7z89Pffex/P+dvvz9pPePZSa8e731/+aK76N9zTncS82a4W/rf9nX/Gve/4jDfiXvfXp1q2O3/rox99/ME3P+Dz1Uv55cOVuMLv/sSHX9v9sccXJyfqNX/hn/D1ar0Rpxgoxy335fdf+dO/3Lv7F/lXq1fhy0u/+1+/w1IvWywBAA==" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" freezeLayout="true" useNameOf="true" createdInVersion="20.1.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="20.1.4.0" name="RoadDataModel" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="fb4362ba-a384-4f33-b345-eaf2f4faa181" namespace="xRoad.Module.BusinessObjects.RoadDataModel" dataBaseShemaInfo="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" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" freezeLayout="true" useNameOf="true" createdInVersion="20.1.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="20.1.4.0" name="RoadDataModel" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
   <classes>
     <dataBaseObjectModelHasClasses Id="ee9c60cd-4acc-4208-8976-e8c5b4052d30">
       <xpObject Id="fb34530b-fcfc-42cd-b16a-08d3e18d85bd" name="Arco" baseClass="xMap.Persistent.BaseImpl.XPSTGeometry" userFileName="Arco" designerFileName="Arco.Designer" className="Arco" virtualBaseClass="xMap.Persistent.BaseImpl.XPSTGeometry" persistent="ARCO" virtualName="Arco">
@@ -30,14 +30,14 @@
           </generalXpObjectHasFields>
         </fields>
         <superClass>
-          <inheritance Id="195f5517-f510-4663-bce5-af25b495f35b">
+          <inheritance Id="5ef85619-5445-4fa3-8afc-0da2f37baf67">
             <externalPersistentTypeMoniker Id="cab723c2-3c53-4475-b414-f16fe88b7c11" />
           </inheritance>
         </superClass>
       </xpObject>
     </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="8e5691c4-093e-45c9-8fb8-83625a40fc50">
-      <xpObject Id="7666aec1-fcfc-4f6d-b527-0b024b8c46d2" name="Strada" baseClass="xMap.Persistent.Base.DefaultXPObject" userFileName="Strada" designerFileName="Strada.Designer" className="Strada" virtualBaseClass="xMap.Persistent.Base.DefaultXPObject" persistent="STRADA" virtualName="Strada">
+      <xpObject Id="7666aec1-fcfc-4f6d-b527-0b024b8c46d2" name="Strada" baseClass="xMap.Persistent.Base.DefaultXPObject" userFileName="Strada" designerFileName="Strada.Designer" className="Strada" virtualBaseClass="xMap.Persistent.Base.DefaultXPObject" persistent="STRADA" virtualName="Strada" customAttributes="DefaultProperty(nameof(Sigla))">
         <fields>
           <generalXpObjectHasFields Id="9aadab7d-9318-4ff4-82d5-25ceb0e155f6">
             <field Id="cf56fd86-02b5-4046-86e2-45e98897cc24" name="Sigla" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
@@ -72,27 +72,29 @@
             </index>
           </xpObjectHasIndexes>
         </indexes>
+        <saTargets>
+          <simpleAssociation Id="7af97c65-7095-4aec-b956-c144c47091ff" sourceCollectionName="Tombini" name="TombinoReferencesStrada" targetFieldName="Strada">
+            <xpObjectMoniker Id="4255373e-a38c-4dd0-9485-6f6003a93833" />
+          </simpleAssociation>
+          <simpleAssociation Id="3534bc7e-c7a0-474c-acce-cc6c3ded3242" sourceCollectionName="LimitiCentroAbitato" name="LimiteCentroAbitatoReferencesStrada" targetFieldName="Strada">
+            <xpObjectMoniker Id="77236b62-deca-4bba-8e3e-23cb1a0e6b24" />
+          </simpleAssociation>
+          <simpleAssociation Id="222e9e14-99b6-4b72-8858-739b0d1d509c" sourceCollectionName="LimitiPortata" name="LimitePortataReferencesStrada" targetFieldName="Strada">
+            <xpObjectMoniker Id="effa560e-efc2-48dd-abea-63476769d1cf" />
+          </simpleAssociation>
+          <simpleAssociation Id="de7c71b1-7344-433c-92fd-b4f57420b775" sourceCollectionName="LimitiVelocità" name="LimiteVelocitàReferencesStrada" targetFieldName="Strada">
+            <xpObjectMoniker Id="8955ab76-94c7-44ad-b395-dfbd46d88b34" />
+          </simpleAssociation>
+          <simpleAssociation Id="9608d8a6-b454-4ca0-8e1d-9999ae307bec" sourceCollectionName="Ponti" name="PonteReferencesStrada" targetFieldName="Strada">
+            <xpObjectMoniker Id="8ac45d13-c83d-4806-995d-3d946b21dafd" />
+          </simpleAssociation>
+        </saTargets>
         <aggrTarget>
           <aggregation Id="5a748717-3672-40ee-a287-ab0e8a813744" sourceCollectionName="Archi" name="ArcoReferencesStrada" targetFieldName="Strada" noForeignKey="true">
             <xpObjectMoniker Id="fb34530b-fcfc-42cd-b16a-08d3e18d85bd" />
           </aggregation>
           <aggregation Id="1e4d47aa-f4ca-43b1-ba31-7a921df2b47c" sourceCollectionName="Cippi" name="CippoReferencesStrada" targetFieldName="Strada" noForeignKey="true">
             <xpObjectMoniker Id="05c054d4-3554-4555-ae99-2b1ef2c360b3" />
-          </aggregation>
-          <aggregation Id="6be9b0e2-37ff-450c-b14a-10ab1a898b6e" sourceCollectionName="Ponti" name="PonteReferencesStrada" targetFieldName="Strada" noForeignKey="true">
-            <xpObjectMoniker Id="8ac45d13-c83d-4806-995d-3d946b21dafd" />
-          </aggregation>
-          <aggregation Id="58ee89a4-9b08-4339-b2c5-b97ed869afbf" sourceCollectionName="LimitiVelocità" name="LimiteVelocitàReferencesStrada" targetFieldName="Strada" noForeignKey="true">
-            <xpObjectMoniker Id="8955ab76-94c7-44ad-b395-dfbd46d88b34" />
-          </aggregation>
-          <aggregation Id="f2913d3f-2525-483a-ac06-3ba539f2ec20" sourceCollectionName="LimitiCentroAbitato" name="LimiteCentroAbitatoReferencesStrada" targetFieldName="Strada">
-            <xpObjectMoniker Id="77236b62-deca-4bba-8e3e-23cb1a0e6b24" />
-          </aggregation>
-          <aggregation Id="05a3655a-66e5-4be9-ba1c-bdbe59835652" sourceCollectionName="LimitiPortata" name="LimitePortataReferencesStrada" targetFieldName="Strada">
-            <xpObjectMoniker Id="effa560e-efc2-48dd-abea-63476769d1cf" />
-          </aggregation>
-          <aggregation Id="1ecb2004-193c-4d33-96f4-b7671f91e37f" sourceCollectionName="Tombini" name="TombinoReferencesStrada" targetFieldName="Strada">
-            <xpObjectMoniker Id="4255373e-a38c-4dd0-9485-6f6003a93833" />
           </aggregation>
         </aggrTarget>
         <collectionFields>
@@ -102,20 +104,20 @@
           <xpObjectHasCollectionFields Id="5f775770-b53a-4829-9ee1-7ff3d1ce65a4">
             <collectionField Id="07b3f92d-e819-49b7-9418-4c30662e0d53" name="Cippi" />
           </xpObjectHasCollectionFields>
-          <xpObjectHasCollectionFields Id="ea1869b4-5cae-4799-99f1-8b072f159319">
-            <collectionField Id="2cf8b0a7-c171-4315-a18a-56d7decf2dd9" name="Ponti" />
+          <xpObjectHasCollectionFields Id="3001e4de-3785-487e-8a04-682c214d59a5">
+            <collectionField Id="e329e222-9281-4c37-a537-eb02680e74a9" name="Tombini" />
           </xpObjectHasCollectionFields>
-          <xpObjectHasCollectionFields Id="4af5aa5a-3dab-404a-bacc-e6e2236b36db">
-            <collectionField Id="a5189c4d-639f-45ff-9521-753539d2793e" name="LimitiVelocità" />
+          <xpObjectHasCollectionFields Id="0ec65526-cf34-4e75-8a4e-06d70bc1b098">
+            <collectionField Id="aad2f9fe-2fa5-419c-acba-762e501b0276" name="LimitiCentroAbitato" />
           </xpObjectHasCollectionFields>
-          <xpObjectHasCollectionFields Id="10c71dc7-1ac9-4a15-9e4d-e677c8adb6b1">
-            <collectionField Id="ce43a71d-6c0c-470e-994b-3309cae3e44a" name="LimitiCentroAbitato" />
+          <xpObjectHasCollectionFields Id="0af1015f-c8ee-426e-9311-5d008c7961fa">
+            <collectionField Id="0b2f630f-65fb-4aae-8b8c-ec03fdb96792" name="LimitiPortata" />
           </xpObjectHasCollectionFields>
-          <xpObjectHasCollectionFields Id="41070191-4747-48dc-a272-5fe3bb60d721">
-            <collectionField Id="a274560b-0780-424a-a621-1cb28bc251ab" name="LimitiPortata" />
+          <xpObjectHasCollectionFields Id="1a1e0168-46ed-4d92-af9c-ca5e98057f47">
+            <collectionField Id="2bc3e2d7-a3f8-49d2-837a-eab5279764e9" name="LimitiVelocità" />
           </xpObjectHasCollectionFields>
-          <xpObjectHasCollectionFields Id="ebbc3358-74b7-4f87-8fbb-061cdcbb59f8">
-            <collectionField Id="4c44fdb3-7532-444d-a091-01414fccfc7c" name="Tombini" />
+          <xpObjectHasCollectionFields Id="067e28d5-d612-4476-ab07-3839b728fcf7">
+            <collectionField Id="35653f43-62d7-41e5-93dc-e5942ceb28d6" name="Ponti" />
           </xpObjectHasCollectionFields>
         </collectionFields>
       </xpObject>
@@ -224,31 +226,8 @@
         </fields>
       </xpObject>
     </dataBaseObjectModelHasClasses>
-    <dataBaseObjectModelHasClasses Id="3917818f-0af5-4ae6-bf95-0affaba6c0aa">
-      <xpObject Id="bd5faf76-b102-423f-8809-c81740bdd279" name="EventoLineare" baseClass="Evento" userFileName="EventoLineare" designerFileName="EventoLineare.Designer" className="EventoLineare" virtualBaseClass="Evento" nonPersistent="true" virtualName="EventoLineare">
-        <fields>
-          <generalXpObjectHasFields Id="e4c54c8e-bd14-4ce6-9c93-6d8aa4482046">
-            <field Id="6589dd72-91e3-4841-bcc0-dd393dc781d1" name="XPosFinale" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="3cb5a4b4-3f78-4762-b91c-7abdfa58f1cd">
-            <field Id="ebf99907-bd67-4df8-8732-70ba01b59ea3" name="YPosFinale" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="8c1c317d-00ea-4e55-a300-ff9e48d1f1b7">
-            <field Id="db48fc55-e54d-4eac-9fde-9a3b7fbeadab" name="ZPosFinale" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="2b18c61e-fb6c-4762-bd81-b2d4f86964d7">
-            <field Id="c43f1353-98e7-41ac-92f4-fb4d9be03ace" name="MPosFinale" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-        </fields>
-        <superClass>
-          <inheritance Id="f9628c20-a867-49a6-9d06-ac3ea0cce96f">
-            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
-          </inheritance>
-        </superClass>
-      </xpObject>
-    </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="bf16ced1-f579-48b4-810d-c0b73182b32d">
-      <xpObject Id="8ac45d13-c83d-4806-995d-3d946b21dafd" name="Ponte" baseClass="EventoLineare" userFileName="Ponte" designerFileName="Ponte.Designer" className="Ponte" virtualBaseClass="EventoLineare" persistent="PONTE" virtualName="Ponte">
+      <xpObject Id="8ac45d13-c83d-4806-995d-3d946b21dafd" name="Ponte" baseClass="Evento" userFileName="Ponte" designerFileName="Ponte.Designer" className="Ponte" virtualBaseClass="Evento" persistent="EV_Ponte" virtualName="Ponte">
         <fields>
           <generalXpObjectHasFields Id="8dcbff8d-c55a-421b-aa88-5f93fa5941c2">
             <field Id="b72aea3d-a8e7-4d25-a0d1-2979783b3ddf" name="Nome" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
@@ -257,7 +236,7 @@
             <field Id="a3994f7f-951a-4fff-9ded-07c51853a667" name="TipoOpera" virtualColumnType="String" delayedUpdateModifiedOnly="false" customAttributes="NoForeignKey" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="c22eb613-58bf-4845-9ce5-7ef4935beb66">
-            <field Id="9557d9c9-2673-452e-95cc-eadb89227b36" name="TipoImpalcato" columnType="TimeSpan" virtualColumnType="TipoMateriale" logicalType="TipoMateriale" delayedUpdateModifiedOnly="false" customAttributes="NoForeignKey" />
+            <field Id="9557d9c9-2673-452e-95cc-eadb89227b36" name="TipoMateriale" columnType="TimeSpan" virtualColumnType="TipoMateriale" logicalType="TipoMateriale" delayedUpdateModifiedOnly="false" customAttributes="NoForeignKey" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="b6ab3de7-134a-42cc-b999-49bb377b40ee">
             <field Id="21b4d710-07e3-482f-9f13-6c2d1c60b8b7" name="TipoSpalla" virtualColumnType="TipoMateriale" logicalType="TipoMateriale" delayedUpdateModifiedOnly="false" customAttributes="NoForeignKey" />
@@ -306,18 +285,18 @@
           </generalXpObjectHasFields>
         </fields>
         <superClass>
-          <inheritance Id="69d7e1f3-623e-44cc-aac4-4436f256c3a8">
-            <xpObjectMoniker Id="bd5faf76-b102-423f-8809-c81740bdd279" />
+          <inheritance Id="227efd85-c4a7-48ac-9646-ea3c83371e16">
+            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
           </inheritance>
         </superClass>
         <aggrTarget>
-          <aggregation Id="448be139-3286-45a8-b450-ab1344567bea" sourceCollectionName="Ispezioni" name="IspezioniReferencesPonte" targetFieldName="Ponte" noForeignKey="true">
-            <xpObjectMoniker Id="fa0a2e4d-f040-4b7b-8e22-fea6524ea271" />
+          <aggregation Id="4d0b005c-9384-448d-9204-20a7f33425fb" sourceCollectionName="Ispezioni" name="IspezioneReferencesPonte" targetFieldName="Ponte">
+            <xpObjectMoniker Id="03bfb5a0-2bc9-47c9-b996-5b2fe40892e2" />
           </aggregation>
         </aggrTarget>
         <collectionFields>
-          <xpObjectHasCollectionFields Id="40b8c6b7-7a85-476e-9c70-a82337946218">
-            <collectionField Id="952557f2-18bb-4ebb-b581-bd5049c46974" name="Ispezioni" />
+          <xpObjectHasCollectionFields Id="30abaf14-b4ee-4357-856f-f5a1f38638ca">
+            <collectionField Id="41cb2e89-42a7-4c05-8c19-97b52429d8b3" name="Ispezioni" />
           </xpObjectHasCollectionFields>
         </collectionFields>
       </xpObject>
@@ -332,7 +311,7 @@
       </xpObject>
     </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="c6d57497-5ba6-43cb-96db-3c4661718044">
-      <xpObject Id="8955ab76-94c7-44ad-b395-dfbd46d88b34" name="LimiteVelocità" baseClass="EventoLineare" userFileName="LimiteVelocità" designerFileName="LimiteVelocità.Designer" className="LimiteVelocità" virtualBaseClass="EventoLineare" persistent="LIMITEVELOCITA" virtualName="LimiteVelocità">
+      <xpObject Id="8955ab76-94c7-44ad-b395-dfbd46d88b34" name="LimiteVelocità" baseClass="Evento" userFileName="LimiteVelocità" designerFileName="LimiteVelocità.Designer" className="LimiteVelocità" virtualBaseClass="Evento" persistent="EV_LimiteVelocità" virtualName="LimiteVelocità">
         <fields>
           <generalXpObjectHasFields Id="bcfc655b-59d4-42b9-ac0d-ce520e2fd06a">
             <field Id="578252ce-7e24-47ba-805f-d77b94a3ea41" name="Limite" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
@@ -342,14 +321,14 @@
           </generalXpObjectHasFields>
         </fields>
         <superClass>
-          <inheritance Id="0be5fd4c-73be-46d8-bc4f-17eb33835e12">
-            <xpObjectMoniker Id="bd5faf76-b102-423f-8809-c81740bdd279" />
+          <inheritance Id="8566ccaf-5bbd-44e0-aa88-c55028c4b31c">
+            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
           </inheritance>
         </superClass>
       </xpObject>
     </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="6b83c113-367b-4eb7-99e6-6106ea23fef4">
-      <xpObject Id="77236b62-deca-4bba-8e3e-23cb1a0e6b24" name="LimiteCentroAbitato" baseClass="EventoLineare" userFileName="CentroAbitato" designerFileName="CentroAbitato.Designer" className="LimiteCentroAbitato" virtualBaseClass="EventoLineare" virtualName="LimiteCentroAbitato">
+      <xpObject Id="77236b62-deca-4bba-8e3e-23cb1a0e6b24" name="LimiteCentroAbitato" baseClass="Evento" userFileName="CentroAbitato" designerFileName="CentroAbitato.Designer" className="LimiteCentroAbitato" virtualBaseClass="Evento" persistent="EV_LimiteCentroAbitato" virtualName="LimiteCentroAbitato">
         <fields>
           <generalXpObjectHasFields Id="82661ac6-aff9-4f66-932e-79e46d0a2031">
             <field Id="9a02bc06-647d-46cb-b960-13f411621ebf" name="Nome" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
@@ -362,8 +341,8 @@
           </generalXpObjectHasFields>
         </fields>
         <superClass>
-          <inheritance Id="a68b30e5-2b9c-4b5c-b498-61c062ae2890">
-            <xpObjectMoniker Id="bd5faf76-b102-423f-8809-c81740bdd279" />
+          <inheritance Id="58050821-b1c5-4a72-b195-accf34c0c095">
+            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
           </inheritance>
         </superClass>
       </xpObject>
@@ -392,35 +371,8 @@
         </fields>
       </xpObject>
     </dataBaseObjectModelHasClasses>
-    <dataBaseObjectModelHasClasses Id="1a3b49cc-5bef-473b-9d77-c317385df4c1">
-      <xpObject Id="99e90578-3c52-4578-aeca-161d2cb02e80" name="GeometriaEventoLineare" baseClass="GeometriaEvento" userFileName="GeometriaEventoLineare" designerFileName="GeometriaEventoLineare.Designer" className="GeometriaEventoLineare" virtualBaseClass="GeometriaEvento" persistent="GEOMETRIAEVENTOLINEARE" virtualName="GeometriaEventoLineare">
-        <superClass>
-          <inheritance Id="48704a02-9ab6-497c-b42f-e25741ea0336">
-            <xpObjectMoniker Id="58cd241f-fed7-4983-b0f7-01d86f3b9afa" />
-          </inheritance>
-        </superClass>
-      </xpObject>
-    </dataBaseObjectModelHasClasses>
-    <dataBaseObjectModelHasClasses Id="403bbd1c-2c19-4fc4-8ec7-910f1b38092a">
-      <xpObject Id="6db6243c-4b27-4709-98b4-fc082abde6de" name="GeometriaEventoPuntuale" baseClass="GeometriaEvento" userFileName="GeometriaEventoPuntuale" designerFileName="GeometriaEventoPuntuale.Designer" className="GeometriaEventoPuntuale" virtualBaseClass="GeometriaEvento" persistent="GEOMETRIAEVENTOPUNTUALE" virtualName="GeometriaEventoPuntuale">
-        <superClass>
-          <inheritance Id="4cc52b71-9389-419f-b2bf-67e27d84923b">
-            <xpObjectMoniker Id="58cd241f-fed7-4983-b0f7-01d86f3b9afa" />
-          </inheritance>
-        </superClass>
-      </xpObject>
-    </dataBaseObjectModelHasClasses>
-    <dataBaseObjectModelHasClasses Id="86c32463-dfea-47ad-85df-7040121adcf2">
-      <xpObject Id="9207294f-e60e-4af6-bb6c-0771cbdcf7c9" name="EventoPuntuale" baseClass="Evento" userFileName="EventoPuntuale" designerFileName="EventoPuntuale.Designer" className="EventoPuntuale" virtualBaseClass="Evento" nonPersistent="true" virtualName="EventoPuntuale">
-        <superClass>
-          <inheritance Id="10917159-e29f-41fe-ac4e-b7c18824252c">
-            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
-          </inheritance>
-        </superClass>
-      </xpObject>
-    </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="cc5da40c-c2a4-4aac-b5cc-6c199eaf0b43">
-      <xpObject Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" name="Evento" baseClass="xMap.Persistent.Base.DefaultXPObject" userFileName="Evento" designerFileName="Evento.Designer" className="Evento" virtualBaseClass="xMap.Persistent.Base.DefaultXPObject" nonPersistent="true" virtualName="Evento">
+      <xpObject Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" name="Evento" baseClass="xMap.Persistent.BaseImpl.XPSTGeometry" userFileName="Evento" designerFileName="Evento.Designer" className="Evento" virtualBaseClass="xMap.Persistent.BaseImpl.XPSTGeometry" nonPersistent="true" virtualName="Evento">
         <fields>
           <generalXpObjectHasFields Id="20666e3a-ba01-4b1f-8128-053e77126813">
             <field Id="a75a2700-bf18-4695-86ec-b8764205ffb5" name="DataInizio" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" isNullable="true" />
@@ -429,7 +381,7 @@
             <field Id="26f381b8-e8bf-4333-a579-94a09a9de3f6" name="DataFine" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" isNullable="true" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="ff0d6714-a27d-4d25-99ff-2b0a7169e07e">
-            <field Id="3d33e4f3-cd63-4dd8-b57a-f14fe0f72bc9" name="Atto" virtualColumnType="Atto" logicalType="Atto" delayedUpdateModifiedOnly="false" customAttributes="Aggregated" />
+            <field Id="3d33e4f3-cd63-4dd8-b57a-f14fe0f72bc9" name="Atto" virtualColumnType="Atto" logicalType="Atto" delayedUpdateModifiedOnly="false" customAttributes="Aggregated,DevExpress.Persistent.Base.ExpandObjectMembers(DevExpress.Persistent.Base.ExpandObjectMembers.Never)" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="ca0e6513-2467-4a28-a469-897cf0cc2fa0">
             <field Id="6f28c687-37d6-49f3-adb9-eb9107d81f01" name="TipoLocalizzazione" columnType="TimeSpan" virtualColumnType="TipoLocalizzazione" logicalType="TipoLocalizzazione" delayedUpdateModifiedOnly="false" />
@@ -437,35 +389,41 @@
           <generalXpObjectHasFields Id="a3772808-7b82-474e-814e-0a3dfcf875ec">
             <field Id="2bea6a72-f0ca-4c8c-b62d-bf23f0d8411d" name="TipoCoordinata" columnType="TimeSpan" virtualColumnType="TipoCoordinata" logicalType="TipoCoordinata" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2a48c987-ed5a-4d98-86fc-bc0ae1ece50a">
+            <field Id="391ea9b9-09b1-4332-9ddd-0bf74078fb44" name="TipoGeometria" virtualColumnType="TipoGeometriaEvento" logicalType="TipoGeometriaEvento" delayedUpdateModifiedOnly="false" customAttributes="Browsable(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ddf39894-d527-4481-8185-c075bab8de74">
+            <field Id="7c8ccf64-c5a9-472f-aa77-45b489928442" name="Località" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="75f6d7b9-a334-44b0-ac0c-e20a6fc86765">
-            <field Id="9b4ebcbc-18cb-48de-ad95-9f1571e8975c" name="XPos" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+            <field Id="9b4ebcbc-18cb-48de-ad95-9f1571e8975c" name="XPos" columnType="Double" displayName="Coord. X" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="b045304b-d746-4a71-aa4b-1349dd12222a">
-            <field Id="7dea93ed-e30d-4f50-9bb0-3d9c9a8a4b6c" name="YPos" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+            <field Id="7dea93ed-e30d-4f50-9bb0-3d9c9a8a4b6c" name="YPos" columnType="Double" displayName="Coord. Y" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="01185c7a-c67c-4d69-a6e5-0bf691f39bbd">
-            <field Id="949072df-d7a3-4d72-8bda-ca507bcce002" name="ZPos" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+            <field Id="949072df-d7a3-4d72-8bda-ca507bcce002" name="ZPos" columnType="Double" displayName="Coord. Z" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="562e2d63-799e-446a-82c3-d944e95be765">
-            <field Id="cd200654-e12a-4a40-b8bb-8fcae6a187d1" name="MPos" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+            <field Id="cd200654-e12a-4a40-b8bb-8fcae6a187d1" name="MPos" columnType="Double" displayName="Dal km." virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="2a48c987-ed5a-4d98-86fc-bc0ae1ece50a">
-            <field Id="391ea9b9-09b1-4332-9ddd-0bf74078fb44" name="TipoGeometria" virtualColumnType="TipoGeometriaEvento" logicalType="TipoGeometriaEvento" delayedUpdateModifiedOnly="false" />
+          <generalXpObjectHasFields Id="371ce6b0-4628-47e2-ab70-1d7c6816cd6b">
+            <field Id="48663dfb-d086-49ac-996a-16618a672a5b" name="XPosFinale" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3f73ab31-e824-4b34-a045-c5426d76ec60">
+            <field Id="3a893ee5-d346-4e44-bb0a-f2799f0eeaa8" name="YPosFinale" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e40fe359-8a2c-4352-8d93-1e3e9674f8e7">
+            <field Id="4ce1aa02-0866-43df-aaf1-5fe2bfb5bf32" name="ZPosFinale" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fa0706fc-aa3d-4f46-80ea-b43088ab3796">
+            <field Id="9a292cc9-11a1-4b09-96b3-9219cf3c0c49" name="MPosFinale" columnType="Double" displayName="Al km." virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
         </fields>
       </xpObject>
     </dataBaseObjectModelHasClasses>
-    <dataBaseObjectModelHasClasses Id="7e97f6ac-5a40-4e00-b654-f9835afe8b3e">
-      <xpObject Id="58cd241f-fed7-4983-b0f7-01d86f3b9afa" name="GeometriaEvento" baseClass="xMap.Persistent.BaseImpl.XPSTGeometry" userFileName="GeometriaEvento" designerFileName="GeometriaEvento.Designer" className="GeometriaEvento" virtualBaseClass="xMap.Persistent.BaseImpl.XPSTGeometry" nonPersistent="true" virtualName="GeometriaEvento">
-        <superClass>
-          <inheritance Id="74c13d4c-8d11-4392-904c-934c13b23ede">
-            <externalPersistentTypeMoniker Id="cab723c2-3c53-4475-b414-f16fe88b7c11" />
-          </inheritance>
-        </superClass>
-      </xpObject>
-    </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="a61a9137-07a5-485b-a717-68fc7a64628e">
-      <xpObject Id="4255373e-a38c-4dd0-9485-6f6003a93833" name="Tombino" baseClass="EventoPuntuale" userFileName="Tombino" designerFileName="Tombino.Designer" className="Tombino" virtualBaseClass="EventoPuntuale" virtualName="Tombino">
+      <xpObject Id="4255373e-a38c-4dd0-9485-6f6003a93833" name="Tombino" baseClass="Evento" userFileName="Tombino" designerFileName="Tombino.Designer" className="Tombino" virtualBaseClass="Evento" persistent="EV_Tombino" virtualName="Tombino">
         <fields>
           <generalXpObjectHasFields Id="4131b99a-1b89-4b07-866d-6fb6c703872a">
             <field Id="3a855ab0-b1da-4e7f-a68b-5aef55edd17e" name="Nome" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
@@ -478,14 +436,14 @@
           </generalXpObjectHasFields>
         </fields>
         <superClass>
-          <inheritance Id="a2508945-e51d-4e83-b2bf-bce559c26404">
-            <xpObjectMoniker Id="9207294f-e60e-4af6-bb6c-0771cbdcf7c9" />
+          <inheritance Id="c64149d0-75ad-42c3-8b1d-6994e3df4f2e">
+            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
           </inheritance>
         </superClass>
       </xpObject>
     </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="5799cd0d-e87f-4f7a-aa3d-d16b7f453aa7">
-      <xpObject Id="effa560e-efc2-48dd-abea-63476769d1cf" name="LimitePortata" baseClass="EventoLineare" userFileName="LimitePortata" designerFileName="LimitePortata.Designer" className="LimitePortata" virtualBaseClass="EventoLineare" virtualName="LimitePortata">
+      <xpObject Id="effa560e-efc2-48dd-abea-63476769d1cf" name="LimitePortata" baseClass="Evento" userFileName="LimitePortata" designerFileName="LimitePortata.Designer" className="LimitePortata" virtualBaseClass="Evento" persistent="EV_LimitePortata" virtualName="LimitePortata">
         <fields>
           <generalXpObjectHasFields Id="94f39e25-cd68-4335-835c-32e4631f5c8e">
             <field Id="d6431f9f-7160-454b-a15b-6768f0b4691e" name="Portata" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />
@@ -495,8 +453,8 @@
           </generalXpObjectHasFields>
         </fields>
         <superClass>
-          <inheritance Id="5996d1a0-596a-416f-8575-6627866523f3">
-            <xpObjectMoniker Id="bd5faf76-b102-423f-8809-c81740bdd279" />
+          <inheritance Id="bd19981c-8f8c-49fe-b087-cc42429234bc">
+            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
           </inheritance>
         </superClass>
       </xpObject>
@@ -515,21 +473,6 @@
         <fields>
           <generalXpObjectHasFields Id="f5b15ef3-6e3c-46b6-bd2e-c0f8a100f637">
             <field Id="068cd519-e98b-44f0-9baf-5ec8bbe38bc1" name="Descrizione" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-        </fields>
-      </xpObject>
-    </dataBaseObjectModelHasClasses>
-    <dataBaseObjectModelHasClasses Id="3bb484fe-3d92-49fe-8d48-3aac72e2cfa3">
-      <xpObject Id="fa0a2e4d-f040-4b7b-8e22-fea6524ea271" name="Ispezione" baseClass="XPObject" userFileName="Ispezione" designerFileName="Ispezione.Designer" className="Ispezione" virtualName="Ispezione">
-        <fields>
-          <generalXpObjectHasFields Id="4bcdcc56-1d5c-4e11-b29a-167d8384d1bd">
-            <field Id="28a83f46-b15b-4bdf-9f78-bc2ee6a5ee6e" name="Ponte" virtualColumnType="Ponte" logicalType="Ponte" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="569f9d01-a0fa-4899-a8f2-edd4c5152dff">
-            <field Id="e888b1d5-229c-4e34-983c-58b1394ae2ca" name="Data" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="7acd4494-78d7-4553-94db-3dc417abfe94">
-            <field Id="9a21c68b-8045-4c38-947e-a31791bfb937" name="Note" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
         </fields>
       </xpObject>
@@ -553,6 +496,21 @@
             <externalPersistentTypeMoniker Id="cab723c2-3c53-4475-b414-f16fe88b7c11" />
           </inheritance>
         </superClass>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="c6c16dcc-0d54-46f6-8e84-47e3436c82e1">
+      <xpObject Id="03bfb5a0-2bc9-47c9-b996-5b2fe40892e2" name="Ispezione" baseClass="xMap.Persistent.Base.DefaultXPObject" userFileName="Ispezione" designerFileName="Ispezione.Designer" className="Ispezione" virtualBaseClass="xMap.Persistent.Base.DefaultXPObject" virtualName="Ispezione">
+        <fields>
+          <generalXpObjectHasFields Id="c8e707d6-c70f-4a91-b270-8d313e20dce0">
+            <field Id="42367bf2-1cdb-4a96-9aea-97ba9ec167e4" name="Ponte" virtualColumnType="Ponte" logicalType="Ponte" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="81af1b50-1549-4604-b802-b50aee4eb769">
+            <field Id="0d340d33-562c-4afe-9eed-8e3ada7370ac" name="Data" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="80d1caa0-96ad-40db-b323-e5653b2fef8c">
+            <field Id="771e09ab-cdb0-417f-94ae-94781c0f62df" name="Note" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
+          </generalXpObjectHasFields>
+        </fields>
       </xpObject>
     </dataBaseObjectModelHasClasses>
   </classes>
@@ -613,33 +571,6 @@
     <dataBaseObjectModelHasUserComments Id="d78c9287-b713-4bc2-8ba3-d8846b2544e0">
       <userComment Id="798f5a03-d887-4167-8bc6-210145910f2a" text="- Disabilitare ForeignKey tra FeatureClass." />
     </dataBaseObjectModelHasUserComments>
-    <dataBaseObjectModelHasUserComments Id="b54a7d05-9bb3-425f-938d-1148051894da">
-      <userComment Id="b5d69392-dcd6-4727-ab65-70bc1f82830f" text="Abstract">
-        <generalXpObjects>
-          <userCommentReferencesGeneralXpObjects Id="afeac186-9571-48b4-98e6-62954f27c83f">
-            <xpObjectMoniker Id="58cd241f-fed7-4983-b0f7-01d86f3b9afa" />
-          </userCommentReferencesGeneralXpObjects>
-        </generalXpObjects>
-      </userComment>
-    </dataBaseObjectModelHasUserComments>
-    <dataBaseObjectModelHasUserComments Id="6913cf80-610c-4fab-9f18-094f5d5bb769">
-      <userComment Id="2965b221-ad44-46e2-9404-b96ae120ec7a" text="Line">
-        <generalXpObjects>
-          <userCommentReferencesGeneralXpObjects Id="a6f21d9c-aec4-4e73-99b3-ba03b9c9d557">
-            <xpObjectMoniker Id="99e90578-3c52-4578-aeca-161d2cb02e80" />
-          </userCommentReferencesGeneralXpObjects>
-        </generalXpObjects>
-      </userComment>
-    </dataBaseObjectModelHasUserComments>
-    <dataBaseObjectModelHasUserComments Id="f40cb3e0-c9e5-426d-b87d-c35f7a22c9f4">
-      <userComment Id="96d1d6b5-e4cf-49d3-ae7d-56f126245cad" text="Point">
-        <generalXpObjects>
-          <userCommentReferencesGeneralXpObjects Id="8e5c5227-b849-4b71-9c0e-bc4f5338dfcd">
-            <xpObjectMoniker Id="6db6243c-4b27-4709-98b4-fc082abde6de" />
-          </userCommentReferencesGeneralXpObjects>
-        </generalXpObjects>
-      </userComment>
-    </dataBaseObjectModelHasUserComments>
     <dataBaseObjectModelHasUserComments Id="f0666883-3895-44c1-ad46-1c4cd3db7f62">
       <userComment Id="dbc5803f-5d3d-45a0-b861-847a5871d3b7" text="Eseguire Register with Database per le FeatureClass" />
     </dataBaseObjectModelHasUserComments>
@@ -655,15 +586,6 @@
         </generalXpObjects>
       </userComment>
     </dataBaseObjectModelHasUserComments>
-    <dataBaseObjectModelHasUserComments Id="f9343a07-7807-4160-8d07-527fcf92fc95">
-      <userComment Id="773059cc-e9b1-41bf-a44f-f04e4e6bdc53" text="IXPGeometry">
-        <generalXpObjects>
-          <userCommentReferencesGeneralXpObjects Id="87ad2312-5e7c-4c66-8add-ca4a20af44c3">
-            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
-          </userCommentReferencesGeneralXpObjects>
-        </generalXpObjects>
-      </userComment>
-    </dataBaseObjectModelHasUserComments>
     <dataBaseObjectModelHasUserComments Id="cc289754-f4d7-4fb2-9209-51577100d93c">
       <userComment Id="26583d47-b647-4798-b554-bcbdd005c864" text="IXPGeometry">
         <generalXpObjects>
@@ -675,6 +597,15 @@
     </dataBaseObjectModelHasUserComments>
     <dataBaseObjectModelHasUserComments Id="8d3b6b6d-b979-4d70-ae7d-1e07aa911976">
       <userComment Id="e14dc386-c830-4f0f-851e-983fd7270ce3" text="Utilizzare nomi persistenti in MAIUSCOLO per featureClass" />
+    </dataBaseObjectModelHasUserComments>
+    <dataBaseObjectModelHasUserComments Id="a4082057-8ea3-4969-a11d-06edba102522">
+      <userComment Id="3ad9d9f3-7f40-4ac0-95d6-2fddc502e158" text="NonPersistent">
+        <generalXpObjects>
+          <userCommentReferencesGeneralXpObjects Id="08bbe0ae-f198-470e-a81f-b32534044e46">
+            <xpObjectMoniker Id="e3d27667-fa93-48c6-a72b-a5c94ce87073" />
+          </userCommentReferencesGeneralXpObjects>
+        </generalXpObjects>
+      </userComment>
     </dataBaseObjectModelHasUserComments>
   </userComments>
 </dataBaseObjectModel>

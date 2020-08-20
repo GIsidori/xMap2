@@ -17,7 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [NonPersistent]
-    public partial class Evento : xMap.Persistent.Base.DefaultXPObject
+    public partial class Evento : xMap.Persistent.BaseImpl.XPSTGeometry
     {
         DateTime? fDataInizio;
         public DateTime? DataInizio
@@ -32,7 +32,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<DateTime?>(nameof(DataFine), ref fDataFine, value); }
         }
         Atto fAtto;
-        [Aggregated]
+        [Aggregated, DevExpress.Persistent.Base.ExpandObjectMembers(DevExpress.Persistent.Base.ExpandObjectMembers.Never)]
         public Atto Atto
         {
             get { return fAtto; }
@@ -50,35 +50,71 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fTipoCoordinata; }
             set { SetPropertyValue<TipoCoordinata>(nameof(TipoCoordinata), ref fTipoCoordinata, value); }
         }
+        TipoGeometriaEvento fTipoGeometria;
+        [Browsable(false)]
+        public TipoGeometriaEvento TipoGeometria
+        {
+            get { return fTipoGeometria; }
+            set { SetPropertyValue<TipoGeometriaEvento>(nameof(TipoGeometria), ref fTipoGeometria, value); }
+        }
+        string fLocalità;
+        public string Località
+        {
+            get { return fLocalità; }
+            set { SetPropertyValue<string>(nameof(Località), ref fLocalità, value); }
+        }
         double fXPos;
+        [DevExpress.Xpo.DisplayName(@"Coord. X")]
         public double XPos
         {
             get { return fXPos; }
             set { SetPropertyValue<double>(nameof(XPos), ref fXPos, value); }
         }
         double fYPos;
+        [DevExpress.Xpo.DisplayName(@"Coord. Y")]
         public double YPos
         {
             get { return fYPos; }
             set { SetPropertyValue<double>(nameof(YPos), ref fYPos, value); }
         }
         double fZPos;
+        [DevExpress.Xpo.DisplayName(@"Coord. Z")]
         public double ZPos
         {
             get { return fZPos; }
             set { SetPropertyValue<double>(nameof(ZPos), ref fZPos, value); }
         }
         double fMPos;
+        [DevExpress.Xpo.DisplayName(@"Dal km.")]
         public double MPos
         {
             get { return fMPos; }
             set { SetPropertyValue<double>(nameof(MPos), ref fMPos, value); }
         }
-        TipoGeometriaEvento fTipoGeometria;
-        public TipoGeometriaEvento TipoGeometria
+        double fXPosFinale;
+        public double XPosFinale
         {
-            get { return fTipoGeometria; }
-            set { SetPropertyValue<TipoGeometriaEvento>(nameof(TipoGeometria), ref fTipoGeometria, value); }
+            get { return fXPosFinale; }
+            set { SetPropertyValue<double>(nameof(XPosFinale), ref fXPosFinale, value); }
+        }
+        double fYPosFinale;
+        public double YPosFinale
+        {
+            get { return fYPosFinale; }
+            set { SetPropertyValue<double>(nameof(YPosFinale), ref fYPosFinale, value); }
+        }
+        double fZPosFinale;
+        public double ZPosFinale
+        {
+            get { return fZPosFinale; }
+            set { SetPropertyValue<double>(nameof(ZPosFinale), ref fZPosFinale, value); }
+        }
+        double fMPosFinale;
+        [DevExpress.Xpo.DisplayName(@"Al km.")]
+        public double MPosFinale
+        {
+            get { return fMPosFinale; }
+            set { SetPropertyValue<double>(nameof(MPosFinale), ref fMPosFinale, value); }
         }
     }
 

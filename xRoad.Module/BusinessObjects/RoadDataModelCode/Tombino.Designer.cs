@@ -16,7 +16,8 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Tombino : EventoPuntuale
+    [Persistent(@"EV_Tombino")]
+    public partial class Tombino : Evento
     {
         string fNome;
         public string Nome

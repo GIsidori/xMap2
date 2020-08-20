@@ -24,12 +24,12 @@ namespace xMap.Persistent.Base
 
         }
 
-        private Int64 oid;
-        [Key(AutoGenerate = true), Browsable(false), Persistent("OBJECTID"),DbType("NUMBER(*,0)")]
-        public Int64 Oid
+        private int oid;
+        [Key(AutoGenerate = false), Browsable(false), Persistent("OBJECTID"), DbType("int")]
+        public int Oid
         {
             get => oid;
-            set => SetPropertyValue<Int64>(nameof(Oid), ref oid, value);
+            set => SetPropertyValue<int>(nameof(Oid), ref oid, value);
         }
     }
 

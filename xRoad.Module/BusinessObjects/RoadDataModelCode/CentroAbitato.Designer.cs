@@ -16,7 +16,8 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class LimiteCentroAbitato : EventoLineare
+    [Persistent(@"EV_LimiteCentroAbitato")]
+    public partial class LimiteCentroAbitato : Evento
     {
         string fNome;
         public string Nome

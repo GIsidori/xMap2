@@ -16,10 +16,10 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Ispezione : XPObject
+    public partial class Ispezione : xMap.Persistent.Base.DefaultXPObject
     {
         Ponte fPonte;
-        [Association(@"IspezioniReferencesPonte"), NoForeignKey]
+        [Association(@"IspezioneReferencesPonte")]
         public Ponte Ponte
         {
             get { return fPonte; }
@@ -32,6 +32,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<DateTime>(nameof(Data), ref fData, value); }
         }
         string fNote;
+        [Size(SizeAttribute.Unlimited)]
         public string Note
         {
             get { return fNote; }

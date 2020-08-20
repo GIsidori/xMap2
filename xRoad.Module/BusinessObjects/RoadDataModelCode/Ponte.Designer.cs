@@ -16,8 +16,8 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [Persistent(@"PONTE")]
-    public partial class Ponte : EventoLineare
+    [Persistent(@"EV_Ponte")]
+    public partial class Ponte : Evento
     {
         string fNome;
         public string Nome
@@ -32,12 +32,12 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return fTipoOpera; }
             set { SetPropertyValue<string>(nameof(TipoOpera), ref fTipoOpera, value); }
         }
-        TipoMateriale fTipoImpalcato;
+        TipoMateriale fTipoMateriale;
         [NoForeignKey]
-        public TipoMateriale TipoImpalcato
+        public TipoMateriale TipoMateriale
         {
-            get { return fTipoImpalcato; }
-            set { SetPropertyValue<TipoMateriale>(nameof(TipoImpalcato), ref fTipoImpalcato, value); }
+            get { return fTipoMateriale; }
+            set { SetPropertyValue<TipoMateriale>(nameof(TipoMateriale), ref fTipoMateriale, value); }
         }
         TipoMateriale fTipoSpalla;
         [NoForeignKey]
@@ -128,13 +128,13 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<double>(nameof(LimitePeso), ref fLimitePeso, value); }
         }
         Strada fStrada;
-        [Association(@"PonteReferencesStrada"), NoForeignKey]
+        [Association(@"PonteReferencesStrada")]
         public Strada Strada
         {
             get { return fStrada; }
             set { SetPropertyValue<Strada>(nameof(Strada), ref fStrada, value); }
         }
-        [Association(@"IspezioniReferencesPonte"), Aggregated]
+        [Association(@"IspezioneReferencesPonte"), Aggregated]
         public XPCollection<Ispezione> Ispezioni { get { return GetCollection<Ispezione>(nameof(Ispezioni)); } }
     }
 
