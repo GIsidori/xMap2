@@ -17,7 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"EV_Ponte")]
-    public partial class Ponte : Evento
+    public partial class Ponte : EventoLineare
     {
         string fNome;
         public string Nome
@@ -115,7 +115,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<double>(nameof(Portata), ref fPortata, value); }
         }
         Atto fOrdinanzaLimitePeso;
-        [Aggregated]
+        [Aggregated, NoForeignKey]
         public Atto OrdinanzaLimitePeso
         {
             get { return fOrdinanzaLimitePeso; }
@@ -128,7 +128,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<double>(nameof(LimitePeso), ref fLimitePeso, value); }
         }
         Strada fStrada;
-        [Association(@"PonteReferencesStrada")]
+        [Association(@"PonteReferencesStrada"), NoForeignKey]
         public Strada Strada
         {
             get { return fStrada; }

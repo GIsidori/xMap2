@@ -8,9 +8,10 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class LimiteCentroAbitato:IEvento
+    public partial class GeometriaPuntuale
     {
-        public LimiteCentroAbitato(Session session) : base(session) { }
+        public GeometriaPuntuale() : base() { }
+        public GeometriaPuntuale(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

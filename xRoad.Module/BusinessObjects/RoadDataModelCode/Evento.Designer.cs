@@ -16,8 +16,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [NonPersistent]
-    public partial class Evento : xMap.Persistent.BaseImpl.XPSTGeometry
+    public partial class Evento : xMap.Persistent.Base.DefaultXPObject
     {
         DateTime? fDataInizio;
         public DateTime? DataInizio
@@ -32,7 +31,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<DateTime?>(nameof(DataFine), ref fDataFine, value); }
         }
         Atto fAtto;
-        [Aggregated, DevExpress.Persistent.Base.ExpandObjectMembers(DevExpress.Persistent.Base.ExpandObjectMembers.Never)]
+        [Aggregated, DevExpress.Persistent.Base.ExpandObjectMembers(DevExpress.Persistent.Base.ExpandObjectMembers.Never), NoForeignKey]
         public Atto Atto
         {
             get { return fAtto; }
@@ -115,6 +114,12 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
         {
             get { return fMPosFinale; }
             set { SetPropertyValue<double>(nameof(MPosFinale), ref fMPosFinale, value); }
+        }
+        string fSigla;
+        public string Sigla
+        {
+            get { return fSigla; }
+            set { SetPropertyValue<string>(nameof(Sigla), ref fSigla, value); }
         }
     }
 

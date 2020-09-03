@@ -17,7 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"EV_Tombino")]
-    public partial class Tombino : Evento
+    public partial class Tombino : EventoPuntuale
     {
         string fNome;
         public string Nome
@@ -26,13 +26,14 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<string>(nameof(Nome), ref fNome, value); }
         }
         double fLarghezza;
+        [DevExpress.Xpo.DisplayName(@"Larghezza (mt.)")]
         public double Larghezza
         {
             get { return fLarghezza; }
             set { SetPropertyValue<double>(nameof(Larghezza), ref fLarghezza, value); }
         }
         Strada fStrada;
-        [Association(@"TombinoReferencesStrada")]
+        [Association(@"TombinoReferencesStrada"), NoForeignKey]
         public Strada Strada
         {
             get { return fStrada; }

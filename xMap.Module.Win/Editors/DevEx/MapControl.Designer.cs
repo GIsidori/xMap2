@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             DevExpress.XtraMap.CartesianMapCoordinateSystem cartesianMapCoordinateSystem1 = new DevExpress.XtraMap.CartesianMapCoordinateSystem();
+            DevExpress.XtraMap.CartesianSourceCoordinateSystem cartesianSourceCoordinateSystem2 = new DevExpress.XtraMap.CartesianSourceCoordinateSystem();
             DevExpress.XtraMap.CartesianSourceCoordinateSystem cartesianSourceCoordinateSystem1 = new DevExpress.XtraMap.CartesianSourceCoordinateSystem();
             this.map = new DevExpress.XtraMap.MapControl();
             this.layer = new DevExpress.XtraMap.VectorItemsLayer();
+            this.sqlGeometryItemStorage1 = new DevExpress.XtraMap.SqlGeometryItemStorage();
             this.storage = new DevExpress.XtraMap.SqlGeometryItemStorage();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +50,7 @@
             this.map.Size = new System.Drawing.Size(907, 562);
             this.map.TabIndex = 0;
             this.layer.Data = this.storage;
+            this.sqlGeometryItemStorage1.SourceCoordinateSystem = cartesianSourceCoordinateSystem2;
             this.storage.SourceCoordinateSystem = cartesianSourceCoordinateSystem1;
             // 
             // MapControl
@@ -67,5 +70,6 @@
         private DevExpress.XtraMap.MapControl map;
         private DevExpress.XtraMap.VectorItemsLayer layer;
         private DevExpress.XtraMap.SqlGeometryItemStorage storage;
+        private DevExpress.XtraMap.SqlGeometryItemStorage sqlGeometryItemStorage1;
     }
 }

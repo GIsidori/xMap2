@@ -17,7 +17,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"EV_LimiteCentroAbitato")]
-    public partial class LimiteCentroAbitato : Evento
+    public partial class LimiteCentroAbitato : EventoLineare
     {
         string fNome;
         public string Nome
@@ -32,7 +32,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<string>(nameof(CodiceIstat), ref fCodiceIstat, value); }
         }
         Strada fStrada;
-        [Association(@"LimiteCentroAbitatoReferencesStrada")]
+        [Association(@"LimiteCentroAbitatoReferencesStrada"), NoForeignKey]
         public Strada Strada
         {
             get { return fStrada; }

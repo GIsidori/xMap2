@@ -25,7 +25,7 @@ namespace xMap.Persistent.Base
         }
 
         private int oid;
-        [Key(AutoGenerate = false), Browsable(false), Persistent("OBJECTID"), DbType("int")]
+        [Key(AutoGenerate = true), Browsable(false), Persistent("OBJECTID"), DbType("int")]
         public int Oid
         {
             get => oid;

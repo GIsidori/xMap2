@@ -5,23 +5,23 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using DevExpress.Persistent.Base;
 using xMap.Persistent.Base;
 using NetTopologySuite.Geometries;
 
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class EventoLineare
+    public abstract partial class EventoLineare:IXPGeometry
     {
         public EventoLineare(Session session) : base(session) { }
-        public override void AfterConstruction() 
+
+        public Geometry Shape
         {
-            this.TipoGeometria = TipoGeometriaEvento.Lineare;
-            base.AfterConstruction(); 
+            get => ((IXPGeometry)fGeometria)?.Shape;
+            set => ((IXPGeometry)fGeometria).Shape = value;
         }
 
-
+        public override void AfterConstruction() { base.AfterConstruction(); }
     }
 
 }

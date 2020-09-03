@@ -19,7 +19,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
     public partial class Ispezione : xMap.Persistent.Base.DefaultXPObject
     {
         Ponte fPonte;
-        [Association(@"IspezioneReferencesPonte")]
+        [Association(@"IspezioneReferencesPonte"), NoForeignKey]
         public Ponte Ponte
         {
             get { return fPonte; }

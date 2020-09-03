@@ -17,11 +17,10 @@ namespace xMap.Persistent.BaseImpl
 
     //https://community.devexpress.com/blogs/oliver/archive/2017/01/16/xpo-sql-server-and-spatial-data-revisited.aspx
 
-
     [NonPersistent]
     [DeferredDeletion(false)]
     [OptimisticLocking(false)]
-    public abstract class XPSTGeometry:XPCustomObject,IXPGeometry
+    public abstract class XPSTGeometry:DefaultXPObject,IXPGeometry
     {
         public XPSTGeometry():base(Session.DefaultSession)
         {
@@ -33,13 +32,6 @@ namespace xMap.Persistent.BaseImpl
 
         }
 
-        private int oid;
-        [Key(autoGenerate: false), Persistent("OBJECTID"), Browsable(false),DbType("int")]
-        public int OID
-        {
-            get => oid;
-            set => SetPropertyValue<int>(nameof(OID), ref oid, value);
-        }
 
         private Geometry shape;
         [DbType("SDE.ST_GEOMETRY"), Persistent("SHAPE")]

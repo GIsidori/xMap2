@@ -64,7 +64,6 @@ namespace xMap.Module.Win.Editors.DevEx
                         break;
                 }
             }
-    ;
         }
 
         public void RefreshDataSource(object dataSource)
@@ -91,6 +90,14 @@ namespace xMap.Module.Win.Editors.DevEx
         {
             map.ZoomToFitLayerItems(0.4);
         }
+
+
+        public object EditValue
+        {
+            get;
+            set;
+        }
+
 
     }
 }

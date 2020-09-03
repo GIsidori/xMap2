@@ -8,7 +8,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class LimitePortata
+    public partial class LimitePortata:IEvento
     {
         public LimitePortata(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }

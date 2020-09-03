@@ -17,16 +17,17 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
     [Persistent(@"EV_LimitePortata")]
-    public partial class LimitePortata : Evento
+    public partial class LimitePortata : EventoLineare
     {
         double fPortata;
+        [DevExpress.Xpo.DisplayName(@"Portata (Ton)")]
         public double Portata
         {
             get { return fPortata; }
             set { SetPropertyValue<double>(nameof(Portata), ref fPortata, value); }
         }
         Strada fStrada;
-        [Association(@"LimitePortataReferencesStrada")]
+        [Association(@"LimitePortataReferencesStrada"), NoForeignKey]
         public Strada Strada
         {
             get { return fStrada; }

@@ -8,7 +8,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Tombino
+    public partial class Tombino:IEvento
     {
         public Tombino(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }

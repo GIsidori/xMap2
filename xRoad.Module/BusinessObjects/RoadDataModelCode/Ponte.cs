@@ -8,7 +8,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class Ponte
+    public partial class Ponte:IEvento
     {
         public Ponte(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }

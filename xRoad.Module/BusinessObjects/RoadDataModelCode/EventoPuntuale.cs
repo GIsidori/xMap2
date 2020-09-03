@@ -5,51 +5,23 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using DevExpress.Persistent.Base;
+using xMap.Persistent.Base;
 using NetTopologySuite.Geometries;
 
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class EventoPuntuale
+    public abstract partial class EventoPuntuale:IXPGeometry
     {
         public EventoPuntuale(Session session) : base(session) { }
-        public override void AfterConstruction() 
+
+        public Geometry Shape
         {
-            this.TipoGeometria = TipoGeometriaEvento.Puntuale;
-            base.AfterConstruction(); 
+            get => ((IXPGeometry)fGeometria)?.Shape;
+            set => ((IXPGeometry)fGeometria).Shape = value;
         }
 
-        //private GeometriaEventoPuntuale geometria;
-
-        //[Aggregated, Browsable(false), NoForeignKey]
-        //public GeometriaEventoPuntuale GeometriaEventoPuntuale
-        //{
-        //    get => geometria;
-        //    set
-        //    {
-        //        if (geometria == value)
-        //            return;
-
-        //        GeometriaEventoPuntuale prevGeom = geometria;
-        //        geometria = value;
-
-        //        if (IsLoading)
-        //            return;
-
-        //        if (prevGeom != null && prevGeom.EventoPuntuale == this)
-        //            prevGeom.EventoPuntuale = null;
-
-        //        if (geometria != null)
-        //            geometria.EventoPuntuale = this;
-
-        //        OnChanged(nameof(GeometriaEvento));
-
-        //    }
-        //}
-
-        //public Geometry Shape { get => geometria?.Shape; set { if (geometria != null) geometria.Shape = value; } }
-
+        public override void AfterConstruction() { base.AfterConstruction(); }
     }
 
 }

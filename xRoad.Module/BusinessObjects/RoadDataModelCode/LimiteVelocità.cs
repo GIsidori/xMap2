@@ -8,7 +8,7 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    public partial class LimiteVelocità
+    public partial class LimiteVelocità:IEvento
     {
         public LimiteVelocità(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }

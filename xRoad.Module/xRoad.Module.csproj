@@ -108,6 +108,22 @@
     <Compile Include="BusinessObjects\RoadDataModelCode\Evento.Designer.cs">
       <DependentUpon>Evento.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoLineare.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoLineare.Designer.cs">
+      <DependentUpon>EventoLineare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoPuntuale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoPuntuale.Designer.cs">
+      <DependentUpon>EventoPuntuale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaLineare.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaLineare.Designer.cs">
+      <DependentUpon>GeometriaLineare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaPuntuale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaPuntuale.Designer.cs">
+      <DependentUpon>GeometriaPuntuale.cs</DependentUpon>
+    </Compile>
     <Compile Include="BusinessObjects\RoadDataModelCode\Ispezione.cs" />
     <Compile Include="BusinessObjects\RoadDataModelCode\Ispezione.Designer.cs">
       <DependentUpon>Ispezione.cs</DependentUpon>

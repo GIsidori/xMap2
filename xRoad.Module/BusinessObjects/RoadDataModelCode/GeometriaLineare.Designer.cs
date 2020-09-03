@@ -16,16 +16,8 @@ using System.Reflection;
 namespace xRoad.Module.BusinessObjects.RoadDataModel
 {
 
-    [NonPersistent]
-    public partial class EventoLineare : Evento
+    public partial class GeometriaLineare : xMap.Persistent.BaseImpl.XPSTGeometry
     {
-        GeometriaLineare fGeometria;
-        [NoForeignKey, Browsable(false)]
-        public GeometriaLineare Geometria
-        {
-            get { return fGeometria; }
-            set { SetPropertyValue<GeometriaLineare>(nameof(Geometria), ref fGeometria, value); }
-        }
     }
 
 }
