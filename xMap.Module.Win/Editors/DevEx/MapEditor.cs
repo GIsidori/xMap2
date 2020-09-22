@@ -57,5 +57,6 @@ namespace xMap.Module.Win.Editors.DevEx
         {
             return this.PropertyValue;
         }
+
     }
 }

@@ -25,6 +25,15 @@ namespace xMap.Module.Win.Editors.DevEx
             InitializeComponent();
             layer.DataLoaded += this.Layer_DataLoaded;
             map.MapEditor.MapItemEdited += this.MapEditor_MapItemEdited;
+            this.wmsDataProvider1.ResponseCapabilities += WmsDataProvider1_ResponseCapabilities;
+        }
+
+        private void WmsDataProvider1_ResponseCapabilities(object sender, CapabilitiesRespondedEventArgs e)
+        {
+            // Specify an active layer for the map control.
+            this.wmsDataProvider1.ActiveLayerName = e.Layers[0].Name;
+            // Recieve information on the active layer.
+            //label1.Text = string.Format("Layer name: {0}, Layer title: {1}", e.Layers[0].Name, e.Layers[0].Title);
         }
 
         private void MapEditor_MapItemEdited(object sender, MapItemEditedEventArgs e)

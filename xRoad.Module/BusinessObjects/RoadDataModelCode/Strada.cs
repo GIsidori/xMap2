@@ -21,6 +21,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
         private Percorso percorso;
 
+        [VisibleInListView(false),VisibleInLookupListView(false)]
         public Percorso Percorso
         {
             get => percorso;
@@ -47,6 +48,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             }
         }
 
+        [VisibleInListView(false), VisibleInLookupListView(false),VisibleInDetailView(false),VisibleInDashboards(false)]
         public Geometry Shape { get => ((IXPGeometry)percorso)?.Shape; set => ((IXPGeometry)percorso).Shape = value; }
 
 
