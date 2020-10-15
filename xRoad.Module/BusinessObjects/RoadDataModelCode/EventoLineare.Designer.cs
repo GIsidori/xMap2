@@ -19,13 +19,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
     [NonPersistent]
     public partial class EventoLineare : Evento
     {
-        GeometriaLineare fGeometria;
-        [NoForeignKey, Browsable(false)]
-        public GeometriaLineare Geometria
-        {
-            get { return fGeometria; }
-            set { SetPropertyValue<GeometriaLineare>(nameof(Geometria), ref fGeometria, value); }
-        }
     }
 
 }

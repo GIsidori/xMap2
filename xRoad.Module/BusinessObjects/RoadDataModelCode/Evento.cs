@@ -34,6 +34,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
                 case nameof(Strada):
                     Strada s = newValue as Strada;
                     Sigla = s?.Sigla;
+                    OIDStrada = s?.Oid;
                     break;
                 case nameof(Sigla):
                     string sigla = newValue as string;

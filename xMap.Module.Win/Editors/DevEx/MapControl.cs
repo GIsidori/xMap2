@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraMap;
+using DevExpress.Xpo;
 using xMap.Persistent.Base;
 using System.Data.SqlTypes;
 using NetTopologySuite.Geometries;
@@ -19,19 +20,21 @@ namespace xMap.Module.Win.Editors.DevEx
     {
 
         IBindingList bindingList;
+        Dictionary<string, string> dataSourceProperties = new Dictionary<string, string>();
 
         public MapControl()
         {
             InitializeComponent();
+
             layer.DataLoaded += this.Layer_DataLoaded;
             map.MapEditor.MapItemEdited += this.MapEditor_MapItemEdited;
-            this.wmsDataProvider1.ResponseCapabilities += WmsDataProvider1_ResponseCapabilities;
+            //this.wmsDataProvider1.ResponseCapabilities += WmsDataProvider1_ResponseCapabilities;
         }
 
         private void WmsDataProvider1_ResponseCapabilities(object sender, CapabilitiesRespondedEventArgs e)
         {
             // Specify an active layer for the map control.
-            this.wmsDataProvider1.ActiveLayerName = e.Layers[0].Name;
+            //this.wmsDataProvider1.ActiveLayerName = e.Layers[0].Name;
             // Recieve information on the active layer.
             //label1.Text = string.Format("Layer name: {0}, Layer title: {1}", e.Layers[0].Name, e.Layers[0].Title);
         }
@@ -86,10 +89,21 @@ namespace xMap.Module.Win.Editors.DevEx
                 {
                     if (item.Shape != null)
                         storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.SRID));
+                    foreach (var pair in dataSourceProperties)
+                    {
+                        var vl = map.Layers[pair.Key] as VectorItemsLayer;
+                        var stor = vl.Data as SqlGeometryItemStorage;
+                        stor.Items.Clear();
+                        var xpo = item as DevExpress.Xpo.XPBaseObject;
+                        IBindingList list = xpo.GetMemberValue(pair.Value) as IBindingList;
+                        foreach (IXPGeometry innerItem in list)
+                        {
+                            stor.Items.Add(new SqlGeometryItem(innerItem.Shape.ToString(), (int)item.Shape.SRID));
+                        }
+                    }
+
                 }
             }
-
-            //storage.SourceCoordinateSystem = new CartesianSourceCoordinateSystem() { CoordinateConverter = new UTMCartesianToGeoConverter(32, Hemisphere.Northern) };
 
             map.ResumeRender();
 
@@ -105,6 +119,49 @@ namespace xMap.Module.Win.Editors.DevEx
         {
             get;
             set;
+        }
+
+        public bool ShowToolbar
+        {
+            get => map.MapEditor.ShowEditorPanel;
+            set => map.MapEditor.ShowEditorPanel = value;
+        }
+
+        public LayerBase AddVectorLayer(string dataSourceProperty,string layerName)
+        {
+            var _layer = new DevExpress.XtraMap.VectorItemsLayer();
+            var _storage = new DevExpress.XtraMap.SqlGeometryItemStorage();
+            _layer.Name = layerName;
+            _layer.Data = _storage;
+            _storage.SourceCoordinateSystem = storage.SourceCoordinateSystem;
+            map.Layers.Add(_layer);
+            dataSourceProperties.Add(layerName, dataSourceProperty);
+            return _layer;
+
+        }
+
+        public LayerBase AddWMSLayer(string uri,string layerName)
+        {
+            ImageLayer imageLayer = new ImageLayer();
+            WmsDataProvider dataProvider = new WmsDataProvider();
+            dataProvider.ServerUri = uri;
+            dataProvider.ActiveLayerName = layerName;
+            imageLayer.DataProvider = dataProvider;
+            map.Layers.Add(imageLayer);
+            return imageLayer;
+        }
+
+        public LayerBase AddBingMap(string bingKey)
+        {
+            var layer = new ImageLayer()
+            {
+                DataProvider = new BingMapDataProvider()
+                {
+                    BingKey = bingKey
+                }
+            };
+
+            return layer;
         }
 
 

@@ -18,6 +18,12 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
 
     public partial class GeometriaPuntuale : xMap.Persistent.BaseImpl.XPSTGeometry
     {
+        int fEvento;
+        public int Evento
+        {
+            get { return fEvento; }
+            set { SetPropertyValue<int>(nameof(Evento), ref fEvento, value); }
+        }
     }
 
 }

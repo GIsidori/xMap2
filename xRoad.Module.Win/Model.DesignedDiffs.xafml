@@ -1,61 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <Options BingKey="AsiGHquEaIIBocV-MHDesAVViQSqcwGao_JxeaYIwlnmOMd53bPAYwrHRPn5D69Y" />
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="20.1.4.0" IsNewNode="True" />
     <SchemaModule Name="SystemWindowsFormsModule" Version="20.1.4.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
     <DetailView Id="Strada_DetailView">
-      <Layout>
-        <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="21.746575342465754">
-            <LayoutGroup Id="Strada" RelativeSize="100">
-              <LayoutGroup Id="Strada_col1" RelativeSize="49.943883277216614">
-                <LayoutGroup Id="Autodb0b4cd0-0dec-41c5-8910-9e1eed59eaa7" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="36.363636363636367" IsNewNode="True">
-                  <LayoutItem Id="Sigla" ViewItem="Sigla" Index="0" RelativeSize="59.7752808988764" IsNewNode="True" />
-                  <LayoutItem Id="Tronco" ViewItem="Tronco" Index="1" RelativeSize="40.2247191011236" IsNewNode="True" />
-                </LayoutGroup>
-                <LayoutItem Id="Denominazione" RelativeSize="27.272727272727273" Index="1" />
-                <LayoutItem Id="Sigla" RelativeSize="21.428571428571427" Index="1" Removed="True" />
-                <LayoutItem Id="ClassificaFunzionale" RelativeSize="36.363636363636367" Index="2" />
-                <LayoutItem Id="Percorso" RelativeSize="23.529411764705884" Removed="True" />
-              </LayoutGroup>
-              <LayoutGroup Id="Strada_col2" RelativeSize="50.056116722783386">
-                <LayoutItem Id="Numero" RelativeSize="36.363636363636367" />
-                <LayoutItem Id="Asse" RelativeSize="27.272727272727273" />
-                <LayoutItem Id="TipoAmministrazione" RelativeSize="36.363636363636367" />
-                <LayoutItem Id="Tronco" RelativeSize="28.571428571428573" Removed="True" />
-              </LayoutGroup>
-            </LayoutGroup>
-          </LayoutGroup>
-          <TabbedGroup Id="Tabs" RelativeSize="78.253424657534254">
-            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" RelativeSize="100" Caption="Percorso" TextAlignMode="AlignWithChildren" IsNewNode="True">
-              <LayoutItem Id="Percorso" ViewItem="Percorso" Index="0" RelativeSize="100" TextAlignMode="AutoSize" ShowCaption="False" IsNewNode="True" />
-            </LayoutGroup>
-            <LayoutGroup Id="Archi" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1">
-              <LayoutItem Id="Archi" TextAlignMode="AutoSize" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="Cippi" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="2">
-              <LayoutItem Id="Cippi" TextAlignMode="AutoSize" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="Tombini" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="3">
-              <LayoutItem Id="Tombini" TextAlignMode="AutoSize" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="LimitiCentroAbitato" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="4">
-              <LayoutItem Id="LimitiCentroAbitato" TextAlignMode="AutoSize" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="LimitiPortata" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="5">
-              <LayoutItem Id="LimitiPortata" TextAlignMode="AutoSize" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="LimitiVelocità" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="6">
-              <LayoutItem Id="LimitiVelocità" TextAlignMode="AutoSize" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="Ponti" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="7">
-              <LayoutItem Id="Ponti" TextAlignMode="AutoSize" RelativeSize="100" />
-            </LayoutGroup>
-          </TabbedGroup>
-        </LayoutGroup>
-      </Layout>
+      <Items>
+        <PropertyEditor Id="Percorso" PropertyEditorType="xMap.Module.Win.Editors.DevEx.MapEditor">
+          <MapLayers>
+            <MapLayer Id="Cippi" DataSourceProperty="Cippi" Index="0" LayerName="Cippi" IsNewNode="True" />
+            <MapLayer Id="CTR:50k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="2" Index="1" IsNewNode="True" />
+            <MapLayer Id="CTR:25k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="1" Index="2" IsNewNode="True" />
+            <MapLayer Id="CTR:5k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="0" Index="3" IsNewNode="True" />
+            <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="4" LayerName="BingMap" IsNewNode="True" />
+            <MapLayer Id="LimitiVelocità" LayerName="Limiti di Velocità" DataSourceProperty="LimitiVelocità" IsNewNode="True" />
+          </MapLayers>
+        </PropertyEditor>
+      </Items>
     </DetailView>
   </Views>
 </Application>

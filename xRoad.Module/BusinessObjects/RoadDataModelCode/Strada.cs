@@ -30,7 +30,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
                 if (percorso == value)
                     return;
 
-
                 Percorso prev = percorso;
                 percorso = value;
 

@@ -116,10 +116,18 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             set { SetPropertyValue<double>(nameof(MPosFinale), ref fMPosFinale, value); }
         }
         string fSigla;
+        [MemberDesignTimeVisibility(false)]
         public string Sigla
         {
             get { return fSigla; }
             set { SetPropertyValue<string>(nameof(Sigla), ref fSigla, value); }
+        }
+        int? fOIDStrada;
+        [MemberDesignTimeVisibility(false)]
+        public int? OIDStrada
+        {
+            get { return fOIDStrada; }
+            set { SetPropertyValue<int?>(nameof(OIDStrada), ref fOIDStrada, value); }
         }
     }
 

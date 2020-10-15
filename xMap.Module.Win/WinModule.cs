@@ -44,5 +44,11 @@ namespace xMap.Module.Win {
             application.CreateCustomUserModelDifferenceStore += Application_CreateCustomUserModelDifferenceStore;
             // Manage various aspects of the application UI and behavior at the module level.
         }
+
+
+        public override void ExtendModelInterfaces(ModelInterfaceExtenders extenders)
+        {
+            base.ExtendModelInterfaces(extenders);
+        }
     }
 }

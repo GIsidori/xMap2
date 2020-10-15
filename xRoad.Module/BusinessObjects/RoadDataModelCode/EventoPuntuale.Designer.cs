@@ -19,13 +19,6 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
     [NonPersistent]
     public partial class EventoPuntuale : Evento
     {
-        GeometriaPuntuale fGeometria;
-        [NoForeignKey, Browsable(false)]
-        public GeometriaPuntuale Geometria
-        {
-            get { return fGeometria; }
-            set { SetPropertyValue<GeometriaPuntuale>(nameof(Geometria), ref fGeometria, value); }
-        }
     }
 
 }

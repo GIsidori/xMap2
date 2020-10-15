@@ -39,5 +39,12 @@ namespace xMap.Module {
             base.CustomizeTypesInfo(typesInfo);
             CalculatedPersistentAliasHelper.CustomizeTypesInfo(typesInfo);
         }
+
+        public override void ExtendModelInterfaces(ModelInterfaceExtenders extenders)
+        {
+            extenders.Add<IModelPropertyEditor, IModelMapPropertyEditor>();
+            extenders.Add<IModelOptions, IModelMapOptions>();
+            base.ExtendModelInterfaces(extenders);
+        }
     }
 }
