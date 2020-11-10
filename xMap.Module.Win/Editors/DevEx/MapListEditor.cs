@@ -33,7 +33,7 @@ namespace xMap.Module.Win.Editors.DevEx
 
         }
 
-        public override SelectionType SelectionType => SelectionType.None;
+        public override SelectionType SelectionType => SelectionType.MultipleSelection;
 
         public override IList GetSelectedObjects()
         {

@@ -16,6 +16,7 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
     {
         public EventoPuntuale(Session session) : base(session) { }
 
+        [NonPersistent]
         [VisibleInListView(false), VisibleInLookupListView(false), VisibleInDetailView(false), VisibleInDashboards(false)]
         public Geometry Shape
         {
@@ -29,7 +30,9 @@ namespace xRoad.Module.BusinessObjects.RoadDataModel
             get { return Session.FindObject<GeometriaPuntuale>(new BinaryOperator(nameof(GeometriaPuntuale.Evento), this.Oid)); }
         }
 
-        public override void AfterConstruction() { base.AfterConstruction(); }
+        public override void AfterConstruction() {
+            this.TipoGeometria = TipoGeometriaEvento.Puntuale;
+            base.AfterConstruction(); }
     }
 
 }

@@ -51,6 +51,7 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Security.v20.1">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
@@ -71,6 +72,7 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.ViewVariantsModule.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Win.v20.1">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>

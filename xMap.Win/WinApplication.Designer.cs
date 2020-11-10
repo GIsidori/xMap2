@@ -35,6 +35,8 @@
             this.xMapModule1 = new xMap.Module.xMapModule();
             this.xRoadWindowsFormsModule1 = new xRoad.Module.Win.xRoadWindowsFormsModule();
             this.xRoadModule1 = new xRoad.Module.xRoadModule();
+            this.viewVariantsModule1 = new DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule();
+            this.businessClassLibraryCustomizationModule1 = new DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // securityStrategyComplex1
@@ -64,6 +66,8 @@
             this.Modules.Add(this.module2);
             this.Modules.Add(this.securityModule1);
             this.Modules.Add(this.validationModule);
+            this.Modules.Add(this.viewVariantsModule1);
+            this.Modules.Add(this.businessClassLibraryCustomizationModule1);
             this.Modules.Add(this.module3);
             this.Modules.Add(this.validationWindowsFormsModule);
             this.Modules.Add(this.module4);
@@ -91,5 +95,7 @@
         private Module.xMapModule xMapModule1;
         private xRoad.Module.Win.xRoadWindowsFormsModule xRoadWindowsFormsModule1;
         private xRoad.Module.xRoadModule xRoadModule1;
+        private DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule viewVariantsModule1;
+        private DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule businessClassLibraryCustomizationModule1;
     }
 }

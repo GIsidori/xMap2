@@ -88,7 +88,7 @@ namespace xMap.Module.Win.Editors.DevEx
                 foreach (IXPGeometry item in bindingList)
                 {
                     if (item.Shape != null)
-                        storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.SRID));
+                        AddItem(item, storage); // storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.SRID));
                     foreach (var pair in dataSourceProperties)
                     {
                         var vl = map.Layers[pair.Key] as VectorItemsLayer;
@@ -98,7 +98,7 @@ namespace xMap.Module.Win.Editors.DevEx
                         IBindingList list = xpo.GetMemberValue(pair.Value) as IBindingList;
                         foreach (IXPGeometry innerItem in list)
                         {
-                            stor.Items.Add(new SqlGeometryItem(innerItem.Shape.ToString(), (int)item.Shape.SRID));
+                            AddItem(innerItem, stor);
                         }
                     }
 
@@ -109,9 +109,23 @@ namespace xMap.Module.Win.Editors.DevEx
 
         }
 
+        private void AddItem(IXPGeometry item,SqlGeometryItemStorage storage)
+        {
+            if (item.Shape != null)
+            {
+                var sqlStorageItem = new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.SRID);
+                foreach (DevExpress.Xpo.Metadata.XPMemberInfo info in item.ClassInfo.ObjectProperties)
+                {
+                    sqlStorageItem.Attributes.Add(new MapItemAttribute() { Name = info.Name, Value = info.GetValue(item) });
+                }
+                storage.Items.Add(sqlStorageItem);
+            }
+
+        }
+
         private void Layer_DataLoaded(object sender, DataLoadedEventArgs e)
         {
-            map.ZoomToFitLayerItems(0.4);
+            map.ZoomToFitLayerItems();
         }
 
 
@@ -164,6 +178,11 @@ namespace xMap.Module.Win.Editors.DevEx
             return layer;
         }
 
+        private void map_MapItemClick(object sender, MapItemClickEventArgs e)
+        {
+            
+        }
 
+        
     }
 }

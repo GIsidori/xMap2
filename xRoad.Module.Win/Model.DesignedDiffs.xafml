@@ -16,9 +16,29 @@
             <MapLayer Id="CTR:5k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="0" Index="3" IsNewNode="True" />
             <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="4" LayerName="BingMap" IsNewNode="True" />
             <MapLayer Id="LimitiVelocità" LayerName="Limiti di Velocità" DataSourceProperty="LimitiVelocità" IsNewNode="True" />
+            <MapLayer Id="Tombini" DataSourceProperty="Tombini" LayerName="Tombini" IsNewNode="True" />
           </MapLayers>
         </PropertyEditor>
       </Items>
     </DetailView>
+    <ListView Id="Strada_ListView">
+      <Variants>
+        <Variant Id="Elenco" ViewID="Strada_ListView" Caption="Elenco" IsNewNode="True" />
+        <Variant Id="Mappa" ViewID="Strada_MapListView" Caption="Mappa" IsNewNode="True" />
+      </Variants>
+    </ListView>
+    <ListView Id="Strada_MapListView" ClassName="xRoad.Module.BusinessObjects.RoadDataModel.Strada" EditorTypeName="xMap.Module.Win.Editors.DevEx.MapListEditor" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Percorso" PropertyName="Percorso" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Shape" PropertyName="Shape" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Sigla" PropertyName="Sigla" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="Denominazione" PropertyName="Denominazione" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="ClassificaFunzionale" PropertyName="ClassificaFunzionale" Width="70" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Numero" PropertyName="Numero" Width="70" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="Asse" PropertyName="Asse" Width="70" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="TipoAmministrazione" PropertyName="TipoAmministrazione" Width="70" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Tronco" PropertyName="Tronco" Width="70" Index="6" IsNewNode="True" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>

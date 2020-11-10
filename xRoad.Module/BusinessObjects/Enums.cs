@@ -9,8 +9,8 @@ namespace xRoad.Module.BusinessObjects
     public enum TipoLocalizzazione
     {
         Odometrica,         //Progressiva chilometrica su strada
-        Toponomastica,      //Via e Numero Civico
         Coordinate,         //Coordinate geografiche
+        Toponomastica,      //Via e Numero Civico
         Catasto,            //Dati catastali
     }
 
