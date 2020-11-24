@@ -6,16 +6,63 @@
     <SchemaModule Name="SystemWindowsFormsModule" Version="20.1.4.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <ListView Id="Ponte_ListView">
+      <Variants>
+        <Variant Id="List" ViewID="Ponte_ListView" Caption="Elenco" IsNewNode="True" />
+        <Variant Id="Map" ViewID="Ponte_MapListView" Caption="Mappa" IsNewNode="True" />
+      </Variants>
+    </ListView>
+    <ListView Id="Ponte_MapListView" ClassName="xRoad.Module.BusinessObjects.RoadDataModel.Ponte" EditorTypeName="xMap.Module.Win.Editors.DevEx.MapListEditor" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Atto" PropertyName="Atto" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DataFine" PropertyName="DataFine" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DataInizio" PropertyName="DataInizio" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Località" PropertyName="Località" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="MPos" PropertyName="MPos" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="MPosFinale" PropertyName="MPosFinale" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Shape" PropertyName="Shape" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="TipoCoordinata" PropertyName="TipoCoordinata" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="TipoLocalizzazione" PropertyName="TipoLocalizzazione" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="XPos" PropertyName="XPos" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="XPosFinale" PropertyName="XPosFinale" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="YPos" PropertyName="YPos" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="YPosFinale" PropertyName="YPosFinale" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ZPos" PropertyName="ZPos" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ZPosFinale" PropertyName="ZPosFinale" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Nome" PropertyName="Nome" Width="70" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="TipoOpera" PropertyName="TipoOpera" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="TipoMateriale" PropertyName="TipoMateriale" Width="70" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="TipoSpalla" PropertyName="TipoSpalla" Width="70" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="TipoPila" PropertyName="TipoPila" Width="70" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="NumeroCampate" PropertyName="NumeroCampate" Width="50" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Lunghezza" PropertyName="Lunghezza" Width="50" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="Larghezza" PropertyName="Larghezza" Width="50" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="LunghMaxCampata" PropertyName="LunghMaxCampata" Width="50" Index="8" IsNewNode="True" />
+        <ColumnInfo Id="Illuminazione" PropertyName="Illuminazione" Width="50" Index="9" IsNewNode="True" />
+        <ColumnInfo Id="TipoElementoAttraversato" PropertyName="TipoElementoAttraversato" Width="70" Index="10" IsNewNode="True" />
+        <ColumnInfo Id="Note" PropertyName="Note" Width="70" Index="11" IsNewNode="True" />
+        <ColumnInfo Id="StatoManutenzione" PropertyName="StatoManutenzione" Width="70" Index="12" IsNewNode="True" />
+        <ColumnInfo Id="CodiceARS" PropertyName="CodiceARS" Width="70" Index="13" IsNewNode="True" />
+        <ColumnInfo Id="Portata" PropertyName="Portata" Width="50" Index="14" IsNewNode="True" />
+        <ColumnInfo Id="OrdinanzaLimitePeso" PropertyName="OrdinanzaLimitePeso" Width="70" Index="15" IsNewNode="True" />
+        <ColumnInfo Id="LimitePeso" PropertyName="LimitePeso" Width="50" Index="16" IsNewNode="True" />
+        <ColumnInfo Id="Strada" PropertyName="Strada" Width="70" Index="17" IsNewNode="True" />
+      </Columns>
+      <MapLayers IsNewNode="True">
+        <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="0" LayerName="BingMap" IsNewNode="True" />
+        <MapLayer Id="Strada" LayerName="Strade" DataSourceProperty="Strada" Index="1" IsNewNode="True" />
+      </MapLayers>
+    </ListView>
     <DetailView Id="Strada_DetailView">
       <Items>
         <PropertyEditor Id="Percorso" PropertyEditorType="xMap.Module.Win.Editors.DevEx.MapEditor">
           <MapLayers>
-            <MapLayer Id="Cippi" DataSourceProperty="Cippi" Index="0" LayerName="Cippi" IsNewNode="True" />
-            <MapLayer Id="CTR:50k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="2" Index="1" IsNewNode="True" />
-            <MapLayer Id="CTR:25k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="1" Index="2" IsNewNode="True" />
-            <MapLayer Id="CTR:5k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="0" Index="3" IsNewNode="True" />
-            <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="4" LayerName="BingMap" IsNewNode="True" />
-            <MapLayer Id="LimitiVelocità" LayerName="Limiti di Velocità" DataSourceProperty="LimitiVelocità" IsNewNode="True" />
+            <MapLayer Id="CTR:50k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="2" Index="0" Visible="False" IsNewNode="True" />
+            <MapLayer Id="CTR:25k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="1" Index="1" Visible="False" IsNewNode="True" />
+            <MapLayer Id="CTR:5k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="0" Index="2" Visible="False" IsNewNode="True" />
+            <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="3" LayerName="BingMap" IsNewNode="True" />
+            <MapLayer Id="LimitiVelocità" LayerName="Limiti di Velocità" DataSourceProperty="LimitiVelocità" Index="4" IsNewNode="True" />
+            <MapLayer Id="Cippi" DataSourceProperty="Cippi" Index="5" LayerName="Cippi" IsNewNode="True" />
             <MapLayer Id="Tombini" DataSourceProperty="Tombini" LayerName="Tombini" IsNewNode="True" />
           </MapLayers>
         </PropertyEditor>
@@ -23,8 +70,8 @@
     </DetailView>
     <ListView Id="Strada_ListView">
       <Variants>
-        <Variant Id="Elenco" ViewID="Strada_ListView" Caption="Elenco" IsNewNode="True" />
-        <Variant Id="Mappa" ViewID="Strada_MapListView" Caption="Mappa" IsNewNode="True" />
+        <Variant Id="List" ViewID="Strada_ListView" Caption="Elenco" IsNewNode="True" />
+        <Variant Id="Map" ViewID="Strada_MapListView" Caption="Mappa" IsNewNode="True" />
       </Variants>
     </ListView>
     <ListView Id="Strada_MapListView" ClassName="xRoad.Module.BusinessObjects.RoadDataModel.Strada" EditorTypeName="xMap.Module.Win.Editors.DevEx.MapListEditor" IsNewNode="True">
@@ -39,6 +86,15 @@
         <ColumnInfo Id="TipoAmministrazione" PropertyName="TipoAmministrazione" Width="70" Index="5" IsNewNode="True" />
         <ColumnInfo Id="Tronco" PropertyName="Tronco" Width="70" Index="6" IsNewNode="True" />
       </Columns>
+      <MapLayers IsNewNode="True">
+        <MapLayer Id="CTR:50k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="2" Index="0" Visible="False" IsNewNode="True" />
+        <MapLayer Id="CTR:25k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="1" Index="1" Visible="False" IsNewNode="True" />
+        <MapLayer Id="CTR:5k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="0" Index="2" Visible="False" IsNewNode="True" />
+        <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="3" LayerName="BingMap" IsNewNode="True" />
+        <MapLayer Id="LimitiVelocità" LayerName="Limiti di Velocità" DataSourceProperty="LimitiVelocità" Index="4" IsNewNode="True" />
+        <MapLayer Id="Cippi" DataSourceProperty="Cippi" Index="5" LayerName="Cippi" IsNewNode="True" />
+        <MapLayer Id="Tombini" DataSourceProperty="Tombini" LayerName="Tombini" Index="6" IsNewNode="True" />
+      </MapLayers>
     </ListView>
   </Views>
 </Application>

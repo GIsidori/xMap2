@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
@@ -72,6 +74,28 @@ namespace xRoad.Module.Controllers
                 p.TipoCoordinata = BusinessObjects.TipoCoordinata.Proiettata;
                 p.Shape = new Point(coord);
             }
+        }
+
+        private void simpleAction1_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+
+            //var gp = new srvsitarcgis.MakeRouteEventPuntuale_GPServer();
+            //var options = new srvsitarcgis.GPResultOptions();
+            //var env = new srvsitarcgis.PropertySet();
+            //gp.Execute("MakeRouteEventPuntuale", null, options, env);
+
+            string gpUrl = "http://srvsitarcgis:6080/arcgis/rest/services/publish/MakeRouteEventPuntuale/GPServer";
+
+            var client = new RestSharp.RestClient(gpUrl);
+            var request = new RestSharp.RestRequest("MakeRouteEventPuntuale/SubmitJob",RestSharp.Method.POST, RestSharp.DataFormat.Json);
+            request.AddParameter("env:outSR",null);
+            request.AddParameter("env:processSR", null);
+            request.AddParameter("returnZ", false);
+            request.AddParameter("returnM", false);
+            request.AddParameter("returnTrueCurve", false);
+            request.AddParameter("f", "json");
+            var response = client.Execute(request);
+
         }
     }
 }

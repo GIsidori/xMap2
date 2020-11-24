@@ -33,28 +33,7 @@ namespace xMap.Module.Win.Editors.DevEx
         protected override object CreateControlCore()
         {
             mapControl = new MapControl();
-            if (info != null)
-                mapControl.ShowToolbar = info.ShowToolbar;
-            foreach (var item in info.MapLayers)
-            {
-                LayerBase layer = null;
-                switch (item.LayerType)
-                {
-                    case LayerType.WMSLayer:
-                        layer = mapControl.AddWMSLayer(item.Uri, item.LayerName);
-                        break;
-                    case LayerType.BingMapLayer:
-                        string bingKey = ((IModelMapOptions)((IModelApplication)info.Root).Options).BingKey;
-                        layer = mapControl.AddBingMap(bingKey);
-                        break;
-                    case LayerType.VectorLayer:
-                        string dataSourceProperty = item.DataSourceProperty;
-                        layer = mapControl.AddVectorLayer(dataSourceProperty,item.LayerName);
-                        break;
-                }
-                if (layer != null)
-                    layer.Visible = item.Visible;
-            }
+            mapControl.AddLayers(info);
             return mapControl;
         }
 

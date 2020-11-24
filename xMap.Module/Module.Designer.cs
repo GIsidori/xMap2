@@ -28,6 +28,10 @@
             // 
             this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.ModelDifference));
             this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.ModelDifferenceAspect));
+            this.AdditionalExportedTypes.Add(typeof(xMap.Persistent.BaseImpl.XPSTGeometry));
+            this.AdditionalExportedTypes.Add(typeof(xMap.Persistent.Base.DefaultXPObject));
+            this.AdditionalExportedTypes.Add(typeof(xMap.Persistent.Base.StringCodedDomain));
+            this.AdditionalExportedTypes.Add(typeof(xMap.Persistent.Base.ShortIntegerCodedDomain));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Security.SecurityModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Validation.ValidationModule));

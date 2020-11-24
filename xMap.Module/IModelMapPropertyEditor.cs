@@ -18,7 +18,7 @@ namespace xMap.Module
     }
 
 
-    public interface IModelMapPropertyEditor : IModelPropertyEditor
+    public interface IModelMap:IModelNode
     {
         [Description("Visualizza toolbar nel controllo mappa")]
         [Category("Map")]
@@ -29,6 +29,14 @@ namespace xMap.Module
         [Category("Map")]
         [ModelBrowsable(typeof(IsMapCalculator))]
         IModelMapLayers MapLayers { get; }
+    }
+
+    public interface IModelMapListView : IModelListView, IModelMap
+    {
+    }
+
+    public interface IModelMapPropertyEditor : IModelPropertyEditor,IModelMap
+    {
     }
 
     public enum LayerType
@@ -61,6 +69,8 @@ namespace xMap.Module
         {
             if (node is IModelMemberViewItem mm)
                 return mm.ModelMember.MemberInfo.MemberTypeInfo.ImplementedInterfaces.Any(i=>i.Type == typeof(IXPGeometry));
+            if (node is IModelMapListView ml)
+                return ml.ModelClass.TypeInfo.ImplementedInterfaces.Any(i => i.Type == typeof(IXPGeometry));
             return false;
         }
     }

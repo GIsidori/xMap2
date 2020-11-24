@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="xMap">
-  <Options>
-    <LayoutManagerOptions RequiredFieldMark="*" />
-  </Options>
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="20.1.4.0" IsNewNode="True" />
   </SchemaModules>

@@ -160,10 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Editors\DevEx\MapControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Editors\DevEx\MapControl.Designer.cs">
-      <DependentUpon>MapControl.cs</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Editors\DevEx\MapEditor.cs" />
     <Compile Include="Editors\DevEx\MapListEditor.cs" />
@@ -176,9 +173,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Editors\DevEx\MapControl.resx">
-      <DependentUpon>MapControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

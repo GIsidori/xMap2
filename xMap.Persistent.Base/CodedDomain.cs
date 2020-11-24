@@ -1,4 +1,5 @@
-﻿using DevExpress.Xpo;
+﻿using DevExpress.Persistent.Base;
+using DevExpress.Xpo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace xMap.Persistent.Base
         }
 
         private string codice;
-        [Key]
+        [Key,VisibleInListView(true)]
         public string Codice
         {
             get => codice;
@@ -36,7 +37,7 @@ namespace xMap.Persistent.Base
         }
 
         private short codice;
-        [Key]
+        [Key,VisibleInListView(true)]
         public short Codice
         {
             get => codice;

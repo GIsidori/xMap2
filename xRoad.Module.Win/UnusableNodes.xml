@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Strada_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Percorso" PropertyEditorType="xMap.Module.Win.Editors.DevEx.MapEditor">
+          <MapLayers Id="MapLayers">
+            <MapLayer Id="Cippi" DataSourceProperty="Cippi" Index="0" LayerName="Cippi" />
+            <MapLayer Id="CTR:50k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="2" Index="1" />
+            <MapLayer Id="CTR:25k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="1" Index="2" />
+            <MapLayer Id="CTR:5k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="0" Index="3" />
+            <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="4" LayerName="BingMap" />
+            <MapLayer Id="LimitiVelocità" LayerName="Limiti di Velocità" DataSourceProperty="LimitiVelocità" />
+            <MapLayer Id="Tombini" DataSourceProperty="Tombini" LayerName="Tombini" />
+          </MapLayers>
+        </PropertyEditor>
+      </Items>
+    </DetailView>
+    <ListView Id="Strada_ListView">
+      <Variants Id="Variants">
+        <Variant Id="@7b39253c-e3c9-4f73-a92f-fa79d0df0eaa" ViewID="Strada_ListView" Caption="Elenco" />
+        <Variant Id="@9b63e3b8-03c0-42d7-aafb-bf35a0ce8948" ViewID="Strada_MapListView" Caption="Mappa" />
+      </Variants>
+    </ListView>
+    <ListView Id="Strada_MapListView" ClassName="xRoad.Module.BusinessObjects.RoadDataModel.Strada" EditorTypeName="xMap.Module.Win.Editors.DevEx.MapListEditor">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Percorso" PropertyName="Percorso" Width="70" Index="-1" />
+        <ColumnInfo Id="Shape" PropertyName="Shape" Width="70" Index="-1" />
+        <ColumnInfo Id="Sigla" PropertyName="Sigla" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="Denominazione" PropertyName="Denominazione" Width="70" Index="1" />
+        <ColumnInfo Id="ClassificaFunzionale" PropertyName="ClassificaFunzionale" Width="70" Index="2" />
+        <ColumnInfo Id="Numero" PropertyName="Numero" Width="70" Index="3" />
+        <ColumnInfo Id="Asse" PropertyName="Asse" Width="70" Index="4" />
+        <ColumnInfo Id="TipoAmministrazione" PropertyName="TipoAmministrazione" Width="70" Index="5" />
+        <ColumnInfo Id="Tronco" PropertyName="Tronco" Width="70" Index="6" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

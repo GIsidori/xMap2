@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.actionGetLocation = new DevExpress.ExpressApp.Actions.ParametrizedAction(this.components);
+            this.simpleAction1 = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             // 
             // actionGetLocation
             // 
@@ -44,14 +45,26 @@
             this.actionGetLocation.ValueType = typeof(double);
             this.actionGetLocation.Execute += new DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventHandler(this.actionGetLocation_Execute);
             // 
+            // simpleAction1
+            // 
+            this.simpleAction1.Caption = "Aggiorna eventi su mappa";
+            this.simpleAction1.Category = "Edit";
+            this.simpleAction1.ConfirmationMessage = "Confermi?";
+            this.simpleAction1.Id = "706cc6e8-0f85-4d65-a324-d940c5543efa";
+            this.simpleAction1.TargetObjectType = typeof(xRoad.Module.BusinessObjects.RoadDataModel.Strada);
+            this.simpleAction1.ToolTip = null;
+            this.simpleAction1.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.simpleAction1_Execute);
+            // 
             // LinearReferencingViewController
             // 
             this.Actions.Add(this.actionGetLocation);
+            this.Actions.Add(this.simpleAction1);
 
         }
 
         #endregion
 
         private DevExpress.ExpressApp.Actions.ParametrizedAction actionGetLocation;
+        private DevExpress.ExpressApp.Actions.SimpleAction simpleAction1;
     }
 }

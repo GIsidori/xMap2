@@ -23,7 +23,6 @@ namespace xMap.Module {
         public xMapModule() {
             InitializeComponent();
 			BaseObject.OidInitializationMode = OidInitializationMode.AfterConstruction;
-
             xMap.Xpo.DB.OracleSDEConnectionProvider.Register();
         }
 
@@ -43,6 +42,7 @@ namespace xMap.Module {
         public override void ExtendModelInterfaces(ModelInterfaceExtenders extenders)
         {
             extenders.Add<IModelPropertyEditor, IModelMapPropertyEditor>();
+            extenders.Add<IModelListView, IModelMapListView>();
             extenders.Add<IModelOptions, IModelMapOptions>();
             base.ExtendModelInterfaces(extenders);
         }

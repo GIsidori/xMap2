@@ -46,16 +46,4 @@
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="20.1.4.0" IsNewNode="True" />
   </SchemaModules>
-  <Views>
-    <ListView Id="ShortIntegerCodedDomain_ListView">
-      <Columns>
-        <ColumnInfo Id="Codice" Index="0" />
-      </Columns>
-    </ListView>
-    <ListView Id="StringCodedDomain_ListView">
-      <Columns>
-        <ColumnInfo Id="Codice" Index="0" />
-      </Columns>
-    </ListView>
-  </Views>
 </Application>
