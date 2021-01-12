@@ -70,11 +70,15 @@
     <Reference Include="DevExpress.Xpo.v20.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.XtraMap.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="mscorlib">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="NetTopologySuite, Version=2.0.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
       <HintPath>..\packages\NetTopologySuite.2.1.0\lib\netstandard2.0\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <SpecificVersion>False</SpecificVersion>
@@ -105,11 +109,135 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\Enums.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Arco.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Arco.Designer.cs">
+      <DependentUpon>Arco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Atto.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Atto.Designer.cs">
+      <DependentUpon>Atto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Cippo.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Cippo.Designer.cs">
+      <DependentUpon>Cippo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Evento.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Evento.Designer.cs">
+      <DependentUpon>Evento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoLineare.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoLineare.Designer.cs">
+      <DependentUpon>EventoLineare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoPuntuale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\EventoPuntuale.Designer.cs">
+      <DependentUpon>EventoPuntuale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaLineare.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaLineare.Designer.cs">
+      <DependentUpon>GeometriaLineare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaPuntuale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\GeometriaPuntuale.Designer.cs">
+      <DependentUpon>GeometriaPuntuale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Ispezione.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Ispezione.Designer.cs">
+      <DependentUpon>Ispezione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteCentroAbitato.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteCentroAbitato.Designer.cs">
+      <DependentUpon>LimiteCentroAbitato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimitePortata.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimitePortata.Designer.cs">
+      <DependentUpon>LimitePortata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteVelocità.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\LimiteVelocità.Designer.cs">
+      <DependentUpon>LimiteVelocità.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Percorso.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Percorso.Designer.cs">
+      <DependentUpon>Percorso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Ponte.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Ponte.Designer.cs">
+      <DependentUpon>Ponte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Strada.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Strada.Designer.cs">
+      <DependentUpon>Strada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAmministrazione.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAmministrazione.Designer.cs">
+      <DependentUpon>TipoAmministrazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAsse.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAsse.Designer.cs">
+      <DependentUpon>TipoAsse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAtto.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoAtto.Designer.cs">
+      <DependentUpon>TipoAtto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoCarreggiata.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoCarreggiata.Designer.cs">
+      <DependentUpon>TipoCarreggiata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoCippo.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoCippo.Designer.cs">
+      <DependentUpon>TipoCippo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoClassificaFunzionale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoClassificaFunzionale.Designer.cs">
+      <DependentUpon>TipoClassificaFunzionale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoConfineAmministrativo.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoConfineAmministrativo.Designer.cs">
+      <DependentUpon>TipoConfineAmministrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoAttraversato.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoAttraversato.Designer.cs">
+      <DependentUpon>TipoElementoAttraversato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoStradale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoElementoStradale.Designer.cs">
+      <DependentUpon>TipoElementoStradale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoFonte.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoFonte.Designer.cs">
+      <DependentUpon>TipoFonte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoMateriale.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoMateriale.Designer.cs">
+      <DependentUpon>TipoMateriale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoOpera.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoOpera.Designer.cs">
+      <DependentUpon>TipoOpera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoStato.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\TipoStato.Designer.cs">
+      <DependentUpon>TipoStato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\RoadDataModelCode\Tombino.cs" />
+    <Compile Include="BusinessObjects\RoadDataModelCode\Tombino.Designer.cs">
+      <DependentUpon>Tombino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\StradaViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\StradaViewController.Designer.cs">
+      <DependentUpon>StradaViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="IModelMapPropertyEditor.cs" />
     <Compile Include="Module.cs">
@@ -121,6 +249,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controllers\StradaViewController.resx">
+      <DependentUpon>StradaViewController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
     <EmbeddedResource Include="Module.resx">
       <DependentUpon>Module.cs</DependentUpon>
@@ -130,6 +261,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="BusinessObjects\ReadMe.txt" />
+    <None Include="BusinessObjects\RoadDataModel.xpo" />
+    <None Include="BusinessObjects\RoadDataModel.xpo.diagram">
+      <DependentUpon>RoadDataModel.xpo</DependentUpon>
+    </None>
     <None Include="Controllers\ReadMe.txt" />
     <None Include="DatabaseUpdate\ReadMe.txt" />
     <None Include="FunctionalTests\WinSample.ets" />

@@ -4,6 +4,7 @@ using DevExpress.ExpressApp.Win.Editors;
 using DevExpress.Internal.WinApi.Windows.UI.Notifications;
 using DevExpress.XtraMap;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -17,11 +18,9 @@ namespace xMap.Module.Win.Editors.DevEx
     public class MapEditor:WinPropertyEditor
     {
         private MapControl mapControl;
-        IModelMapPropertyEditor info;
 
         public MapEditor(Type objectType,IModelMemberViewItem info):base(objectType,info)
         {
-            this.info = info as IModelMapPropertyEditor;
         }
 
         protected override void Dispose(bool disposing)
@@ -33,8 +32,24 @@ namespace xMap.Module.Win.Editors.DevEx
         protected override object CreateControlCore()
         {
             mapControl = new MapControl();
-            mapControl.AddLayers(info);
+            mapControl.AddLayers(this.ObjectTypeInfo,this.Model);
+            
+            mapControl.MapItemDoubleClick += MapControl_MapItemDoubleClick;
             return mapControl;
+        }
+
+        private IList GetSelectedItems()
+        {
+            return mapControl.GetSelectedItems();
+        }
+
+        private void MapControl_MapItemDoubleClick(object sender, MapItemClickEventArgs e)
+        {
+            var list = GetSelectedItems();
+            if (list.Count == 1)
+            {
+                var item = list[0];
+            }
         }
 
         protected override void OnControlCreated()

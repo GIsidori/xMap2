@@ -61,17 +61,6 @@
             <field Id="d384d7e9-14da-4fe2-a144-1cfcb72f5b03" name="Tronco" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
         </fields>
-        <indexes>
-          <xpObjectHasIndexes Id="9facca83-91df-4715-84a8-06c891fa77b6">
-            <index Id="05891ba0-08be-42b1-83d6-d27cbe348986" name="UXSigla" unique="true">
-              <fieldsInIndex>
-                <indexReferencesFields Id="449d7d76-a8fc-4c44-ad2a-348646632d22">
-                  <fieldMoniker Id="cf56fd86-02b5-4046-86e2-45e98897cc24" />
-                </indexReferencesFields>
-              </fieldsInIndex>
-            </index>
-          </xpObjectHasIndexes>
-        </indexes>
         <saTargets>
           <simpleAssociation Id="7af97c65-7095-4aec-b956-c144c47091ff" sourceCollectionName="Tombini" name="TombinoReferencesStrada" targetFieldName="Strada" noForeignKey="true">
             <xpObjectMoniker Id="4255373e-a38c-4dd0-9485-6f6003a93833" />

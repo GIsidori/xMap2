@@ -33,10 +33,9 @@
             this.validationModule = new DevExpress.ExpressApp.Validation.ValidationModule();
             this.validationWindowsFormsModule = new DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule();
             this.xMapModule1 = new xMap.Module.xMapModule();
-            this.xRoadWindowsFormsModule1 = new xRoad.Module.Win.xRoadWindowsFormsModule();
-            this.xRoadModule1 = new xRoad.Module.xRoadModule();
             this.viewVariantsModule1 = new DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule();
             this.businessClassLibraryCustomizationModule1 = new DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule();
+            this.conditionalAppearanceModule1 = new DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // securityStrategyComplex1
@@ -71,8 +70,7 @@
             this.Modules.Add(this.module3);
             this.Modules.Add(this.validationWindowsFormsModule);
             this.Modules.Add(this.module4);
-            this.Modules.Add(this.xRoadModule1);
-            this.Modules.Add(this.xRoadWindowsFormsModule1);
+            this.Modules.Add(this.conditionalAppearanceModule1);
             this.Security = this.securityStrategyComplex1;
             this.UseOldTemplates = false;
             this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.xMapWindowsFormsApplication_DatabaseVersionMismatch);
@@ -93,9 +91,8 @@
         private DevExpress.ExpressApp.Validation.ValidationModule validationModule;
         private DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule validationWindowsFormsModule;
         private Module.xMapModule xMapModule1;
-        private xRoad.Module.Win.xRoadWindowsFormsModule xRoadWindowsFormsModule1;
-        private xRoad.Module.xRoadModule xRoadModule1;
         private DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule viewVariantsModule1;
         private DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule businessClassLibraryCustomizationModule1;
+        private DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule conditionalAppearanceModule1;
     }
 }

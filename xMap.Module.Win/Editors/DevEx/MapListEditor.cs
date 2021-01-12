@@ -16,30 +16,14 @@ using xMap.Persistent.BaseImpl;
 namespace xMap.Module.Win.Editors.DevEx
 {
     [ListEditor(typeof(IXPGeometry), false)]
-    public class MapListEditor : ListEditor,IComplexListEditor
+    public class MapListEditor : ListEditor
     {
         private MapControl map;
-        private CollectionSourceBase collectionSource;
-        private XafApplication application;
-        IModelMap info;
-        
 
-        public MapListEditor(IModelListView info) : base(info)
+        public MapListEditor(IModelListView model):base(model)
         {
-            this.info = info as IModelMap;
-        }
-
-
-        #region IComplexListEditor
-
-        public virtual void Setup(CollectionSourceBase collectionSource, XafApplication application)
-        {
-            this.collectionSource = collectionSource;
-            this.application = application;
 
         }
-
-        #endregion
 
         public override void Dispose()
         {
@@ -51,20 +35,9 @@ namespace xMap.Module.Win.Editors.DevEx
 
         public override IList GetSelectedObjects()
         {
-            ArrayList selectedObjects = new ArrayList();
-            if (map != null)
-            {
-                if (map.Layer.SelectedItems.Count > 0)
-                {
-                    
-                    foreach (MapItem item in map.Layer.SelectedItems)
-                    {
-                        selectedObjects.Add(map.GetRow(item));
-                    }
-                }
-            }
-
-            return selectedObjects.ToArray(typeof(object));
+            if (map == null)
+                return new List<object>();
+            return map.GetSelectedItems();
         }
 
         public override void Refresh()
@@ -76,6 +49,7 @@ namespace xMap.Module.Win.Editors.DevEx
             if (map == null)
                 return;
 
+            map.AddLayers(this.ObjectTypeInfo, this.Model);
             map.RefreshDataSource(DataSource);
         }
 
@@ -83,7 +57,6 @@ namespace xMap.Module.Win.Editors.DevEx
         {
             map = new MapControl();
 
-            map.AddLayers(info);
             SubscribeMapEvents();
 
             return map;

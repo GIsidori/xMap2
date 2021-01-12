@@ -12,6 +12,8 @@ using DevExpress.ExpressApp.Model;
 using xMap.Persistent.Base;
 using xMap.Persistent.BaseImpl;
 using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.DC;
+using System.Collections;
 
 namespace xMap.Module.Win.Editors.DevEx
 {
@@ -19,85 +21,116 @@ namespace xMap.Module.Win.Editors.DevEx
     {
 
         private VectorItemsLayer layer;
-        private SqlGeometryItemStorage storage;
         Dictionary<string, string> dataSourceProperties = new Dictionary<string, string>();
         private object DataSource;
+        private ITypeInfo objectTypeInfo;
+        CartesianSourceCoordinateSystem cartesianSourceCoordinateSystem1;
+        private VectorItemsLayer vectorItemsLayer1;
+        UTMCartesianToGeoConverter utmCartesianToGeoConverter1;
 
-        public MapControl()
+        public MapControl():base()
         {
-        }
-
-        public VectorItemsLayer Layer => layer;
-
-        public void AddLayers(IModelMap info)
-        {
-            DevExpress.XtraMap.CartesianSourceCoordinateSystem cartesianSourceCoordinateSystem1 = new DevExpress.XtraMap.CartesianSourceCoordinateSystem();
-            DevExpress.XtraMap.UTMCartesianToGeoConverter utmCartesianToGeoConverter1 = new DevExpress.XtraMap.UTMCartesianToGeoConverter();
-
-            layer = new VectorItemsLayer();
-            storage = new SqlGeometryItemStorage();
-            Layers.Add(layer);
-            layer.Data = storage;
-            layer.ItemStyle.Stroke = System.Drawing.Color.FromArgb(192, 0, 0);
-            layer.ItemStyle.StrokeWidth = 3;
-
+            cartesianSourceCoordinateSystem1 = new CartesianSourceCoordinateSystem();
+            utmCartesianToGeoConverter1 = new UTMCartesianToGeoConverter();
             utmCartesianToGeoConverter1.UtmZone = 32;
             cartesianSourceCoordinateSystem1.CoordinateConverter = utmCartesianToGeoConverter1;
-            storage.SourceCoordinateSystem = cartesianSourceCoordinateSystem1;
+        }
 
-            MapEditor.ShowEditorPanel = info.ShowToolbar;
-            foreach (var item in info.MapLayers.OrderBy(l => l.Index))
+        public MapItemsLayerBase Layer => layer;
+
+        public void AddLayers(ITypeInfo objectTypeInfo, IModelNode info)
+        {
+
+            this.objectTypeInfo = objectTypeInfo;
+            this.Layers.Clear();
+
+
+            layer = AddVectorLayer(null);
+
+            if (info is IModelMap mapInfo)
             {
-                LayerBase layer = null;
-                switch (item.LayerType)
+                MapEditor.ShowEditorPanel = mapInfo.ShowToolbar;
+                foreach (IModelMapLayer model in mapInfo.MapLayers.OrderBy(l => l.Index))
                 {
-                    case LayerType.WMSLayer:
-                        layer = AddWMSLayer(item.Uri, item.LayerName);
-                        break;
-                    case LayerType.BingMapLayer:
-                        string bingKey = ((IModelMapOptions)((IModelApplication)info.Root).Options).BingKey;
-                        layer = AddBingMap(bingKey);
-                        break;
-                    case LayerType.VectorLayer:
-                        string dataSourceProperty = item.DataSourceProperty;
-                        layer = AddVectorLayer(dataSourceProperty, item.LayerName);
-                        break;
+                    LayerBase layer = null;
+                    switch (model.LayerType)
+                    {
+                        case LayerType.WMSLayer:
+                            layer = AddWMSLayer(model);
+                            break;
+                        case LayerType.BingMapLayer:
+                            layer = AddBingMap(model);
+                            break;
+                        case LayerType.VectorLayer:
+                            layer = AddVectorLayer(model);
+                            break;
+                    }
+                    if (layer != null)
+                        layer.Visible = model.Visible;
                 }
-                if (layer != null)
-                    layer.Visible = item.Visible;
             }
-
             layer.DataLoaded += this.Layer_DataLoaded;
             MapEditor.MapItemEdited += this.MapEditor_MapItemEdited;
 
         }
 
-        private LayerBase AddVectorLayer(string dataSourceProperty, string layerName)
+        private VectorItemsLayer AddVectorLayer(IModelMapLayer model)
         {
-            var _layer = new DevExpress.XtraMap.VectorItemsLayer();
-            var _storage = new DevExpress.XtraMap.SqlGeometryItemStorage();
-            _layer.Name = layerName;
-            _layer.Data = _storage;
-            _storage.SourceCoordinateSystem = storage.SourceCoordinateSystem;
-            Layers.Add(_layer);
-            dataSourceProperties.Add(layerName, dataSourceProperty);
-            return _layer;
+            var layer = new DevExpress.XtraMap.VectorItemsLayer();
+            var storage = new DevExpress.XtraMap.SqlGeometryItemStorage();
+            layer.Name = model?.LayerName;
+            layer.Data = storage;
+            storage.SourceCoordinateSystem = cartesianSourceCoordinateSystem1;
+            string pattern = null;
+            string dataSourceProperty = model?.DataSourceProperty;
+            if (dataSourceProperty == null)
+            {
+                pattern = objectTypeInfo.DefaultMember?.Name;
+            }
+            else
+            {
+                var mInfo = objectTypeInfo.FindMember(dataSourceProperty);
+                
+                if (mInfo.IsList)
+                    pattern = mInfo.ListElementTypeInfo.DefaultMember?.Name;
+                dataSourceProperties.Add(model.LayerName, dataSourceProperty);
+            }
+            if (pattern != null)
+                layer.ShapeTitlesPattern = "{"+pattern+"}";
+            if (model != null)
+            {
+                layer.ShapeTitlesVisibility = model.TitleVisible.GetValueOrDefault(VisibilityMode.Auto);
+                layer.ItemStyle.Font = new Font(layer.ItemStyle.Font, model.FontStyle.GetValueOrDefault());
+                if (model.FillColor.HasValue)
+                    layer.ItemStyle.Fill = model.FillColor.Value;
+                if (model.StrokeColor.HasValue)
+                    layer.ItemStyle.Stroke = model.StrokeColor.Value;
+                if (model.StrokeWidth.HasValue)
+                    layer.ItemStyle.StrokeWidth = model.StrokeWidth.Value;
+                if (model.TextColor.HasValue)
+                    layer.ItemStyle.TextColor = model.TextColor.Value;
+                if (model.TextGlowColor.HasValue)
+                    layer.ItemStyle.TextGlowColor = model.TextGlowColor.Value;
+            }
+            Layers.Add(layer);
+            return layer;
 
         }
 
-        private LayerBase AddWMSLayer(string uri, string layerName)
+        private LayerBase AddWMSLayer(IModelMapLayer model)
         {
             ImageLayer imageLayer = new ImageLayer();
             WmsDataProvider dataProvider = new WmsDataProvider();
-            dataProvider.ServerUri = uri;
-            dataProvider.ActiveLayerName = layerName;
+            dataProvider.ServerUri = model.Uri;
+            dataProvider.ActiveLayerName = model.LayerName;
             imageLayer.DataProvider = dataProvider;
             Layers.Add(imageLayer);
             return imageLayer;
         }
 
-        private LayerBase AddBingMap(string bingKey)
+        private LayerBase AddBingMap(IModelMapLayer model)
         {
+            string bingKey = ((IModelMapOptions)((IModelApplication)model.Root).Options).BingKey;
             var layer = new ImageLayer()
             {
                 DataProvider = new BingMapDataProvider()
@@ -113,6 +146,8 @@ namespace xMap.Module.Win.Editors.DevEx
         {
             DataSource = dataSource;
             SuspendRender();
+
+            SqlGeometryItemStorage storage = layer.Data as SqlGeometryItemStorage;
             storage.Items.Clear();
             if (dataSource is IBindingList bindingList)
             {
@@ -120,8 +155,7 @@ namespace xMap.Module.Win.Editors.DevEx
                 {
                     if (item.Shape != null)
                     {
-                        objectRecords[item.Oid] = item;
-                        AddItem(item, storage); // storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.SRID));
+                        AddItem(item, storage,null); // storage.Items.Add(new SqlGeometryItem(item.Shape.ToString(), (int)item.Shape.SRID));
                     }
                     foreach (var pair in dataSourceProperties)
                     {
@@ -141,7 +175,7 @@ namespace xMap.Module.Win.Editors.DevEx
                        
                         foreach (IXPGeometry innerItem in list)
                         {
-                            AddItem(innerItem, stor);
+                            AddItem(innerItem, stor,pair.Key);
                         }
                     }
 
@@ -152,23 +186,35 @@ namespace xMap.Module.Win.Editors.DevEx
 
         }
 
-        Dictionary<int,IXPGeometry> objectRecords = new Dictionary<int,IXPGeometry>();
+        struct ObjectHandle
+        {
+            public int oid;
+            public string layerName;
+            public ObjectHandle(int oid,string layerName)
+            {
+                this.oid = oid;
+                this.layerName = layerName;
+            }
+        }
 
-        private object GetXPGeometry(int oid)
+        Dictionary<ObjectHandle,IXPGeometry> objectRecords = new Dictionary<ObjectHandle,IXPGeometry>();
+
+        private object GetXPGeometry(int oid,string layerName)
         {
             IXPGeometry result = null;
-            objectRecords.TryGetValue(oid, out result);
+            var handle = new ObjectHandle(oid, layerName);
+            objectRecords.TryGetValue(handle, out result);
             return result;
         }
 
         public object GetRow(MapItem item)
         {
             int oid = (int) item.Attributes[nameof(XPSTGeometry.Oid)].Value;
-            return GetXPGeometry(oid);
+            return GetXPGeometry(oid,item.Layer.Name);
         }
 
 
-        private SqlGeometryItem AddItem(IXPGeometry item, SqlGeometryItemStorage storage)
+        private SqlGeometryItem AddItem(IXPGeometry item, SqlGeometryItemStorage storage,string layerName)
         {
             SqlGeometryItem sqlStorageItem = null;
             if (item.Shape != null)
@@ -180,6 +226,8 @@ namespace xMap.Module.Win.Editors.DevEx
                 }
                 storage.Items.Add(sqlStorageItem);
             }
+
+            objectRecords[new ObjectHandle(item.Oid,layerName)] = item;
 
             return sqlStorageItem;
 
@@ -231,7 +279,34 @@ namespace xMap.Module.Win.Editors.DevEx
             ZoomToFitLayerItems();
         }
 
+        public IList GetSelectedItems()
+        {
+            ArrayList selectedObjects = new ArrayList();
+            foreach (var layerBase in Layers)
+            {
+                if (layerBase is MapItemsLayerBase layer)
+                    foreach (MapItem item in layer.SelectedItems)
+                    {
+                        selectedObjects.Add(this.GetRow(item));
+                    }
+            }
 
+            return selectedObjects.ToArray(typeof(object));
 
+        }
+
+        private void InitializeComponent()
+        {
+            this.vectorItemsLayer1 = new DevExpress.XtraMap.VectorItemsLayer();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // MapControl
+            // 
+            this.Layers.Add(this.vectorItemsLayer1);
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+            this.ResumeLayout(false);
+
+        }
     }
 }

@@ -1,6 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="xMap">
+  <Options BingKey="AsiGHquEaIIBocV-MHDesAVViQSqcwGao_JxeaYIwlnmOMd53bPAYwrHRPn5D69Y" />
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="20.1.4.0" IsNewNode="True" />
   </SchemaModules>
+  <BOModel>
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoAmministrazione" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoAsse" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoAtto" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoCarreggiata" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoCippo" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoClassificaFunzionale" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoConfineAmministrativo" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoElementoAttraversato" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoElementoStradale" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoFonte" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoMateriale" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoOpera" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="xRoad.Module.BusinessObjects.RoadDataModel.TipoStato" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Grafo stradale" Caption="Grafo stradale" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="@ca356b22-4306-4dba-afe2-bd46687df31d" ViewId="Strada_ListView" Caption="Strade" Index="0" IsNewNode="True" />
+          <Item Id="PontiViadotti" ViewId="Ponte_ListView" Caption="Ponti e viadotti" Index="1" IsNewNode="True" />
+          <Item Id="@6abb236c-61b0-4592-b75f-a3b39d8fb431" ViewId="LimitePortata_ListView" Index="3" Caption="Limiti Portata" IsNewNode="True" />
+          <Item Id="@e3c113bc-7f71-4801-ad08-880f3f1a8bfa" ViewId="LimiteVelocità_ListView" Index="6" IsNewNode="True" />
+          <Item Id="@ad49ccd0-bc7c-4168-88c8-58ea09a58be1" ViewId="Tombino_ListView" Caption="Tombini" Index="7" IsNewNode="True" />
+          <Item Id="GrafoStradale.Impostazioni" Caption="Impostazioni" Index="8" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="@03b76485-d7b7-4211-b0dd-21b3cdfeda68" ViewId="TipoAsse_ListView" IsNewNode="True" />
+              <Item Id="@13613525-e64d-4123-8845-1fe1fd426ea3" ViewId="TipoElementoStradale_ListView" IsNewNode="True" />
+              <Item Id="@1e320ea2-6706-4ac6-a16f-1f3b3191d374" ViewId="TipoFonte_ListView" IsNewNode="True" />
+              <Item Id="@256b43a7-1bf8-493a-a7e7-5f03e45183e0" ViewId="TipoCarreggiata_ListView" IsNewNode="True" />
+              <Item Id="@52a4b6bf-7707-4c4e-9671-e050693ba6ff" ViewId="TipoStato_ListView" IsNewNode="True" />
+              <Item Id="@b62c7dc4-c815-4158-bdb9-8f37fc0464f8" ViewId="TipoElementoAttraversato_ListView" IsNewNode="True" />
+              <Item Id="@bce937d7-2334-4342-bba0-c1120cc0354a" ViewId="TipoMateriale_ListView" IsNewNode="True" />
+              <Item Id="@c9e7632f-1fcf-4030-805c-6fa9fd77cf45" ViewId="TipoAmministrazione_ListView" IsNewNode="True" />
+              <Item Id="@cacbcaac-ed68-4c5c-b8a9-0780182ffd91" ViewId="TipoCippo_ListView" IsNewNode="True" />
+              <Item Id="@cddc44a3-068b-433f-a5be-d2db125d7fc4" ViewId="TipoClassificaFunzionale_ListView" IsNewNode="True" />
+              <Item Id="@d190c85e-c7b1-4fb4-ad2e-db48d0b47b2b" ViewId="TipoOpera_ListView" IsNewNode="True" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
 </Application>

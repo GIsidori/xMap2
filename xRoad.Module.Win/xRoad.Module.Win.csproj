@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\xMap.Win\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -152,6 +152,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Controllers\ReadMe.txt" />
+    <None Include="UnusableNodes5 - Copia.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Editors\ReadMe.txt" />
@@ -175,10 +179,6 @@
     <ProjectReference Include="..\xMap.Persistent.Base\xMap.Persistent.Base.csproj">
       <Project>{3960c133-c26a-4eb8-b5d7-689f587505ba}</Project>
       <Name>xMap.Persistent.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\xRoad.Module\xRoad.Module.csproj">
-      <Project>{501ac9bb-7724-40ce-bdef-038c2f4865e6}</Project>
-      <Name>xRoad.Module</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

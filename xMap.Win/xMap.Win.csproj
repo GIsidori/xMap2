@@ -51,6 +51,7 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Objects.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Security.v20.1">
       <SpecificVersion>False</SpecificVersion>
@@ -242,14 +243,6 @@
       <Project>{C6A8E335-36ED-4E42-9EB5-713B9ACE37EE}</Project>
       <Name>xMap.Module</Name>
       <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\xRoad.Module.Win\xRoad.Module.Win.csproj">
-      <Project>{263c1a48-d027-4dd9-b528-813dfb4c6a76}</Project>
-      <Name>xRoad.Module.Win</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\xRoad.Module\xRoad.Module.csproj">
-      <Project>{501ac9bb-7724-40ce-bdef-038c2f4865e6}</Project>
-      <Name>xRoad.Module</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

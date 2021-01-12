@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Strada_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Percorso" PropertyEditorType="xMap.Module.Win.Editors.DevEx.MapEditor">
+          <MapLayers Id="MapLayers">
+            <MapLayer Id="CTR:50k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="2" Index="0" Visible="False" />
+            <MapLayer Id="CTR:25k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="1" Index="1" Visible="False" />
+            <MapLayer Id="CTR:5k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="0" Index="2" Visible="False" />
+            <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="3" LayerName="BingMap" />
+            <MapLayer Id="LimitiVelocità" LayerName="Limiti di Velocità" DataSourceProperty="LimitiVelocità" Index="4" FillColor="Red" />
+            <MapLayer Id="Cippi" DataSourceProperty="Cippi" Index="5" LayerName="Cippi" FillColor="Magenta" StrokeWidth="3" StrokeColor="0, 192, 0" />
+            <MapLayer Id="Ponti" DataSourceProperty="Ponti" LayerName="Ponti" FillColor="Magenta" StrokeColor="0, 0, 192" StrokeWidth="5" FontStyle="Bold" TextColor="255, 192, 128" TextGlowColor="Lime" />
+            <MapLayer Id="Tombini" DataSourceProperty="Tombini" LayerName="Tombini" FillColor="Blue" StrokeColor="255, 128, 0" StrokeWidth="3" />
+          </MapLayers>
+        </PropertyEditor>
+      </Items>
+    </DetailView>
+    <ListView Id="Strada_ListView">
+      <Variants Id="Variants">
+        <Variant Id="List" ViewID="Strada_ListView" Caption="Elenco" />
+        <Variant Id="Map" ViewID="Strada_MapListView" Caption="Mappa" />
+      </Variants>
+    </ListView>
+    <ListView Id="Strada_MapListView" ClassName="xRoad.Module.BusinessObjects.RoadDataModel.Strada" EditorTypeName="xMap.Module.Win.Editors.DevEx.MapListEditor">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Percorso" PropertyName="Percorso" Width="70" Index="-1" />
+        <ColumnInfo Id="Shape" PropertyName="Shape" Width="70" Index="-1" />
+        <ColumnInfo Id="Sigla" PropertyName="Sigla" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="Denominazione" PropertyName="Denominazione" Width="70" Index="1" />
+        <ColumnInfo Id="ClassificaFunzionale" PropertyName="ClassificaFunzionale" Width="70" Index="2" />
+        <ColumnInfo Id="Numero" PropertyName="Numero" Width="70" Index="3" />
+        <ColumnInfo Id="Asse" PropertyName="Asse" Width="70" Index="4" />
+        <ColumnInfo Id="TipoAmministrazione" PropertyName="TipoAmministrazione" Width="70" Index="5" />
+        <ColumnInfo Id="Tronco" PropertyName="Tronco" Width="70" Index="6" />
+      </Columns>
+      <MapLayers Id="MapLayers">
+        <MapLayer Id="CTR:50k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="2" Index="0" Visible="False" />
+        <MapLayer Id="CTR:25k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="1" Index="1" Visible="False" />
+        <MapLayer Id="CTR:5k" LayerType="WMSLayer" Uri="http://srvsitarcgis.ravenna.provincia.ra.it:6080/arcgis/services/publish/CTR/MapServer/WMSServer" LayerName="0" Index="2" Visible="False" />
+        <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="3" LayerName="BingMap" />
+        <MapLayer Id="LimitiVelocità" LayerName="Limiti di Velocità" DataSourceProperty="LimitiVelocità" Index="4" />
+        <MapLayer Id="Cippi" DataSourceProperty="Cippi" Index="5" LayerName="Cippi" />
+        <MapLayer Id="Tombini" DataSourceProperty="Tombini" LayerName="Tombini" Index="6" />
+      </MapLayers>
+    </ListView>
+    <ListView Id="Ponte_MapListView" ClassName="xRoad.Module.BusinessObjects.RoadDataModel.Ponte" EditorTypeName="xMap.Module.Win.Editors.DevEx.MapListEditor">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Atto" PropertyName="Atto" Width="70" Index="-1" />
+        <ColumnInfo Id="DataFine" PropertyName="DataFine" Width="70" Index="-1" />
+        <ColumnInfo Id="DataInizio" PropertyName="DataInizio" Width="70" Index="-1" />
+        <ColumnInfo Id="Località" PropertyName="Località" Width="70" Index="-1" />
+        <ColumnInfo Id="MPos" PropertyName="MPos" Width="50" Index="-1" />
+        <ColumnInfo Id="MPosFinale" PropertyName="MPosFinale" Width="50" Index="-1" />
+        <ColumnInfo Id="Shape" PropertyName="Shape" Width="70" Index="-1" />
+        <ColumnInfo Id="TipoCoordinata" PropertyName="TipoCoordinata" Width="70" Index="-1" />
+        <ColumnInfo Id="TipoLocalizzazione" PropertyName="TipoLocalizzazione" Width="70" Index="-1" />
+        <ColumnInfo Id="XPos" PropertyName="XPos" Width="50" Index="-1" />
+        <ColumnInfo Id="XPosFinale" PropertyName="XPosFinale" Width="50" Index="-1" />
+        <ColumnInfo Id="YPos" PropertyName="YPos" Width="50" Index="-1" />
+        <ColumnInfo Id="YPosFinale" PropertyName="YPosFinale" Width="50" Index="-1" />
+        <ColumnInfo Id="ZPos" PropertyName="ZPos" Width="50" Index="-1" />
+        <ColumnInfo Id="ZPosFinale" PropertyName="ZPosFinale" Width="50" Index="-1" />
+        <ColumnInfo Id="Nome" PropertyName="Nome" Width="70" Index="0" />
+        <ColumnInfo Id="TipoOpera" PropertyName="TipoOpera" Width="70" Index="1" />
+        <ColumnInfo Id="TipoMateriale" PropertyName="TipoMateriale" Width="70" Index="2" />
+        <ColumnInfo Id="TipoSpalla" PropertyName="TipoSpalla" Width="70" Index="3" />
+        <ColumnInfo Id="TipoPila" PropertyName="TipoPila" Width="70" Index="4" />
+        <ColumnInfo Id="NumeroCampate" PropertyName="NumeroCampate" Width="50" Index="5" />
+        <ColumnInfo Id="Lunghezza" PropertyName="Lunghezza" Width="50" Index="6" />
+        <ColumnInfo Id="Larghezza" PropertyName="Larghezza" Width="50" Index="7" />
+        <ColumnInfo Id="LunghMaxCampata" PropertyName="LunghMaxCampata" Width="50" Index="8" />
+        <ColumnInfo Id="Illuminazione" PropertyName="Illuminazione" Width="50" Index="9" />
+        <ColumnInfo Id="TipoElementoAttraversato" PropertyName="TipoElementoAttraversato" Width="70" Index="10" />
+        <ColumnInfo Id="Note" PropertyName="Note" Width="70" Index="11" />
+        <ColumnInfo Id="StatoManutenzione" PropertyName="StatoManutenzione" Width="70" Index="12" />
+        <ColumnInfo Id="CodiceARS" PropertyName="CodiceARS" Width="70" Index="13" />
+        <ColumnInfo Id="Portata" PropertyName="Portata" Width="50" Index="14" />
+        <ColumnInfo Id="OrdinanzaLimitePeso" PropertyName="OrdinanzaLimitePeso" Width="70" Index="15" />
+        <ColumnInfo Id="LimitePeso" PropertyName="LimitePeso" Width="50" Index="16" />
+        <ColumnInfo Id="Strada" PropertyName="Strada" Width="70" Index="17" />
+      </Columns>
+      <MapLayers Id="MapLayers">
+        <MapLayer Id="BingMap" LayerType="BingMapLayer" Index="0" LayerName="BingMap" />
+        <MapLayer Id="Strada" LayerName="Strade" DataSourceProperty="Strada" Index="1" />
+      </MapLayers>
+    </ListView>
+    <ListView Id="Ponte_ListView">
+      <Variants Id="Variants">
+        <Variant Id="List" ViewID="Ponte_ListView" Caption="Elenco" />
+        <Variant Id="Map" ViewID="Ponte_MapListView" Caption="Mappa" />
+      </Variants>
+    </ListView>
+  </Views>
+</Application>
